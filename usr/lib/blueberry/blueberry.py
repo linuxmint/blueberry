@@ -1,12 +1,9 @@
 #!/usr/bin/env python2
 
 import sys
-import os
 import gettext
 from gi.repository import Gtk, GnomeBluetooth
-import pwd
-import socket
-import subprocess
+import rfkillMagic
 
 BLUETOOTH_DISABLED_PAGE      = "disabled-page"
 BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
@@ -27,7 +24,7 @@ class BluetoothConfig:
 
         self.window.set_title(_("Bluetooth"))
         self.window.set_icon_name("bluetooth")
-        self.window.connect("destroy", Gtk.main_quit)
+        self.window.connect("destroy", self.terminate)
         self.window.set_default_size(640, 480)
 
         self.main_box = Gtk.VBox()
@@ -61,47 +58,56 @@ class BluetoothConfig:
 
         self.window.add(frame)
 
-        self.check_airplane_mode()
+        debug = False
+        if len(sys.argv) > 1 and sys.argv[1] == "debug":
+            debug = True
 
-        self.rf_switch.connect("state-set", self.on_switch_changed)
+        self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
+
+        self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
 
         self.window.show()
+
+        self.update_ui_callback()
 
     def add_stack_page(self, message, name):
         label = Gtk.Label(message)
         self.stack.add_named(label, name)
         label.show()
 
-    def check_airplane_mode(self):
-        res = subprocess.check_output(RFKILL_CHK)
+    def update_ui_callback(self):
+        powered = False
+        sensitive = False
+        page = ""
 
-        if not res:
-            self.stack.set_visible_child_name (BLUETOOTH_NO_DEVICES_PAGE);
-            self.rf_switch.set_sensitive(False)
+        if not self.rfkill.have_adapter:
+            page = BLUETOOTH_NO_DEVICES_PAGE
+        elif self.rfkill.hard_block:
+            page = BLUETOOTH_DISABLED_PAGE
+        elif self.rfkill.soft_block:
+            page = BLUETOOTH_DISABLED_PAGE
+            sensitive = True
+        else:
+            page = BLUETOOTH_WORKING_PAGE
+            sensitive = True
+            powered = True
 
-    def on_switch_changed(self, state, data):
-        finish_state = False
+        self.rf_switch.set_sensitive(sensitive)
 
-        try:
-            if state == True:
-                res = subprocess.check_output(RFKILL_UNBLOCK)
-            else:
-                res = subprocess.check_output(RFKILL_BLOCK)
+        self.rf_switch.handler_block(self.rf_handler_id)
+        self.rf_switch.set_state(powered)
+        self.rf_switch.handler_unblock(self.rf_handler_id)
 
-            if not res:
-                res = subprocess.check_output(RFKILL_CHK)
-        except CalledProcessError:
-            finish_state = False;
+        self.stack.set_visible_child_name (page);
 
-        # figure out if it worked...
-        #
-        #
+    def on_switch_changed(self, widget, state):
+        self.rfkill.try_set_blocked(not state)
 
-        # commit the state (background of switch now changes)
-        self.rf_switch.set_state(finish_state)
-
-        # stop handler
         return True
+
+    def terminate(self, window):
+        self.rfkill.terminate()
+        Gtk.main_quit()
 
 if __name__ == "__main__":
     BluetoothConfig()
