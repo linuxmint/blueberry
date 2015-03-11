@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo rm -rf /usr/lib/blueberry
+sudo cp -R usr /
+blueberry
