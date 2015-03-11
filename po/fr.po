@@ -19,16 +19,16 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:28
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:37
 msgid "Bluetooth is disabled"
-msgstr ""
+msgstr "Bluetooth est désactivé"
 
 #: usr/lib/blueberry/blueberry.py:38
 msgid "No Bluetooth adapters found"
-msgstr ""
+msgstr "Aucun adaptateur Bluetooth détecté"
 
 #: usr/lib/blueberry/blueberry.py:39
 msgid "Bluetooth is disabled by hardware switch"
-msgstr ""
+msgstr "Le commutateur matériel du Bluetooth est désactivé"
