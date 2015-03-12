@@ -1,0 +1,9 @@
+<schemalist>
+    <schema id="org.blueberry" path="/org/blueberry/">
+        <key name="tray-enabled" type="b">
+            <default>true</default>
+            <summary>Show a tray icon when bluetooth is enabled or connected</summary>
+        </key>
+    </schema>
+</schemalist>
+

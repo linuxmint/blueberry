@@ -1,0 +1,11 @@
+[Desktop Entry]
+
+Name=blueberry
+Comment=Blueberry tray icon
+Exec=blueberry-tray
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Settings;X-GNOME-NetworkSettings;
+StartupNotify=false
+NoDisplay=true
+

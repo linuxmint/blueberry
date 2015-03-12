@@ -2,8 +2,9 @@
 
 import sys
 import gettext
-from gi.repository import Gtk, GnomeBluetooth
+from gi.repository import Gtk, GnomeBluetooth, Gio
 import rfkillMagic
+import subprocess
 
 BLUETOOTH_DISABLED_PAGE      = "disabled-page"
 BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
@@ -13,6 +14,9 @@ BLUETOOTH_WORKING_PAGE       = "working-page"
 RFKILL_CHK = ["/usr/sbin/rfkill", "list", "bluetooth"]
 RFKILL_BLOCK = ["/usr/sbin/rfkill", "block", "bluetooth"]
 RFKILL_UNBLOCK = ["/usr/sbin/rfkill", "unblock", "bluetooth"]
+
+SETTINGS_SCHEMA = "org.blueberry"
+TRAY_KEY = "tray-enabled"
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
@@ -63,12 +67,34 @@ class BluetoothConfig:
             debug = True
 
         self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
-
         self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
+
+        self.settings = Gio.Settings(SETTINGS_SCHEMA)
+
+        traybox = Gtk.HBox()
+        self.traybutton = Gtk.CheckButton(label=_("Show a tray icon when bluetooth is enabled"))
+        self.traybutton.set_active(self.settings.get_boolean(TRAY_KEY))
+        self.traybutton.connect("toggled", self.on_tray_button_toggled)
+        self.settings.connect("changed::tray-enabled", self.on_settings_changed)
+
+        traybox.pack_start(self.traybutton, False, False, 6)
+        traybox.show_all()
+
+        self.main_box.pack_start(traybox, False, False, 6)
 
         self.window.show()
 
         self.update_ui_callback()
+
+    def on_tray_button_toggled(self, widget, data=None):
+        if widget.get_active():
+            self.settings.set_boolean(TRAY_KEY, True)
+            subprocess.Popen(["blueberry-tray"])
+        else:
+            self.settings.set_boolean(TRAY_KEY, False)
+
+    def on_settings_changed(self, settings, key):
+        self.traybutton.set_active(settings.get_boolean(key))
 
     def add_stack_page(self, message, name):
         label = Gtk.Label(message)
