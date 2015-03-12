@@ -1,3 +1,19 @@
+blueberry (1.0.1) betsy; urgency=medium
+
+  [ Michael Webster ]
+  * Finish settings program
+  * Add system tray icon.
+  * blueberry.py: fix wrong stack page name
+
+  [ Clement Lefebvre ]
+  * Fixed MO generation
+  * Updated makepot and pot file
+  * Copied over blueman's tray icons (symbolic doesn't work well across DEs)
+  * Added hooks for sound/keyboard/mouse settings
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 12 Mar 2015 12:22:53 +0100
+
 blueberry (1.0.0) betsy; urgency=low
 
   * Initial release
