@@ -109,7 +109,7 @@ class BluetoothConfig:
         if not self.rfkill.have_adapter:
             page = BLUETOOTH_NO_DEVICES_PAGE
         elif self.rfkill.hard_block:
-            page = BLUETOOTH_DISABLED_PAGE
+            page = BLUETOOTH_HW_DISABLED_PAGE
         elif self.rfkill.soft_block:
             page = BLUETOOTH_DISABLED_PAGE
             sensitive = True
