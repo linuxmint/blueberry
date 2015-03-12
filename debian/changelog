@@ -1,3 +1,9 @@
+blueberry (1.0.2) betsy; urgency=medium
+
+  * Added blueberry to Xfce's Settings and moved it to Hardware category
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 12 Mar 2015 13:01:38 +0100
+
 blueberry (1.0.1) betsy; urgency=medium
 
   [ Michael Webster ]
