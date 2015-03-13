@@ -38,7 +38,8 @@ class BluetoothTray:
 
         self.icon = Gtk.StatusIcon()
         self.icon.set_title("Bluetooth status")
-        self.icon.connect("popup-menu", self.do_popup_menu)
+        self.icon.connect("popup-menu", self.on_popup_menu)
+        self.icon.connect("activate", self.on_activate)
 
         self.update_icon_callback(None, None, None)
 
@@ -97,7 +98,10 @@ class BluetoothTray:
 
         return n_devices
 
-    def do_popup_menu(self, icon, button, time, data = None):
+    def on_activate(self, icon, data=None):
+        subprocess.Popen(["blueberry"])
+
+    def on_popup_menu(self, icon, button, time, data = None):
         menu = Gtk.Menu()
 
         item = Gtk.MenuItem(label=_("Send files to a device"))
