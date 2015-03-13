@@ -46,9 +46,22 @@ else:
     print "Warning: DE could not be detected!"
     CONF_TOOLS = {}
  
-class BluetoothConfig:
+class Blueberry(Gtk.Application):
     ''' Create the UI '''
     def __init__(self):
+
+        Gtk.Application.__init__(self, application_id='com.linuxmint.blueberry', flags=Gio.ApplicationFlags.FLAGS_NONE)
+        self.connect("activate", self.on_activate)
+
+    def on_activate(self, data=None):
+        list = self.get_windows()
+        if len(list) > 0:
+            # Blueberry is already running, focus the window
+            self.get_active_window().present()
+        else:
+            self.create_window()
+            
+    def create_window(self):
         self.window = Gtk.Window(Gtk.WindowType.TOPLEVEL)
 
         self.window.set_title(_("Bluetooth"))
@@ -113,6 +126,8 @@ class BluetoothConfig:
 
         self.update_ui_callback()
 
+        self.add_window(self.window)
+
     def panel_changed(self, widget, panel):
         if not panel in CONF_TOOLS:
             print "Warning, no configuration tool known for panel '%s'" % panel
@@ -169,5 +184,5 @@ class BluetoothConfig:
         Gtk.main_quit()
 
 if __name__ == "__main__":
-    BluetoothConfig()
-    Gtk.main()
+    app = Blueberry()
+    app.run(None)
