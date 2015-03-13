@@ -70,6 +70,11 @@ class Blueberry(Gtk.Application):
         self.window.set_default_size(640, 480)
 
         self.main_box = Gtk.VBox()
+
+        self.status_image = Gtk.Image()
+        self.status_image.set_from_icon_name("blueberry", Gtk.IconSize.DIALOG)
+        self.status_image.show()
+
         self.stack = Gtk.Stack()
         self.rf_switch = Gtk.Switch()
 
@@ -86,21 +91,19 @@ class Blueberry(Gtk.Application):
         self.lib_widget.show()
         self.stack.show();
         self.main_box.show();
+        self.main_box.set_border_width(12)
 
-        switchbox = Gtk.HBox()
-        switchbox.pack_end(self.rf_switch, False, False, 6)
+        switchbox = Gtk.VBox()
+        switchbox.pack_start(self.status_image, False, False, 10)
+        hbox = Gtk.HBox()
+        hbox.pack_start(self.rf_switch, True, False, 0)
+        switchbox.pack_start(hbox, False, False, 0)        
         switchbox.show_all()
 
-        self.main_box.pack_start(switchbox, False, False, 6)
-        self.main_box.pack_start(self.stack, True, True, 6)
+        self.main_box.pack_start(switchbox, False, False, 0)
+        self.main_box.pack_start(self.stack, True, True, 0)
 
-        frame = Gtk.Frame()
-        frame.add(self.main_box)
-        frame.set_border_width(6)
-        frame.set_shadow_type(Gtk.ShadowType.ETCHED_IN)
-        frame.show()
-
-        self.window.add(frame)
+        self.window.add(self.main_box)
 
         debug = False
         if len(sys.argv) > 1 and sys.argv[1] == "debug":
@@ -117,10 +120,10 @@ class Blueberry(Gtk.Application):
         self.traybutton.connect("toggled", self.on_tray_button_toggled)
         self.settings.connect("changed::tray-enabled", self.on_settings_changed)
 
-        traybox.pack_start(self.traybutton, False, False, 6)
+        traybox.pack_start(self.traybutton, False, False, 0)
         traybox.show_all()
 
-        self.main_box.pack_start(traybox, False, False, 6)
+        self.main_box.pack_start(traybox, False, False, 0)
 
         self.window.show()
 
@@ -156,15 +159,19 @@ class Blueberry(Gtk.Application):
 
         if not self.rfkill.have_adapter:
             page = BLUETOOTH_NO_DEVICES_PAGE
+            self.status_image.set_from_icon_name("blueberry-disabled", Gtk.IconSize.DIALOG)
         elif self.rfkill.hard_block:
             page = BLUETOOTH_HW_DISABLED_PAGE
+            self.status_image.set_from_icon_name("blueberry-disabled", Gtk.IconSize.DIALOG)
         elif self.rfkill.soft_block:
             page = BLUETOOTH_DISABLED_PAGE
             sensitive = True
+            self.status_image.set_from_icon_name("blueberry-disabled", Gtk.IconSize.DIALOG)
         else:
             page = BLUETOOTH_WORKING_PAGE
             sensitive = True
             powered = True
+            self.status_image.set_from_icon_name("blueberry", Gtk.IconSize.DIALOG)
 
         self.rf_switch.set_sensitive(sensitive)
 
@@ -181,7 +188,6 @@ class Blueberry(Gtk.Application):
 
     def terminate(self, window):
         self.rfkill.terminate()
-        Gtk.main_quit()
 
 if __name__ == "__main__":
     app = Blueberry()
