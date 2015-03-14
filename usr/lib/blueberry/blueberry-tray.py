@@ -18,17 +18,15 @@ class BluetoothTray:
         if len(sys.argv) > 1 and sys.argv[1] == "debug":
             debug = True
 
+        self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
         self.settings = Gio.Settings(SETTINGS_SCHEMA)
-        if not self.settings.get_boolean(TRAY_KEY):
-            self.terminate(None)
+        
+        # If we have no adapter or if our settings say not to show a tray icon, just exit
+        if (not self.rfkill.have_adapter) or (not self.settings.get_boolean(TRAY_KEY)):
+            self.rfkill.terminate()
+            sys.exit(0)
 
         self.settings.connect("changed::tray-enabled", self.on_settings_changed_cb)
-
-        self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
-
-        # If we have no adapter, just end it
-        if not self.rfkill.have_adapter:
-            self.terminate(None)
 
         self.client = GnomeBluetooth.Client()
         self.model = self.client.get_model()
@@ -37,7 +35,7 @@ class BluetoothTray:
         self.model.connect('row-inserted', self.update_icon_callback)
 
         self.icon = Gtk.StatusIcon()
-        self.icon.set_title("Bluetooth status")
+        self.icon.set_title(_("Bluetooth"))
         self.icon.connect("popup-menu", self.on_popup_menu)
         self.icon.connect("activate", self.on_activate)
 
