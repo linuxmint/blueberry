@@ -1,3 +1,15 @@
+blueberry (1.0.3) betsy; urgency=medium
+
+  * Removed dodgy 128px icons and resized 16px icons
+  * Made Blueberry a Gtk.Application and enforced uniqueness (singleton application)
+  * Launch blueberry when clicking the tray
+  * Improved UI layout, added status image on top of the switch
+  * Improved tray icon (was too big), changed tray tooltip slightly (more context, less confusing)
+  * Updated pot file
+  * Tray: Exit properly when no adapter is found or settings indicate no tray is wanted
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 14 Mar 2015 14:43:46 +0100
+
 blueberry (1.0.2) betsy; urgency=medium
 
   * Added blueberry to Xfce's Settings and moved it to Hardware category
