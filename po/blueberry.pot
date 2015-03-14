@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-12 09:13+0100\n"
+"POT-Creation-Date: 2015-03-14 12:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,50 +18,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../usr/lib/blueberry/blueberry.py:29
+#: ../usr/lib/blueberry/blueberry.py:67
+#: ../usr/lib/blueberry/blueberry-tray.py:71
 msgid "Bluetooth"
 msgstr ""
 
-#: ../usr/lib/blueberry/blueberry.py:38
+#: ../usr/lib/blueberry/blueberry.py:81
 msgid "Bluetooth is disabled"
 msgstr ""
 
-#: ../usr/lib/blueberry/blueberry.py:39
+#: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
 msgstr ""
 
-#: ../usr/lib/blueberry/blueberry.py:40
+#: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
 msgstr ""
 
-#: ../usr/lib/blueberry/blueberry.py:75
+#: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
-msgstr ""
-
-#: ../usr/lib/blueberry/blueberry-tray.py:65
-#, python-format
-msgid "%d devices connected"
 msgstr ""
 
 #: ../usr/lib/blueberry/blueberry-tray.py:66
 #, python-format
-msgid "%d device connected"
-msgid_plural "%d devices connected"
+msgid "Bluetooth: %d device connected"
+msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../usr/lib/blueberry/blueberry-tray.py:71
-msgid "No devices connected"
-msgstr ""
-
-#: ../usr/lib/blueberry/blueberry-tray.py:103
+#: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
 msgstr ""
 
-#: ../usr/lib/blueberry/blueberry-tray.py:107
+#: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"
 msgstr ""
 
-#: ../usr/lib/blueberry/blueberry-tray.py:113
+#: ../usr/lib/blueberry/blueberry-tray.py:116
 msgid "Quit"
 msgstr ""
