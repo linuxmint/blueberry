@@ -62,14 +62,13 @@ class BluetoothTray:
         n_devices = self.get_n_devices()
 
         if n_devices > 0:
-            self.icon.set_from_icon_name("blueberry-active")
-            self.icon.set_tooltip_text(_("%d devices connected"))
-            self.icon.set_tooltip_text(gettext.ngettext("%d device connected" % n_devices, 
-                                                        "%d devices connected" % n_devices,
+            self.icon.set_from_icon_name("blueberry-tray-active")
+            self.icon.set_tooltip_text(gettext.ngettext("Bluetooth: %d device connected" % n_devices, 
+                                                        "Bluetooth: %d devices connected" % n_devices,
                                                         n_devices))
         else:
-            self.icon.set_from_icon_name("blueberry")
-            self.icon.set_tooltip_text(_("No devices connected"))
+            self.icon.set_from_icon_name("blueberry-tray")
+            self.icon.set_tooltip_text(_("Bluetooth"))
 
     def get_n_devices(self):
         default_iter = None
