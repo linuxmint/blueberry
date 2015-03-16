@@ -4,11 +4,8 @@ import sys
 import gettext
 from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio
 import rfkillMagic
+import blueberrySettings
 import subprocess
-
-SETTINGS_SCHEMA = "org.blueberry"
-TRAY_KEY = "tray-enabled"
-BLOCK_KEY = "bluetooth-soft-block"
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
@@ -20,20 +17,24 @@ class BluetoothTray:
             debug = True
 
         self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
-        self.settings = Gio.Settings(SETTINGS_SCHEMA)
+        self.settings = blueberrySettings.Settings()
 
-        # Sync state before we decide to bail or not
-        if self.settings.get_boolean(BLOCK_KEY):
-            subprocess.Popen(rfkillMagic.RFKILL_BLOCK)
-        else:
-            subprocess.Popen(rfkillMagic.RFKILL_UNBLOCK)
+        # If we have no adapter, exit
+        if not self.rfkill.have_adapter:
+            self.early_terminate()
 
-        # If we have no adapter or if our settings say not to show a tray icon, just exit
-        if (not self.rfkill.have_adapter) or (not self.settings.get_boolean(TRAY_KEY)):
-            self.rfkill.terminate()
-            sys.exit(0)
+        # If we're responsible, sync state before we decide to bail or not
+        if self.settings.get_state_managed():
+            if self.settings.get_soft_blocked():
+                subprocess.Popen(rfkillMagic.RFKILL_BLOCK)
+            else:
+                subprocess.Popen(rfkillMagic.RFKILL_UNBLOCK)
 
-        self.settings.connect("changed::tray-enabled", self.on_settings_changed_cb)
+        # If the tray is disabled, exit
+        if not self.settings.get_tray_enabled():
+            self.early_terminate()
+
+        self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed_cb)
 
         self.client = GnomeBluetooth.Client()
         self.model = self.client.get_model()
@@ -49,7 +50,7 @@ class BluetoothTray:
         self.update_icon_callback(None, None, None)
 
     def on_settings_changed_cb(self, setting, key, data=None):
-        if not self.settings.get_boolean(TRAY_KEY):
+        if not self.settings.get_tray_enabled():
             self.terminate()
 
     def update_icon_callback(self, path=None, iter=None, data=None):
@@ -136,6 +137,10 @@ class BluetoothTray:
     def terminate(self, window = None, data = None):
         self.rfkill.terminate()
         Gtk.main_quit()
+
+    def early_terminate(se1f):
+        self.rfkill.terminate()
+        sys.exit(0)
 
 if __name__ == "__main__":
     BluetoothTray()

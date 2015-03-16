@@ -5,15 +5,12 @@ import gettext
 from gi.repository import Gtk, GnomeBluetooth, Gio
 import rfkillMagic
 import subprocess
+import blueberrySettings
 
 BLUETOOTH_DISABLED_PAGE      = "disabled-page"
 BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
 BLUETOOTH_NO_DEVICES_PAGE    = "no-devices-page"
 BLUETOOTH_WORKING_PAGE       = "working-page"
-
-SETTINGS_SCHEMA = "org.blueberry"
-TRAY_KEY = "tray-enabled"
-BLOCK_KEY = "bluetooth-soft-block"
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
@@ -109,13 +106,13 @@ class Blueberry(Gtk.Application):
         self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
         self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
 
-        self.settings = Gio.Settings(SETTINGS_SCHEMA)
+        self.settings = blueberrySettings.Settings()
 
         traybox = Gtk.HBox()
         self.traybutton = Gtk.CheckButton(label=_("Show a tray icon when bluetooth is enabled"))
-        self.traybutton.set_active(self.settings.get_boolean(TRAY_KEY))
+        self.traybutton.set_active(self.settings.get_tray_enabled())
         self.traybutton.connect("toggled", self.on_tray_button_toggled)
-        self.settings.connect("changed::tray-enabled", self.on_settings_changed)
+        self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed)
 
         traybox.pack_start(self.traybutton, False, False, 0)
         traybox.show_all()
@@ -136,13 +133,13 @@ class Blueberry(Gtk.Application):
 
     def on_tray_button_toggled(self, widget, data=None):
         if widget.get_active():
-            self.settings.set_boolean(TRAY_KEY, True)
+            self.settings.set_tray_enabled(True)
             subprocess.Popen(["blueberry-tray"])
         else:
-            self.settings.set_boolean(TRAY_KEY, False)
+            self.settings.set_tray_enabled(False)
 
     def on_settings_changed(self, settings, key):
-        self.traybutton.set_active(settings.get_boolean(key))
+        self.traybutton.set_active(self.settings.get_tray_enabled())
 
     def add_stack_page(self, message, name):
         label = Gtk.Label(message)
@@ -180,7 +177,9 @@ class Blueberry(Gtk.Application):
 
     def on_switch_changed(self, widget, state):
         self.rfkill.try_set_blocked(not state)
-        self.settings.set_boolean(BLOCK_KEY, not state)
+
+        if self.settings.get_state_managed():
+            self.settings.set_soft_blocked(not state)
 
         return True
 

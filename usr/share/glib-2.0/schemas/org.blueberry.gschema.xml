@@ -9,6 +9,11 @@
             <summary>Stores the current soft-block state of the bluetooth adapter</summary>
             <description>This setting is kept in sync to the current bluetooth state, and is read at startup to restore the blocked state to match the previous session</description>
         </key>
+        <key name="manage-bluetooth-state" type="b">
+            <default>true</default>
+            <summary>Whether to track the soft block state across reboots</summary>
+            <description>Enable this if you want blueberry to make sure the adapter soft block state is kept in sync across reboots.  This may not be necessary under certain conditions or in some distributions</description>
+        </key>
     </schema>
 </schemalist>
 
