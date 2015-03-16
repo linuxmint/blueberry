@@ -19,20 +19,10 @@ class BluetoothTray:
         self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
         self.settings = blueberrySettings.Settings()
 
-        # If we have no adapter, exit
-        if not self.rfkill.have_adapter:
-            self.early_terminate()
-
-        # If we're responsible, sync state before we decide to bail or not
-        if self.settings.get_state_managed():
-            if self.settings.get_soft_blocked():
-                subprocess.Popen(rfkillMagic.RFKILL_BLOCK)
-            else:
-                subprocess.Popen(rfkillMagic.RFKILL_UNBLOCK)
-
-        # If the tray is disabled, exit
-        if not self.settings.get_tray_enabled():
-            self.early_terminate()
+        # If we have no adapter, or disabled tray, end early
+        if (not self.rfkill.have_adapter) or (not self.settings.get_tray_enabled()):
+            self.rfkill.terminate()
+            sys.exit(0)
 
         self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed_cb)
 
@@ -137,10 +127,6 @@ class BluetoothTray:
     def terminate(self, window = None, data = None):
         self.rfkill.terminate()
         Gtk.main_quit()
-
-    def early_terminate(se1f):
-        self.rfkill.terminate()
-        sys.exit(0)
 
 if __name__ == "__main__":
     BluetoothTray()

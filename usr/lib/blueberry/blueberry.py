@@ -177,10 +177,6 @@ class Blueberry(Gtk.Application):
 
     def on_switch_changed(self, widget, state):
         self.rfkill.try_set_blocked(not state)
-
-        if self.settings.get_state_managed():
-            self.settings.set_soft_blocked(not state)
-
         return True
 
     def terminate(self, window):
