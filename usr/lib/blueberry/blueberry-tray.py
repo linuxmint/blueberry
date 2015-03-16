@@ -8,6 +8,7 @@ import subprocess
 
 SETTINGS_SCHEMA = "org.blueberry"
 TRAY_KEY = "tray-enabled"
+BLOCK_KEY = "bluetooth-soft-block"
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
@@ -20,7 +21,13 @@ class BluetoothTray:
 
         self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
         self.settings = Gio.Settings(SETTINGS_SCHEMA)
-        
+
+        # Sync state before we decide to bail or not
+        if self.settings.get_boolean(BLOCK_KEY):
+            subprocess.Popen(rfkillMagic.RFKILL_BLOCK)
+        else:
+            subprocess.Popen(rfkillMagic.RFKILL_UNBLOCK)
+
         # If we have no adapter or if our settings say not to show a tray icon, just exit
         if (not self.rfkill.have_adapter) or (not self.settings.get_boolean(TRAY_KEY)):
             self.rfkill.terminate()

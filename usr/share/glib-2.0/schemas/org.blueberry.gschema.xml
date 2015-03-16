@@ -4,6 +4,11 @@
             <default>true</default>
             <summary>Show a tray icon when bluetooth is enabled or connected</summary>
         </key>
+        <key name="bluetooth-soft-block" type="b">
+            <default>false</default>
+            <summary>Stores the current soft-block state of the bluetooth adapter</summary>
+            <description>This setting is kept in sync to the current bluetooth state, and is read at startup to restore the blocked state to match the previous session</description>
+        </key>
     </schema>
 </schemalist>
 

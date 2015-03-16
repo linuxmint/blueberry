@@ -11,12 +11,9 @@ BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
 BLUETOOTH_NO_DEVICES_PAGE    = "no-devices-page"
 BLUETOOTH_WORKING_PAGE       = "working-page"
 
-RFKILL_CHK = ["/usr/sbin/rfkill", "list", "bluetooth"]
-RFKILL_BLOCK = ["/usr/sbin/rfkill", "block", "bluetooth"]
-RFKILL_UNBLOCK = ["/usr/sbin/rfkill", "unblock", "bluetooth"]
-
 SETTINGS_SCHEMA = "org.blueberry"
 TRAY_KEY = "tray-enabled"
+BLOCK_KEY = "bluetooth-soft-block"
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
@@ -183,6 +180,7 @@ class Blueberry(Gtk.Application):
 
     def on_switch_changed(self, widget, state):
         self.rfkill.try_set_blocked(not state)
+        self.settings.set_boolean(BLOCK_KEY, not state)
 
         return True
 
