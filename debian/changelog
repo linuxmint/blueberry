@@ -1,3 +1,13 @@
+blueberry (1.0.4) betsy; urgency=medium
+
+  [ Michael Webster ]
+  * Unify settings getter/setter
+
+  [ Clement Lefebvre ]
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 31 Mar 2015 12:19:38 +0200
+
 blueberry (1.0.3) betsy; urgency=medium
 
   * Removed dodgy 128px icons and resized 16px icons
