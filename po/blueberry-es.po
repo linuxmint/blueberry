@@ -7,61 +7,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-03-12 09:13+0100\n"
-"PO-Revision-Date: 2015-03-12 08:30+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"POT-Creation-Date: 2015-03-14 12:33+0100\n"
+"PO-Revision-Date: 2015-03-14 22:18+0000\n"
+"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-03-12 10:44+0000\n"
-"X-Generator: Launchpad (build 17389)\n"
+"X-Launchpad-Export-Date: 2015-03-31 10:06+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 
-#: ../usr/lib/blueberry/blueberry.py:29
+#: ../usr/lib/blueberry/blueberry.py:67
+#: ../usr/lib/blueberry/blueberry-tray.py:71
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry.py:38
+#: ../usr/lib/blueberry/blueberry.py:81
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth desactivado"
 
-#: ../usr/lib/blueberry/blueberry.py:39
+#: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
 msgstr "No se encontraron adaptadores Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry.py:40
+#: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "El Bluetooth está desactivado por el interruptor físico"
 
-#: ../usr/lib/blueberry/blueberry.py:75
+#: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
 msgstr ""
-
-#: ../usr/lib/blueberry/blueberry-tray.py:65
-#, python-format
-msgid "%d devices connected"
-msgstr ""
+"Mostrar un icono en la bandeja del sistema cuando el bluetooth está activado"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:66
 #, python-format
-msgid "%d device connected"
-msgid_plural "%d devices connected"
-msgstr[0] ""
-msgstr[1] ""
+msgid "Bluetooth: %d device connected"
+msgid_plural "Bluetooth: %d devices connected"
+msgstr[0] "Bluetooth: %d dispositivo conectado"
+msgstr[1] "Bluetooth: %d dispositivos conectados"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:71
-msgid "No devices connected"
-msgstr ""
-
-#: ../usr/lib/blueberry/blueberry-tray.py:103
+#: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr ""
+msgstr "Enviar ficheros a un dispositivo"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:107
+#: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"
-msgstr ""
+msgstr "Abrir el administrador de dispositivos Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:113
+#: ../usr/lib/blueberry/blueberry-tray.py:116
 msgid "Quit"
 msgstr "Salir"
