@@ -9,5 +9,6 @@ Package: blueberry
 Architecture: all
 Depends: python (>= 2.4), python (<< 3), gnome-bluetooth, gir1.2-gnomebluetooth-1.0, wmctrl
 Breaks: cinnamon-bluetooth
+Replaces: cinnamon-bluetooth
 Description: A configuration tool for Bluetooth
  Configure Bluetooth devices.
