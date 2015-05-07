@@ -1,3 +1,9 @@
+blueberry (1.0.5) betsy; urgency=medium
+
+  * Packaging: Break cinnamon-bluetooth
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 07 May 2015 15:53:15 +0200
+
 blueberry (1.0.4) betsy; urgency=medium
 
   [ Michael Webster ]
