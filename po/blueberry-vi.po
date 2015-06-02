@@ -1,4 +1,4 @@
-# Spanish translation for linuxmint
+# Vietnamese translation for linuxmint
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-03-14 22:18+0000\n"
-"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2015-04-26 14:58+0000\n"
+"Last-Translator: Saki <a4e484b@hotmail.com>\n"
+"Language-Team: Vietnamese <vi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2015-06-02 10:14+0000\n"
 "X-Generator: Launchpad (build 17532)\n"
 
@@ -25,36 +25,34 @@ msgstr "Bluetooth"
 
 #: ../usr/lib/blueberry/blueberry.py:81
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth desactivado"
+msgstr "Bluetooth bị tắt"
 
 #: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
-msgstr "No se encontraron adaptadores Bluetooth"
+msgstr "Không tìm thấy bộ điều hợp Bluetooth nào"
 
 #: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "El Bluetooth está desactivado por el interruptor físico"
+msgstr "Bluetooth bị tắt bằng nút phần cứng"
 
 #: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
-msgstr ""
-"Mostrar un icono en la bandeja del sistema cuando el bluetooth está activado"
+msgstr "Hiện biểu tượng khay hệ thống khi bật bluetooth"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:66
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] "Bluetooth: %d dispositivo conectado"
-msgstr[1] "Bluetooth: %d dispositivos conectados"
+msgstr[0] "Bluetooth: đang kết nối với %d thiết bị"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr "Enviar ficheros a un dispositivo"
+msgstr "Gửi tập tin đến thiết bị"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"
-msgstr "Abrir el administrador de dispositivos Bluetooth"
+msgstr "Mở trình quản lý thiết bị Bluetooth"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:116
 msgid "Quit"
-msgstr "Salir"
+msgstr "Thoát"

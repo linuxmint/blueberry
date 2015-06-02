@@ -1,4 +1,4 @@
-# Spanish translation for linuxmint
+# Assamese translation for linuxmint
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,53 +8,52 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-03-14 22:18+0000\n"
-"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2015-04-17 07:52+0000\n"
+"Last-Translator: Bhaskarjyoti Rajkumar <Unknown>\n"
+"Language-Team: Assamese <as@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Launchpad-Export-Date: 2015-06-02 10:14+0000\n"
 "X-Generator: Launchpad (build 17532)\n"
 
 #: ../usr/lib/blueberry/blueberry.py:67
 #: ../usr/lib/blueberry/blueberry-tray.py:71
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr "ব্লুটুথ"
 
 #: ../usr/lib/blueberry/blueberry.py:81
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth desactivado"
+msgstr "ব্লুটুথ অসামৰ্থবান"
 
 #: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
-msgstr "No se encontraron adaptadores Bluetooth"
+msgstr "কোনো ব্লুটুথ এডাপ্টাৰ পোৱা নগল"
 
 #: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "El Bluetooth está desactivado por el interruptor físico"
+msgstr "ব্লুটুথ হাৰ্ডৱেৰ চুইচ দ্বাৰা অসামৰ্থবান"
 
 #: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
 msgstr ""
-"Mostrar un icono en la bandeja del sistema cuando el bluetooth está activado"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:66
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] "Bluetooth: %d dispositivo conectado"
-msgstr[1] "Bluetooth: %d dispositivos conectados"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr "Enviar ficheros a un dispositivo"
+msgstr ""
 
 #: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"
-msgstr "Abrir el administrador de dispositivos Bluetooth"
+msgstr "ব্লুটুথ ডিভাইচ মেনেজাৰ খোলক"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:116
 msgid "Quit"
-msgstr "Salir"
+msgstr "প্ৰস্থান কৰক"
