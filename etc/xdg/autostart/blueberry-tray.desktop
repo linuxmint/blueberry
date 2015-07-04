@@ -8,4 +8,4 @@ Type=Application
 Categories=GTK;GNOME;Settings;X-GNOME-NetworkSettings;
 StartupNotify=false
 NoDisplay=true
-NotShowIn=GNOME;KDE;
+NotShowIn=GNOME;KDE;Unity;
