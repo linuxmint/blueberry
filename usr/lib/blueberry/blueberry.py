@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 
-import sys, os, commands
+import sys, os
 import gettext
 from gi.repository import Gtk, GnomeBluetooth, Gio
 import rfkillMagic
@@ -16,26 +16,27 @@ BLUETOOTH_WORKING_PAGE       = "working-page"
 gettext.install("blueberry", "/usr/share/locale")
 
 # detect the DE environment
-wm_info = commands.getoutput("wmctrl -m")
 if "XDG_CURRENT_DESKTOP" in os.environ:
     xdg_current_desktop = os.environ["XDG_CURRENT_DESKTOP"]
 else:
     xdg_current_desktop = ""
 
-if "Marco" in wm_info or xdg_current_desktop == "MATE":
+if xdg_current_desktop == "MATE":
     CONF_TOOLS = {"sound": "mate-volume-control", "keyboard": "mate-keyboard-properties", "mouse": "mate-mouse-properties"}
-elif "Xfwm4" in wm_info or xdg_current_desktop == "XFCE":
+elif xdg_current_desktop == "XFCE":
     CONF_TOOLS = {"keyboard": "xfce4-keyboard-settings", "mouse": "xfce4-mouse-settings"}
     if os.path.exists("/usr/bin/pavucontrol"):
         CONF_TOOLS["sound"] = "pavucontrol"
     else:
         CONF_TOOLS["sound"] = "xfce4-mixer"
-elif "Muffin" in wm_info:
+elif xdg_current_desktop == "X-Cinnamon":
     CONF_TOOLS = {"sound": "cinnamon-settings sound", "keyboard": "cinnamon-settings keyboard", "mouse": "cinnamon-settings mouse"}
-elif "Mutter" in wm_info:
+elif "GNOME" in xdg_current_desktop:
     CONF_TOOLS = {"sound": "gnome-control-center sound", "keyboard": "gnome-control-center keyboard", "mouse": "gnome-control-center mouse"}
-elif "Unity" in wm_info or xdg_current_desktop == "Unity":
+elif xdg_current_desktop == "Unity":
     CONF_TOOLS = {"sound": "unity-control-center sound", "keyboard": "unity-control-center keyboard", "mouse": "unity-control-center mouse"}
+elif xdg_current_desktop == "LXDE":
+    CONF_TOOLS = {"sound": "pavucontrol", "keyboard": "lxinput", "mouse": "lxinput"}
 else:
     print "Warning: DE could not be detected!"
     CONF_TOOLS = {}
