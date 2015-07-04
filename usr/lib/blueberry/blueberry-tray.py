@@ -25,6 +25,7 @@ class BluetoothTray:
             sys.exit(0)
 
         self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed_cb)
+        self.settings.get_tray_enabled()
 
         self.client = GnomeBluetooth.Client()
         self.model = self.client.get_model()
