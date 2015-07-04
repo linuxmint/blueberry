@@ -30,12 +30,14 @@ elif "Xfwm4" in wm_info or xdg_current_desktop == "XFCE":
         CONF_TOOLS["sound"] = "pavucontrol"
     else:
         CONF_TOOLS["sound"] = "xfce4-mixer"
-elif "Muffin" in wm_info:
+elif "Muffin" in wm_info or xdg_current_desktop == "X-Cinnamon":
     CONF_TOOLS = {"sound": "cinnamon-settings sound", "keyboard": "cinnamon-settings keyboard", "mouse": "cinnamon-settings mouse"}
-elif "Mutter" in wm_info:
+elif "Mutter" in wm_info or "GNOME" in xdg_current_desktop:
     CONF_TOOLS = {"sound": "gnome-control-center sound", "keyboard": "gnome-control-center keyboard", "mouse": "gnome-control-center mouse"}
 elif "Unity" in wm_info or xdg_current_desktop == "Unity":
     CONF_TOOLS = {"sound": "unity-control-center sound", "keyboard": "unity-control-center keyboard", "mouse": "unity-control-center mouse"}
+elif xdg_current_desktop == "LXDE":
+    CONF_TOOLS = {"sound": "pavucontrol", "keyboard": "lxinput", "mouse": "lxinput"}
 else:
     print "Warning: DE could not be detected!"
     CONF_TOOLS = {}
