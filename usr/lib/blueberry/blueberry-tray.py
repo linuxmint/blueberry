@@ -18,13 +18,12 @@ class BluetoothTray:
 
         self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
         self.settings = blueberrySettings.Settings()
+        self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed_cb)
 
         # If we have no adapter, or disabled tray, end early
         if (not self.rfkill.have_adapter) or (not self.settings.get_tray_enabled()):
             self.rfkill.terminate()
             sys.exit(0)
-
-        self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed_cb)
 
         self.client = GnomeBluetooth.Client()
         self.model = self.client.get_model()
