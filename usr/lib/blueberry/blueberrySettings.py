@@ -7,7 +7,7 @@ TRAY_KEY = "tray-enabled"
 
 class Settings():
     def __init__(self):
-        self.gsettings = Gio.Settings(SETTINGS_SCHEMA)
+        self.gsettings = Gio.Settings.new(SETTINGS_SCHEMA)
 
     def get_tray_enabled(self):
         return self.gsettings.get_boolean(TRAY_KEY)
