@@ -127,3 +127,4 @@ Terminal=false
 Type=Application
 Categories=GTK;GNOME;Settings;HardwareSettings;X-XFCE-SettingsDialog;X-XFCE-HardwareSettings;
 StartupNotify=true
+NotShowIn=GNOME;KDE;Unity;
