@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-05-11 17:59+0000\n"
+"PO-Revision-Date: 2015-08-30 09:23+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-06-26 13:21+0000\n"
-"X-Generator: Launchpad (build 17578)\n"
+"X-Launchpad-Export-Date: 2015-11-06 14:10+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../usr/lib/blueberry/blueberry.py:67
 #: ../usr/lib/blueberry/blueberry-tray.py:71
@@ -37,7 +37,7 @@ msgstr "บลูทูทถูกปิดใช้งานด้วยสว
 
 #: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
-msgstr ""
+msgstr "แสดง Tray icon เมื่อเปิดบลูทูธ"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:66
 #, python-format
@@ -47,7 +47,7 @@ msgstr[0] "บลูทูท: %d อุปกรณ์เชื่อมต่�
 
 #: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr ""
+msgstr "ส่งแฟ้มไปที่อุปกรณ์"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"

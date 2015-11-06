@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-04-11 16:08+0000\n"
-"Last-Translator: Pravin Dass I <dass02rlr@gmail.com>\n"
+"PO-Revision-Date: 2015-08-23 16:28+0000\n"
+"Last-Translator: Kamala Kannan <Unknown>\n"
 "Language-Team: Tamil <ta@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-06-26 13:21+0000\n"
-"X-Generator: Launchpad (build 17578)\n"
+"X-Launchpad-Export-Date: 2015-11-06 14:10+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../usr/lib/blueberry/blueberry.py:67
 #: ../usr/lib/blueberry/blueberry-tray.py:71
@@ -29,11 +29,11 @@ msgstr "ப்ளூடூத் முடக்கப்பட்டுள்�
 
 #: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
-msgstr ""
+msgstr "ப்ளூடூத் தகைவிகள் ஏதும் காணப்படவில்லை"
 
 #: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
-msgstr ""
+msgstr "வன்பொருள் நிலைமாற்றியால் ப்ளூடூத் முடக்கப்பட்டுள்ளது"
 
 #: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
@@ -43,12 +43,12 @@ msgstr "ப்ளூடூத்  செயல்படும்பொழுத�
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ப்ளூடூத்: %d கருவி இணைக்கப்பட்டது"
+msgstr[1] "ப்ளூடூத்: %d கருவி இணைக்கப்பட்டது"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr ""
+msgstr "கோப்புகளை சாதனத்திற்கு அனுப்பு"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"

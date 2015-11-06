@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-04-09 13:22+0000\n"
-"Last-Translator: Gherman Ionuț <ghermanionut96@gmail.com>\n"
+"PO-Revision-Date: 2015-09-26 11:02+0000\n"
+"Last-Translator: CD <Unknown>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2015-06-26 13:21+0000\n"
-"X-Generator: Launchpad (build 17578)\n"
+"X-Launchpad-Export-Date: 2015-11-06 14:10+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../usr/lib/blueberry/blueberry.py:67
 #: ../usr/lib/blueberry/blueberry-tray.py:71
@@ -30,7 +30,7 @@ msgstr "Bluetooth-ul este dezactivat"
 
 #: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
-msgstr "Nu a fost găsit niciun adaptor Bluetooth"
+msgstr "Niciun adaptor Bluetooth găsit"
 
 #: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
@@ -46,15 +46,15 @@ msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] "Bluetooth: %d dispozitiv conectat"
 msgstr[1] "Bluetooth: %d dispozitive conectate"
-msgstr[2] "Bluetooth: %d dispozitive conectate"
+msgstr[2] "Bluetooth: %d de dispozitive conectate"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr "Trimite fişiere catre un dispozitiv"
+msgstr "Trimite fișiere către un dispozitiv"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"
-msgstr "Deschide manager-ul Bluetooth"
+msgstr "Deschide managerul de dispozitive Bluetooth"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:116
 msgid "Quit"

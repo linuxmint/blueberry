@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-03-16 18:30+0000\n"
-"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
+"PO-Revision-Date: 2015-08-28 19:47+0000\n"
+"Last-Translator: Dusan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2015-06-26 13:21+0000\n"
-"X-Generator: Launchpad (build 17578)\n"
+"X-Launchpad-Export-Date: 2015-11-06 14:10+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../usr/lib/blueberry/blueberry.py:67
 #: ../usr/lib/blueberry/blueberry-tray.py:71
@@ -29,31 +29,31 @@ msgstr "Bluetooth je zakázaný"
 
 #: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
-msgstr "Nenašli sa žiadne Bluetooth adaptéry"
+msgstr "Nenašli sa žiadne adaptéry Bluetooth"
 
 #: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth je vypnutý hardvérovým prepínačom"
+msgstr "Bluetooth je zakázaný hardvérovým prepínačom"
 
 #: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
-msgstr "Zobraziť ikonku na systémovej lište ak je bluetooth zapnutý"
+msgstr "Zobraziť ikonu na systémovej lište, ak je bluetooth zapnutý"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:66
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] "Bluetooth: pripojených %d zariadení"
-msgstr[1] "Bluetooth: pripojené %d zariadenie"
+msgstr[0] "Bluetooth: pripojené %d zariadenie"
+msgstr[1] "Bluetooth: pripojených %d zariadení"
 msgstr[2] "Bluetooth: pripojené %d zariadenia"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr "Odoslať súbory na zariadenie"
+msgstr "Odoslať súbory do zariadenia"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"
-msgstr "Otvoriť správcu pre zariadenia s Bluetooth"
+msgstr "Otvoriť správcu zariadení Bluetooth"
 
 #: ../usr/lib/blueberry/blueberry-tray.py:116
 msgid "Quit"

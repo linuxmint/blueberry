@@ -1,4 +1,4 @@
-# Burmese translation for linuxmint
+# Belarusian translation for linuxmint
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,32 +8,33 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-07-26 09:57+0000\n"
-"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
-"Language-Team: Burmese <my@li.org>\n"
+"PO-Revision-Date: 2015-08-12 12:29+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Launchpad-Export-Date: 2015-11-06 14:10+0000\n"
 "X-Generator: Launchpad (build 17838)\n"
 
 #: ../usr/lib/blueberry/blueberry.py:67
 #: ../usr/lib/blueberry/blueberry-tray.py:71
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr ""
 
 #: ../usr/lib/blueberry/blueberry.py:81
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth is disabled"
+msgstr ""
 
 #: ../usr/lib/blueberry/blueberry.py:82
 msgid "No Bluetooth adapters found"
-msgstr "No Bluetooth adapters found"
+msgstr ""
 
 #: ../usr/lib/blueberry/blueberry.py:83
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth is disabled by hardware switch"
+msgstr ""
 
 #: ../usr/lib/blueberry/blueberry.py:118
 msgid "Show a tray icon when bluetooth is enabled"
@@ -48,12 +49,12 @@ msgstr[1] ""
 
 #: ../usr/lib/blueberry/blueberry-tray.py:106
 msgid "Send files to a device"
-msgstr "ကိရိယာမှဖိုင်များကို Send"
+msgstr ""
 
 #: ../usr/lib/blueberry/blueberry-tray.py:110
 msgid "Open Bluetooth device manager"
-msgstr "ပွင့်လင်း Bluetooth ကိရိယာမန်နေဂျာ"
+msgstr ""
 
 #: ../usr/lib/blueberry/blueberry-tray.py:116
 msgid "Quit"
-msgstr "ထွက်"
+msgstr ""
