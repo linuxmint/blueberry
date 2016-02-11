@@ -48,9 +48,10 @@ class BluetoothTray:
             return
 
         if self.rfkill.hard_block or self.rfkill.soft_block:
-            self.icon.set_visible(False)
+            self.icon.set_from_icon_name("blueberry-tray-disabled")
+            self.icon.set_tooltip_text(_("Bluetooth"))
         else:
-            self.icon.set_visible(True)
+            self.icon.set_from_icon_name("blueberry-tray")
             self.update_connected_state()
 
     def update_connected_state(self):
@@ -98,9 +99,10 @@ class BluetoothTray:
     def on_popup_menu(self, icon, button, time, data = None):
         menu = Gtk.Menu()
 
-        item = Gtk.MenuItem(label=_("Send files to a device"))
-        item.connect("activate", self.send_files_cb)
-        menu.append(item)
+        if not(self.rfkill.hard_block or self.rfkill.soft_block):
+            item = Gtk.MenuItem(label=_("Send files to a device"))
+            item.connect("activate", self.send_files_cb)
+            menu.append(item)
 
         item = Gtk.MenuItem(label=_("Open Bluetooth device manager"))
         item.connect("activate", self.open_manager_cb)
