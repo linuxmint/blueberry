@@ -1,3 +1,10 @@
+blueberry (1.1.1) sarah; urgency=medium
+
+  [ Andrew Thornton ]
+  * Add disabled icon for bluetooth-tray
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 16 Feb 2016 16:34:34 +0000
+
 blueberry (1.1.0) betsy; urgency=medium
 
   [ Balló György ]
