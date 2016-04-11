@@ -2,10 +2,15 @@
 
 import sys, os, commands
 import gettext
-from gi.repository import Gtk, GnomeBluetooth, Gio
 import rfkillMagic
 import subprocess
 import blueberrySettings
+
+import gi
+gi.require_version('Gtk', '3.0')
+gi.require_version('GnomeBluetooth', '1.0')
+from gi.repository import Gtk, GnomeBluetooth, Gio
+
 
 BLUETOOTH_DISABLED_PAGE      = "disabled-page"
 BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
