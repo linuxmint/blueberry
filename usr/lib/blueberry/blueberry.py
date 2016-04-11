@@ -90,14 +90,14 @@ class Blueberry(Gtk.Application):
         self.main_box.set_border_width(12)
 
         switchbox = Gtk.VBox()
-        switchbox.pack_start(self.status_image, False, False, 10)
         hbox = Gtk.HBox()
-        hbox.pack_start(self.rf_switch, True, False, 0)
-        switchbox.pack_start(hbox, False, False, 0)        
+        hbox.pack_end(self.rf_switch, False, False, 0)
+        switchbox.pack_start(hbox, False, False, 0)
+        switchbox.pack_start(self.status_image, False, False, 10)
         switchbox.show_all()
 
-        self.main_box.pack_start(switchbox, False, False, 0)
-        self.main_box.pack_start(self.stack, True, True, 0)
+        self.main_box.pack_start(switchbox, False, False, 10)
+        self.main_box.pack_start(self.stack, True, True, 10)
 
         self.window.add(self.main_box)
 
