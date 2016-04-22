@@ -1,3 +1,12 @@
+blueberry (1.1.2) sarah; urgency=medium
+
+  * Added more padding and moved the switch to the top-right corner of the screen (looks out of place with themes where Gtk.Switch isn't centered)
+  * Specify gi versions before importing
+  * Updated translations
+  * Set up generate_desktop_files, makepot
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 22 Apr 2016 15:51:20 +0100
+
 blueberry (1.1.1) sarah; urgency=medium
 
   [ Andrew Thornton ]
