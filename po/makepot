@@ -1,3 +1,0 @@
-#!/bin/bash
-
-xgettext --language=Python --keyword=_ --output=blueberry.pot ../usr/lib/blueberry/*.py

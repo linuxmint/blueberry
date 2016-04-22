@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+
+DOMAIN = "blueberry"
+PATH = "/usr/share/linuxmint/locale"
+
+import os, gettext, sys
+sys.path.append('/usr/lib/linuxmint/common')
+import additionalfiles
+import subprocess
+
+os.environ['LANG'] = "en_US.UTF-8"
+gettext.install(DOMAIN, PATH)
+
+prefix = "[Desktop Entry]\n"
+
+suffix = """Icon=bluetooth
+Exec=blueberry
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Settings;HardwareSettings;X-XFCE-SettingsDialog;X-XFCE-HardwareSettings;
+StartupNotify=true
+NotShowIn=GNOME;KDE;Unity;
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/blueberry.desktop", prefix, _("Bluetooth"), _("Configure Bluetooth settings"), suffix)
