@@ -99,6 +99,12 @@ class BluetoothTray:
     def on_popup_menu(self, icon, button, time, data = None):
         menu = Gtk.Menu()
 
+        def position_menu_cb(m, x, y=None, i=None):
+            try:
+                return Gtk.StatusIcon.position_menu(menu, x, y, icon)
+            except (AttributeError, TypeError):
+                return Gtk.StatusIcon.position_menu(menu, icon)
+
         if not(self.rfkill.hard_block or self.rfkill.soft_block):
             item = Gtk.MenuItem(label=_("Send files to a device"))
             item.connect("activate", self.send_files_cb)
@@ -117,7 +123,7 @@ class BluetoothTray:
         menu.show_all()
 
         device = Gdk.Display.get_default().get_device_manager().get_client_pointer()
-        menu.popup_for_device(device, None, None, lambda w,x: icon.position_menu(menu, icon), icon, button, time)
+        menu.popup_for_device(device, None, None, position_menu_cb, icon, button, time)
 
     def send_files_cb(self, item, data = None):
         subprocess.Popen(["bluetooth-sendto"])
