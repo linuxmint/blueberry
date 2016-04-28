@@ -1,3 +1,13 @@
+blueberry (1.1.3) sarah; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Added blueberry.pot to version control
+
+  [ Sorokin Alexei ]
+  * Fix GtkStatusIcon menu popup on newer Gtk
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 28 Apr 2016 10:11:23 +0100
+
 blueberry (1.1.2) sarah; urgency=medium
 
   * Added more padding and moved the switch to the top-right corner of the screen (looks out of place with themes where Gtk.Switch isn't centered)
