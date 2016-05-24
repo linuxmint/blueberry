@@ -7,55 +7,60 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2016-01-20 01:14+0000\n"
-"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"POT-Creation-Date: 2016-04-22 15:48+0100\n"
+"PO-Revision-Date: 2016-04-22 22:40+0000\n"
+"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
-#: ../usr/lib/blueberry/blueberry.py:67
-#: ../usr/lib/blueberry/blueberry-tray.py:71
+#: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
+#: usr/lib/blueberry/blueberry-tray.py:52
+#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry.py:81
+#: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
 msgstr "El Bluetooth està inhabilitat"
 
-#: ../usr/lib/blueberry/blueberry.py:82
+#: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
 msgstr "No s’ha trobat cap adaptador de Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry.py:83
+#: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "El Bluetooth està inhabilitat físicament"
 
-#: ../usr/lib/blueberry/blueberry.py:118
+#: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon when bluetooth is enabled"
 msgstr ""
 "Mostra una icona a l’àrea de notificacions quan el Bluetooth estigui "
 "habilitat"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:66
+#: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] "Bluetooth: %d dispositiu connectat"
 msgstr[1] "Bluetooth: %d dispositius connectats"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:106
+#: usr/lib/blueberry/blueberry-tray.py:103
 msgid "Send files to a device"
 msgstr "Envia fitxers a un dispositiu"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:110
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Open Bluetooth device manager"
 msgstr "Obre el gestor de dispositius Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:116
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Quit"
 msgstr "Surt"
+
+#: generate_desktop_files:25
+msgid "Configure Bluetooth settings"
+msgstr "Configura les opcions de Bluetooth"

@@ -7,52 +7,57 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-03-15 09:38+0000\n"
+"POT-Creation-Date: 2016-04-22 15:48+0100\n"
+"PO-Revision-Date: 2016-04-23 05:16+0000\n"
 "Last-Translator: AlephAlpha <alephalpha911@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
-#: ../usr/lib/blueberry/blueberry.py:67
-#: ../usr/lib/blueberry/blueberry-tray.py:71
+#: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
+#: usr/lib/blueberry/blueberry-tray.py:52
+#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr "蓝牙"
 
-#: ../usr/lib/blueberry/blueberry.py:81
+#: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
 msgstr "蓝牙已禁用"
 
-#: ../usr/lib/blueberry/blueberry.py:82
+#: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
 msgstr "未找到蓝牙适配器"
 
-#: ../usr/lib/blueberry/blueberry.py:83
+#: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "蓝牙已通过硬件开关禁用"
 
-#: ../usr/lib/blueberry/blueberry.py:118
+#: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon when bluetooth is enabled"
 msgstr "蓝牙启用时显示托盘图标"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:66
+#: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] "蓝牙：已连接 %d 个设备"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:106
+#: usr/lib/blueberry/blueberry-tray.py:103
 msgid "Send files to a device"
 msgstr "发送文件到设备"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:110
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Open Bluetooth device manager"
 msgstr "打开蓝牙设备管理器"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:116
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Quit"
 msgstr "退出"
+
+#: generate_desktop_files:25
+msgid "Configure Bluetooth settings"
+msgstr "配置蓝牙设置"

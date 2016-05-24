@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2016-03-30 19:06+0000\n"
+"POT-Creation-Date: 2016-04-22 15:48+0100\n"
+"PO-Revision-Date: 2016-05-13 18:03+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,31 +16,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
-#: ../usr/lib/blueberry/blueberry.py:67
-#: ../usr/lib/blueberry/blueberry-tray.py:71
+#: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
+#: usr/lib/blueberry/blueberry-tray.py:52
+#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr "Блутут"
 
-#: ../usr/lib/blueberry/blueberry.py:81
+#: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
 msgstr "Блутут је искључен"
 
-#: ../usr/lib/blueberry/blueberry.py:82
+#: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
 msgstr "Нису пронађени примопредајници Блутута"
 
-#: ../usr/lib/blueberry/blueberry.py:83
+#: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Блутут је искључен физичким прекидачем"
 
-#: ../usr/lib/blueberry/blueberry.py:118
+#: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon when bluetooth is enabled"
 msgstr "Прикажи иконицу у системској касети кад је Блутут укључен"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:66
+#: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
@@ -48,14 +49,18 @@ msgstr[0] "Блутут: %d уређај је повезан"
 msgstr[1] "Блутут: %d уређаја су повезана"
 msgstr[2] "Блутут: %d уређаја је повезано"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:106
+#: usr/lib/blueberry/blueberry-tray.py:103
 msgid "Send files to a device"
 msgstr "Пошаљи датотеке на уређај"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:110
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Open Bluetooth device manager"
 msgstr "Отвори управника Блутут уређаја"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:116
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Quit"
 msgstr "Напусти"
+
+#: generate_desktop_files:25
+msgid "Configure Bluetooth settings"
+msgstr "Измените подешавања блутута"

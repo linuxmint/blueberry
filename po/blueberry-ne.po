@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-03-14 12:33+0100\n"
+"POT-Creation-Date: 2016-04-22 15:48+0100\n"
 "PO-Revision-Date: 2015-03-21 10:35+0000\n"
 "Last-Translator: Sharad Chand <sharcnd@hotmail.com>\n"
 "Language-Team: Nepali <ne@li.org>\n"
@@ -15,45 +15,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
-#: ../usr/lib/blueberry/blueberry.py:67
-#: ../usr/lib/blueberry/blueberry-tray.py:71
+#: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
+#: usr/lib/blueberry/blueberry-tray.py:52
+#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr "ब्लुटुथ"
 
-#: ../usr/lib/blueberry/blueberry.py:81
+#: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
 msgstr "ब्लुटुथ बन्द छ"
 
-#: ../usr/lib/blueberry/blueberry.py:82
+#: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
 msgstr "कुनै पनि ब्लुटुठ यन्त्रहरू फेला परेन"
 
-#: ../usr/lib/blueberry/blueberry.py:83
+#: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "हार्डवेयर स्विचले गर्दा ब्लुटुथ बन्द छ"
 
-#: ../usr/lib/blueberry/blueberry.py:118
+#: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon when bluetooth is enabled"
 msgstr "ब्लुटुथ खुलेको बेला ट्रेमा आइकन देखाउनुहोस्"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:66
+#: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] "ब्लुटुथ: %d यन्त्र जोडिएका छन्"
 msgstr[1] "ब्लुटुथ: %d यन्त्रहरु जोडिएका छन्"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:106
+#: usr/lib/blueberry/blueberry-tray.py:103
 msgid "Send files to a device"
 msgstr "यन्त्रमा फाइल भेज्नुहोस्"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:110
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Open Bluetooth device manager"
 msgstr "ब्लुटुथ यन्त्र म्यानेजर खोल्नुहोस्"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:116
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Quit"
 msgstr "बन्द गर्नुहोस्"
+
+#: generate_desktop_files:25
+msgid "Configure Bluetooth settings"
+msgstr ""

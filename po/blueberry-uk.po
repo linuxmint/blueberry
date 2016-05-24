@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-03-14 12:33+0100\n"
-"PO-Revision-Date: 2015-12-17 06:24+0000\n"
+"POT-Creation-Date: 2016-04-22 15:48+0100\n"
+"PO-Revision-Date: 2016-05-01 05:26+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,31 +16,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
-#: ../usr/lib/blueberry/blueberry.py:67
-#: ../usr/lib/blueberry/blueberry-tray.py:71
+#: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
+#: usr/lib/blueberry/blueberry-tray.py:52
+#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry.py:81
+#: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth вимкнено"
 
-#: ../usr/lib/blueberry/blueberry.py:82
+#: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
 msgstr "Не знайдено жодного адаптера Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry.py:83
+#: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth вимкнений апаратно"
+msgstr "Bluetooth вимкнено апаратно"
 
-#: ../usr/lib/blueberry/blueberry.py:118
+#: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon when bluetooth is enabled"
-msgstr "Показувати піктограму у треї, коли Bluetooth увімкнений"
+msgstr "Показувати піктограму у системній таці, коли Bluetooth увімкнений"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:66
+#: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
@@ -48,14 +49,18 @@ msgstr[0] "Пристрій Bluetooth: %d під’єднано"
 msgstr[1] "Пристрої Bluetooth: %d під’єднано"
 msgstr[2] "Пристроїв Bluetooth: %d під’єднано"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:106
+#: usr/lib/blueberry/blueberry-tray.py:103
 msgid "Send files to a device"
 msgstr "Відправка файлів на пристрій"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:110
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Open Bluetooth device manager"
 msgstr "Відкрити керування пристроями Bluetooth"
 
-#: ../usr/lib/blueberry/blueberry-tray.py:116
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Quit"
 msgstr "Вийти"
+
+#: generate_desktop_files:25
+msgid "Configure Bluetooth settings"
+msgstr "Налаштувати параметри Bluetooth"

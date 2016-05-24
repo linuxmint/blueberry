@@ -1,4 +1,4 @@
-# Kazakh translation for linuxmint
+# Oriya translation for linuxmint
 # Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-22 15:48+0100\n"
-"PO-Revision-Date: 2016-05-20 08:25+0000\n"
-"Last-Translator: Балкыбаев Мурат <d2vsd1@mail.ru>\n"
-"Language-Team: Kazakh <kk@li.org>\n"
+"PO-Revision-Date: 2016-04-23 13:51+0000\n"
+"Last-Translator: Bijay Swain <abc.bijay4@gmail.com>\n"
+"Language-Team: Oriya <or@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
 "X-Generator: Launchpad (build 18053)\n"
 
@@ -22,43 +22,43 @@ msgstr ""
 #: usr/lib/blueberry/blueberry-tray.py:52
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr "ବ୍ଲୁଟୁଥ"
 
 #: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth сөндірулі тұр"
+msgstr "ବ୍ଲୁଟୁଥ  ବନ୍ଦ ଅଛି"
 
 #: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
-msgstr "Bluetooth адаптерлері табылмады"
+msgstr "କୌଣସି ବ୍ଲୁଟୁଥ ଆଡପଟର  ମିଳିଲା ନାହିଁ"
 
 #: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth құрылғылық қосқышымен сөндірілген"
+msgstr "ବ୍ଲୁଟୁଥକୁ ହାର୍ଡୱେର ସ୍ୱିଚ ଦ୍ୱାରା ବନ୍ଦ କରାହୋଇଅଛି"
 
 #: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon when bluetooth is enabled"
-msgstr "Bluetooth қосуыл тұрғанда, белгішені трейде көрсету"
+msgstr "ବ୍ଲୁଟୁଥ ଅନ ହେଲେ ଟ୍ରେ ଆଇକନ ଦେଖାଇବ"
 
 #: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] "Bluetooth: %d құрылғы қосылды"
-msgstr[1] "Bluetooth: %d құрылғы қосылды"
+msgstr[0] "ବ୍ଲୁଟୁଥ:%d ଡିଭାଇସ୍ ସଂଯୋଗ ଅଛି"
+msgstr[1] "ବ୍ଲୁଟୁଥ: %d ଗୋଟି ଡିଭାଇସ୍ ସଂଯୋଗ ଅଛି"
 
 #: usr/lib/blueberry/blueberry-tray.py:103
 msgid "Send files to a device"
-msgstr "Файлдарды құрылғыға жіберу"
+msgstr "ଗୋଟେ ଡିଭାଇ୍ସ କୁ ଫାଇଲ୍ସ ପଠାଅ"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Open Bluetooth device manager"
-msgstr "Bluetooth құрылғы диспетчерін ашу"
+msgstr "ବ୍ଲୁଟୁଥ ମାନେଜର୍ ଖୋଲ"
 
 #: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Quit"
-msgstr "Шығу"
+msgstr "ବିଦାୟ ନିଅନ୍ତୁ"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr "Bluetooth баптаулары"
+msgstr "ବ୍ଲୁଟୁଥ ସେଟିଂଗର ପରିବର୍ତ୍ତନ କରନ୍ତୁ"
