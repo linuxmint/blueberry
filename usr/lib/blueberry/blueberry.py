@@ -116,7 +116,7 @@ class Blueberry(Gtk.Application):
         self.settings = blueberrySettings.Settings()
 
         traybox = Gtk.HBox()
-        self.traybutton = Gtk.CheckButton(label=_("Show a tray icon when bluetooth is enabled"))
+        self.traybutton = Gtk.CheckButton(label=_("Show a tray icon"))
         self.traybutton.set_active(self.settings.get_tray_enabled())
         self.traybutton.connect("toggled", self.on_tray_button_toggled)
         self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed)
