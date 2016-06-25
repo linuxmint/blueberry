@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-22 15:48+0100\n"
+"POT-Creation-Date: 2016-06-15 11:46+0100\n"
 "PO-Revision-Date: 2016-05-21 12:01+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Khmer <km@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-25 09:30+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 
 #: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
 #: usr/lib/blueberry/blueberry-tray.py:52
@@ -37,8 +37,8 @@ msgid "Bluetooth is disabled by hardware switch"
 msgstr "ប៊្លូធូស​ត្រូវ​បាន​បិទ​ដោយ​កុងតាក់​ផ្នែក​រឹង"
 
 #: usr/lib/blueberry/blueberry.py:119
-msgid "Show a tray icon when bluetooth is enabled"
-msgstr "បង្ហាញ​រូប​តំណាង​ថា​សនៅពេលដែល​ប៊្លូ​ធូ​ស​ត្រូវ​បាន​អនុញ្ញាត​"
+msgid "Show a tray icon"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
@@ -46,15 +46,15 @@ msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] "ប៊្លូ​ធូ​ស​ ៖ %d ឧបករណ៍ត្រវបាន​ភ្ជាប់"
 
-#: usr/lib/blueberry/blueberry-tray.py:103
+#: usr/lib/blueberry/blueberry-tray.py:109
 msgid "Send files to a device"
 msgstr "ផ្ញើឯកសារទៅកាន់ឧបករណ៍មួយ"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Open Bluetooth device manager"
 msgstr "បើក​កម្មវិធី​គ្រប់គ្រង​ឧបករណ៍​ប៊្លូ​ធូ​ស"
 
-#: usr/lib/blueberry/blueberry-tray.py:113
+#: usr/lib/blueberry/blueberry-tray.py:119
 msgid "Quit"
 msgstr "ចាកចេញ"
 

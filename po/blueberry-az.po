@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-22 15:48+0100\n"
+"POT-Creation-Date: 2016-06-15 11:46+0100\n"
 "PO-Revision-Date: 2015-12-23 15:26+0000\n"
 "Last-Translator: Nicat Məmmədov <n1c4t97@gmail.com>\n"
 "Language-Team: Azerbaijani <az@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-25 09:30+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 
 #: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
 #: usr/lib/blueberry/blueberry-tray.py:52
@@ -37,8 +37,8 @@ msgid "Bluetooth is disabled by hardware switch"
 msgstr "Bluetooth avadanlıq tərəfindən bağlanıldı"
 
 #: usr/lib/blueberry/blueberry.py:119
-msgid "Show a tray icon when bluetooth is enabled"
-msgstr "Bluetooth aktiv olanda, paneldə piktoqramla göstər"
+msgid "Show a tray icon"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
@@ -47,15 +47,15 @@ msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] "Bluetooth: %d cihaza bağlanılıb"
 msgstr[1] "Bluetooth: %d cihaza bağlanılıb"
 
-#: usr/lib/blueberry/blueberry-tray.py:103
+#: usr/lib/blueberry/blueberry-tray.py:109
 msgid "Send files to a device"
 msgstr "Cihaza fayl göndər"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Open Bluetooth device manager"
 msgstr "Bluetooth cihaz idarəçisini aç"
 
-#: usr/lib/blueberry/blueberry-tray.py:113
+#: usr/lib/blueberry/blueberry-tray.py:119
 msgid "Quit"
 msgstr "Çıx"
 

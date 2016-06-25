@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-22 15:48+0100\n"
+"POT-Creation-Date: 2016-06-15 11:46+0100\n"
 "PO-Revision-Date: 2016-05-13 18:03+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-25 09:30+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 
 #: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
 #: usr/lib/blueberry/blueberry-tray.py:52
@@ -38,8 +38,8 @@ msgid "Bluetooth is disabled by hardware switch"
 msgstr "Блутут је искључен физичким прекидачем"
 
 #: usr/lib/blueberry/blueberry.py:119
-msgid "Show a tray icon when bluetooth is enabled"
-msgstr "Прикажи иконицу у системској касети кад је Блутут укључен"
+msgid "Show a tray icon"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
@@ -49,15 +49,15 @@ msgstr[0] "Блутут: %d уређај је повезан"
 msgstr[1] "Блутут: %d уређаја су повезана"
 msgstr[2] "Блутут: %d уређаја је повезано"
 
-#: usr/lib/blueberry/blueberry-tray.py:103
+#: usr/lib/blueberry/blueberry-tray.py:109
 msgid "Send files to a device"
 msgstr "Пошаљи датотеке на уређај"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Open Bluetooth device manager"
 msgstr "Отвори управника Блутут уређаја"
 
-#: usr/lib/blueberry/blueberry-tray.py:113
+#: usr/lib/blueberry/blueberry-tray.py:119
 msgid "Quit"
 msgstr "Напусти"
 

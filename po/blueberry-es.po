@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-22 15:48+0100\n"
-"PO-Revision-Date: 2016-04-22 21:19+0000\n"
+"POT-Creation-Date: 2016-06-15 11:46+0100\n"
+"PO-Revision-Date: 2016-06-15 19:46+0000\n"
 "Last-Translator: Isidro Pisa <isidro@utils.info>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-05-24 09:36+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-25 09:30+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 
 #: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
 #: usr/lib/blueberry/blueberry-tray.py:52
@@ -37,9 +37,8 @@ msgid "Bluetooth is disabled by hardware switch"
 msgstr "El Bluetooth está desactivado por el interruptor físico"
 
 #: usr/lib/blueberry/blueberry.py:119
-msgid "Show a tray icon when bluetooth is enabled"
-msgstr ""
-"Mostrar un icono en la bandeja del sistema cuando el bluetooth está activado"
+msgid "Show a tray icon"
+msgstr "Mostrar un icono en la bandeja"
 
 #: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
@@ -48,15 +47,15 @@ msgid_plural "Bluetooth: %d devices connected"
 msgstr[0] "Bluetooth: %d dispositivo conectado"
 msgstr[1] "Bluetooth: %d dispositivos conectados"
 
-#: usr/lib/blueberry/blueberry-tray.py:103
+#: usr/lib/blueberry/blueberry-tray.py:109
 msgid "Send files to a device"
 msgstr "Enviar ficheros a un dispositivo"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Open Bluetooth device manager"
 msgstr "Abrir el administrador de dispositivos Bluetooth"
 
-#: usr/lib/blueberry/blueberry-tray.py:113
+#: usr/lib/blueberry/blueberry-tray.py:119
 msgid "Quit"
 msgstr "Salir"
 
