@@ -1,3 +1,9 @@
+blueberry (1.1.6) serena; urgency=medium
+
+  * Specify versions of Gtk and GnomeBluetooth before loading them via gir
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 02 Nov 2016 14:39:16 +0000
+
 blueberry (1.1.5) sarah; urgency=medium
 
   * Renamed the tray option more accurately
