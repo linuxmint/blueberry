@@ -8,43 +8,43 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-06-15 11:46+0100\n"
-"PO-Revision-Date: 2016-04-28 13:14+0000\n"
-"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
+"PO-Revision-Date: 2016-10-07 17:33+0000\n"
+"Last-Translator: aefgh3962 <aefgh3962@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:30+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:15+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 
 #: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
 #: usr/lib/blueberry/blueberry-tray.py:52
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
-msgstr "บลูทูท"
+msgstr "บลูทูธ"
 
 #: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
-msgstr "บลูทูทถูกปิดใช้งาน"
+msgstr "บลูทูธถูกปิดใช้งาน"
 
 #: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
-msgstr "ไม่พบอะแดปเตอร์บลูทูท"
+msgstr "ไม่พบอะแดปเตอร์บลูทูธ"
 
 #: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "บลูทูทถูกปิดใช้งานด้วยสวิตช์ฮาร์ดแวร์"
+msgstr "บลูทูธถูกปิดใช้งานด้วยการเปิดหรือปิดฮาร์ดแวร์"
 
 #: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon"
-msgstr ""
+msgstr "แสดงไอคอนบนถาด"
 
 #: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] "บลูทูท: %d อุปกรณ์เชื่อมต่อแล้ว"
+msgstr[0] "บลูทูธ: %d อุปกรณ์ถูกเชื่อมต่อ"
 
 #: usr/lib/blueberry/blueberry-tray.py:109
 msgid "Send files to a device"
@@ -52,7 +52,7 @@ msgstr "ส่งแฟ้มไปที่อุปกรณ์"
 
 #: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Open Bluetooth device manager"
-msgstr "เปิดโปรแกรมจัดการอุปกรณ์บลูทูท"
+msgstr "เปิดตัวจัดการอุปกรณ์บลูทูธ"
 
 #: usr/lib/blueberry/blueberry-tray.py:119
 msgid "Quit"
@@ -60,4 +60,4 @@ msgstr "ออก"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr "ตั้งค่าบลูทูท"
+msgstr "กำหนดค่าตั้งบลูทูธ"
