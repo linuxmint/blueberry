@@ -1,3 +1,9 @@
+blueberry (1.1.7) serena; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 10 Nov 2016 09:53:37 +0000
+
 blueberry (1.1.6) serena; urgency=medium
 
   * Specify versions of Gtk and GnomeBluetooth before loading them via gir
