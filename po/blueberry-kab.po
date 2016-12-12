@@ -8,57 +8,57 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-06-15 11:46+0100\n"
-"PO-Revision-Date: 2015-07-22 15:19+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-11-13 19:30+0000\n"
+"Last-Translator: Belkacem Mohammed <belkacem77@gmail.com>\n"
 "Language-Team: Kabyle <kab@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-11-09 17:15+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-12-12 12:15+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 
 #: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
 #: usr/lib/blueberry/blueberry-tray.py:52
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:82
 msgid "Bluetooth is disabled"
-msgstr ""
+msgstr "Bluetooth ur irmid ara"
 
 #: usr/lib/blueberry/blueberry.py:83
 msgid "No Bluetooth adapters found"
-msgstr ""
+msgstr "Ulac amezgay Bluetooth  yettwafen"
 
 #: usr/lib/blueberry/blueberry.py:84
 msgid "Bluetooth is disabled by hardware switch"
-msgstr ""
+msgstr "Bluetooth yessens-it ugezzam n warrum"
 
 #: usr/lib/blueberry/blueberry.py:119
 msgid "Show a tray icon"
-msgstr ""
+msgstr "Sken tignit ɣef ufeggag n irmad"
 
 #: usr/lib/blueberry/blueberry-tray.py:62
 #, python-format
 msgid "Bluetooth: %d device connected"
 msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Bluetooth: %d n yibenk yeqqnen"
+msgstr[1] "Bluetooth: %d n ibenkan yeqqnen"
 
 #: usr/lib/blueberry/blueberry-tray.py:109
 msgid "Send files to a device"
-msgstr ""
+msgstr "Azen ifuyla ɣer yibenk"
 
 #: usr/lib/blueberry/blueberry-tray.py:113
 msgid "Open Bluetooth device manager"
-msgstr ""
+msgstr "Ldi amsefrak n yibenk Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:119
 msgid "Quit"
-msgstr ""
+msgstr "Ffeɣ"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr ""
+msgstr "Swel iɣewwaṛen n Bluetooth"
