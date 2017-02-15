@@ -4,6 +4,10 @@
             <default>true</default>
             <summary>Show a tray icon when bluetooth is enabled or connected</summary>
         </key>
+        <key name="obex-enabled" type="b">
+            <default>true</default>
+            <summary>Allow remote devices to send files to this computer via bluetooth</summary>
+        </key>
     </schema>
 </schemalist>
 

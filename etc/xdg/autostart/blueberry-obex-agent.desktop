@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Bluetooth OBEX Agent
+Comment=Allows to receive files via Bluetooth
+Keywords=files;bluetooth;obex;receive;
+AutostartCondition=GSETTINGS org.blueberry obex-enabled
+Icon=blueberry
+Exec=/usr/lib/blueberry/blueberry-obex-agent.py
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Settings;X-GNOME-NetworkSettings;
+StartupNotify=false
+NoDisplay=true
+NotShowIn=GNOME;KDE;Unity;
