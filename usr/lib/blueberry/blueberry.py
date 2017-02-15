@@ -46,7 +46,9 @@ elif xdg_current_desktop == "LXDE":
 else:
     print "Warning: DE could not be detected!"
     CONF_TOOLS = {}
- 
+    if os.path.exists("/usr/bin/pavucontrol"):
+        CONF_TOOLS["sound"] = "pavucontrol"
+
 class Blueberry(Gtk.Application):
     ''' Create the UI '''
     def __init__(self):
