@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 14:58+0000\n"
+"POT-Creation-Date: 2017-02-16 23:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,12 +82,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: usr/lib/blueberry/blueberry.py:70 usr/lib/blueberry/blueberry-tray.py:38
-#: usr/lib/blueberry/blueberry-tray.py:55
 #: usr/lib/blueberry/blueberry-tray.py:68 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:84
+#: usr/lib/blueberry/blueberry.py:84 usr/lib/blueberry/blueberry-tray.py:55
 msgid "Bluetooth is disabled"
 msgstr ""
 
@@ -101,6 +100,16 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:121
 msgid "Show a tray icon"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:191
+#, python-format
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:193
+#, python-format
+msgid "Visible as %s."
 msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:65

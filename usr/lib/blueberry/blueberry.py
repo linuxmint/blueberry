@@ -63,14 +63,14 @@ class Blueberry(Gtk.Application):
             self.get_active_window().present()
         else:
             self.create_window()
-            
+
     def create_window(self):
         self.window = Gtk.Window(Gtk.WindowType.TOPLEVEL)
 
         self.window.set_title(_("Bluetooth"))
         self.window.set_icon_name("bluetooth")
         self.window.connect("destroy", self.terminate)
-        self.window.set_default_size(640, 480)
+        self.window.set_default_size(500, 400)
 
         self.main_box = Gtk.VBox()
 
@@ -98,13 +98,13 @@ class Blueberry(Gtk.Application):
 
         switchbox = Gtk.VBox()
         hbox = Gtk.HBox()
-        hbox.pack_end(self.rf_switch, False, False, 0)
+        hbox.pack_end(self.rf_switch, False, False, 10)
         switchbox.pack_start(hbox, False, False, 0)
-        switchbox.pack_start(self.status_image, False, False, 10)
+        switchbox.pack_start(self.status_image, False, False, 0)
         switchbox.show_all()
 
-        self.main_box.pack_start(switchbox, False, False, 10)
-        self.main_box.pack_start(self.stack, True, True, 10)
+        self.main_box.pack_start(switchbox, False, False, 0)
+        self.main_box.pack_start(self.stack, True, True, 0)
 
         self.window.add(self.main_box)
 
@@ -123,6 +123,8 @@ class Blueberry(Gtk.Application):
         self.traybutton.connect("toggled", self.on_tray_button_toggled)
         self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed)
 
+        self.obex_enabled = self.settings.gsettings.get_boolean("obex-enabled")
+
         traybox.pack_start(self.traybutton, False, False, 0)
         traybox.show_all()
 
@@ -133,6 +135,13 @@ class Blueberry(Gtk.Application):
         self.update_ui_callback()
 
         self.add_window(self.window)
+
+        self.client = GnomeBluetooth.Client()
+        self.model = self.client.get_model()
+        self.model.connect('row-changed', self.update_status)
+        self.model.connect('row-deleted', self.update_status)
+        self.model.connect('row-inserted', self.update_status)
+        self.update_status()
 
     def panel_changed(self, widget, panel):
         if not panel in CONF_TOOLS:
@@ -154,6 +163,41 @@ class Blueberry(Gtk.Application):
         label = Gtk.Label(message)
         self.stack.add_named(label, name)
         label.show()
+
+    def get_default_adapter_name(self):
+        name = None
+        output = subprocess.check_output(["bt-adapter", "-i"]).strip()
+        for line in output.split("\n"):
+            line = line.strip()
+            if line.startswith("Alias: "):
+                name = line.replace("Alias: ", "").replace(" [rw]", "").replace(" [ro]", "")
+                break
+        return name
+
+    def update_status(self, path=None, iter=None, data=None):
+        try:
+            # In version 3.18, gnome_bluetooth_settings_widget
+            # doesn't give explicit access to its label via gi
+            # but it's a composite widget and its hierarchy is:
+            # scrolledwindow -> viewport -> vbox -> explanation-label
+            scrolledwindow = self.lib_widget.get_children()[0]
+            scrolledwindow.set_shadow_type(Gtk.ShadowType.NONE)
+            viewport = scrolledwindow.get_children()[0]
+            vbox = viewport.get_children()[0]
+            explanation_label = vbox.get_children()[0]
+            name = self.get_default_adapter_name()
+            if name is not None:
+                if self.obex_enabled:
+                    text = _("Visible as %s and available for Bluetooth file transfers.")
+                else:
+                    text = _("Visible as %s.")
+                text = "%s\n" % text
+                explanation_label.set_markup(text % "\"%s\"" % name)
+            else:
+                explanation_label.set_label("")
+        except Exception as e:
+            print (e)
+            return None
 
     def update_ui_callback(self):
         powered = False
