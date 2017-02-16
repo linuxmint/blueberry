@@ -58,18 +58,17 @@ class BluetoothTray:
             self.update_connected_state()
 
     def update_connected_state(self):
-        n_devices = self.get_n_devices()
+        connected_devices = self.get_connected_devices()
 
-        if n_devices > 0:
+        if len(connected_devices) > 0:
             self.icon.set_from_icon_name("blueberry-tray-active")
-            self.icon.set_tooltip_text(gettext.ngettext("Bluetooth: %d device connected" % n_devices, 
-                                                        "Bluetooth: %d devices connected" % n_devices,
-                                                        n_devices))
+            self.icon.set_tooltip_text(_("Bluetooth: Connected to %s") % (", ".join(connected_devices)))
         else:
             self.icon.set_from_icon_name("blueberry-tray")
             self.icon.set_tooltip_text(_("Bluetooth"))
 
-    def get_n_devices(self):
+    def get_connected_devices(self):
+        connected_devices = []
         default_iter = None
 
         iter = self.model.get_iter_first()
@@ -81,20 +80,17 @@ class BluetoothTray:
                 break
             iter = self.model.iter_next(iter)
 
-        if default_iter == None:
-            return False
+        if default_iter != None:
+            iter = self.model.iter_children(default_iter)
+            while iter:
+                connected = self.model.get_value(iter, GnomeBluetooth.Column.CONNECTED)
+                if connected:
+                    name = self.model.get_value(iter, GnomeBluetooth.Column.NAME)
+                    connected_devices.append(name)
 
-        n_devices = 0
+                iter = self.model.iter_next(iter)
 
-        iter = self.model.iter_children(default_iter)
-        while iter:
-            connected = self.model.get_value(iter, GnomeBluetooth.Column.CONNECTED)
-            if connected:
-                n_devices += 1
-
-            iter = self.model.iter_next(iter)
-
-        return n_devices
+        return connected_devices
 
     def on_activate(self, icon, data=None):
         subprocess.Popen(["blueberry"])

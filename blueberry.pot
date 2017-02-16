@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 10:09+0000\n"
+"POT-Creation-Date: 2017-02-16 14:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgstr[1] ""
 
 #: usr/lib/blueberry/blueberry.py:70 usr/lib/blueberry/blueberry-tray.py:38
 #: usr/lib/blueberry/blueberry-tray.py:55
-#: usr/lib/blueberry/blueberry-tray.py:70 generate_desktop_files:25
+#: usr/lib/blueberry/blueberry-tray.py:68 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr ""
 
@@ -105,20 +105,18 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:65
 #, python-format
-msgid "Bluetooth: %d device connected"
-msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] ""
-msgstr[1] ""
+msgid "Bluetooth: Connected to %s"
+msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:112
+#: usr/lib/blueberry/blueberry-tray.py:108
 msgid "Send files to a device"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:116
+#: usr/lib/blueberry/blueberry-tray.py:112
 msgid "Open Bluetooth device manager"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:122
+#: usr/lib/blueberry/blueberry-tray.py:118
 msgid "Quit"
 msgstr ""
 
