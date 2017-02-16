@@ -31,7 +31,7 @@ MyApplet.prototype = {
 
         this.metadata = metadata;
         Main.systrayManager.registerRole("blueberry-tray.py", metadata.uuid);
-        this.set_applet_icon_symbolic_name('bluetooth-disabled');
+        this.set_applet_icon_symbolic_name('blueberry-applet');
         this.set_applet_tooltip(gettextBT("Bluetooth"));
 
         try {
@@ -148,18 +148,18 @@ MyApplet.prototype = {
                 let [ nDevices, connected_devices ] = this._get_connected_devices();
                 if (nDevices >= 0) {
                     if (connected_devices.length > 0) {
-                        this.set_applet_icon_symbolic_name('bluetooth-applet-connected');
+                        this.set_applet_icon_symbolic_name('blueberry-applet-connected');
                         let text = gettextBT("Bluetooth: Connected to %s");
                         text = text.replace("%s", connected_devices.join(", "));
                         this.set_applet_tooltip(text);
                     }
                     else {
-                        this.set_applet_icon_symbolic_name('bluetooth-applet');
+                        this.set_applet_icon_symbolic_name('blueberry-applet');
                         this.set_applet_tooltip(gettextBT("Bluetooth"));
                     }
                 }
                 else {
-                    this.set_applet_icon_symbolic_name('bluetooth-applet-disabled');
+                    this.set_applet_icon_symbolic_name('blueberry-applet-disabled');
                     this.set_applet_tooltip(gettextBT("Bluetooth is disabled"));
                 }
             }
