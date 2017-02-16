@@ -52,7 +52,7 @@ class BluetoothTray:
 
         if self.rfkill.hard_block or self.rfkill.soft_block:
             self.icon.set_from_icon_name("blueberry-tray-disabled")
-            self.icon.set_tooltip_text(_("Bluetooth"))
+            self.icon.set_tooltip_text(_("Bluetooth is disabled"))
         else:
             self.icon.set_from_icon_name("blueberry-tray")
             self.update_connected_state()
