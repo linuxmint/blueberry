@@ -4,7 +4,6 @@ import sys, os, commands
 import gettext
 import rfkillMagic
 import subprocess
-import blueberrySettings
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -115,15 +114,15 @@ class Blueberry(Gtk.Application):
         self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
         self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
 
-        self.settings = blueberrySettings.Settings()
+        self.settings = Gio.Settings("org.blueberry")
 
         traybox = Gtk.HBox()
         self.traybutton = Gtk.CheckButton(label=_("Show a tray icon"))
-        self.traybutton.set_active(self.settings.get_tray_enabled())
+        self.traybutton.set_active(self.settings.get_boolean("tray-enabled"))
         self.traybutton.connect("toggled", self.on_tray_button_toggled)
-        self.settings.gsettings.connect("changed::tray-enabled", self.on_settings_changed)
+        self.settings.connect("changed::tray-enabled", self.on_settings_changed)
 
-        self.obex_enabled = self.settings.gsettings.get_boolean("obex-enabled")
+        self.obex_enabled = self.settings.get_boolean("obex-enabled")
 
         traybox.pack_start(self.traybutton, False, False, 0)
         traybox.show_all()
@@ -151,13 +150,13 @@ class Blueberry(Gtk.Application):
 
     def on_tray_button_toggled(self, widget, data=None):
         if widget.get_active():
-            self.settings.set_tray_enabled(True)
+            self.settings.set_boolean("tray-enabled", True)
             subprocess.Popen(["blueberry-tray"])
         else:
-            self.settings.set_tray_enabled(False)
+            self.settings.set_boolean("tray-enabled", False)
 
     def on_settings_changed(self, settings, key):
-        self.traybutton.set_active(self.settings.get_tray_enabled())
+        self.traybutton.set_active(self.settings.get_boolean("tray-enabled"))
 
     def add_stack_page(self, message, name):
         label = Gtk.Label(message)
