@@ -1,3 +1,22 @@
+blueberry (1.1.10) serena; urgency=medium
+
+  * Add OBEX support
+  * Packaging: Add dependency on bluez-obexd
+  * Packaging: Add dependency on python-dbus
+  * Packaging: Add dependency on python-gi and gir1.2-notify-0.7
+  * Use pavucontrol for sound if present and DE isn't detected
+  * l10n: Update POT file
+  * Tray: Improve tooltip to show the name of the connected devices
+  * Provide a Cinnamon applet
+  * Overwrite the label in GnomeBluetooth SettingsWidget
+  * Fix cinnamon icons
+  * Remove blueberrySettings.py
+  * Add settings
+  * Add missing file
+  * Widen the default window size to 640px
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 17 Feb 2017 11:51:52 +0000
+
 blueberry (1.1.9) serena; urgency=medium
 
   * l10n: Update translations
