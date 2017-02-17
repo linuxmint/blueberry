@@ -4,12 +4,11 @@ import sys, os, commands
 import gettext
 import rfkillMagic
 import subprocess
-
+from BlueberrySettingsWidgets import SettingsPage, SettingsBox, SettingsRow
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
 from gi.repository import Gtk, GnomeBluetooth, Gio
-
 
 BLUETOOTH_DISABLED_PAGE      = "disabled-page"
 BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
@@ -19,40 +18,12 @@ BLUETOOTH_WORKING_PAGE       = "working-page"
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
 
-# detect the DE environment
-wm_info = commands.getoutput("wmctrl -m")
-if "XDG_CURRENT_DESKTOP" in os.environ:
-    xdg_current_desktop = os.environ["XDG_CURRENT_DESKTOP"]
-else:
-    xdg_current_desktop = ""
-
-if "Marco" in wm_info or xdg_current_desktop == "MATE":
-    CONF_TOOLS = {"sound": "mate-volume-control", "keyboard": "mate-keyboard-properties", "mouse": "mate-mouse-properties"}
-elif "Xfwm4" in wm_info or xdg_current_desktop == "XFCE":
-    CONF_TOOLS = {"keyboard": "xfce4-keyboard-settings", "mouse": "xfce4-mouse-settings"}
-    if os.path.exists("/usr/bin/pavucontrol"):
-        CONF_TOOLS["sound"] = "pavucontrol"
-    else:
-        CONF_TOOLS["sound"] = "xfce4-mixer"
-elif "Muffin" in wm_info or xdg_current_desktop == "X-Cinnamon":
-    CONF_TOOLS = {"sound": "cinnamon-settings sound", "keyboard": "cinnamon-settings keyboard", "mouse": "cinnamon-settings mouse"}
-elif "Mutter" in wm_info or "GNOME" in xdg_current_desktop:
-    CONF_TOOLS = {"sound": "gnome-control-center sound", "keyboard": "gnome-control-center keyboard", "mouse": "gnome-control-center mouse"}
-elif "Unity" in wm_info or xdg_current_desktop == "Unity":
-    CONF_TOOLS = {"sound": "unity-control-center sound", "keyboard": "unity-control-center keyboard", "mouse": "unity-control-center mouse"}
-elif xdg_current_desktop == "LXDE":
-    CONF_TOOLS = {"sound": "pavucontrol", "keyboard": "lxinput", "mouse": "lxinput"}
-else:
-    print "Warning: DE could not be detected!"
-    CONF_TOOLS = {}
-    if os.path.exists("/usr/bin/pavucontrol"):
-        CONF_TOOLS["sound"] = "pavucontrol"
-
 class Blueberry(Gtk.Application):
     ''' Create the UI '''
     def __init__(self):
 
         Gtk.Application.__init__(self, application_id='com.linuxmint.blueberry', flags=Gio.ApplicationFlags.FLAGS_NONE)
+        self.detect_desktop_environment()
         self.connect("activate", self.on_activate)
 
     def on_activate(self, data=None):
@@ -62,6 +33,42 @@ class Blueberry(Gtk.Application):
             self.get_active_window().present()
         else:
             self.create_window()
+
+    def detect_desktop_environment(self):
+        wm_info = commands.getoutput("wmctrl -m")
+        if "XDG_CURRENT_DESKTOP" in os.environ:
+            xdg_current_desktop = os.environ["XDG_CURRENT_DESKTOP"]
+        else:
+            xdg_current_desktop = ""
+
+        if "Marco" in wm_info or xdg_current_desktop == "MATE":
+            self.de = "Mate"
+            self.configuration_tools = {"sound": "mate-volume-control", "keyboard": "mate-keyboard-properties", "mouse": "mate-mouse-properties"}
+        elif "Xfwm4" in wm_info or xdg_current_desktop == "XFCE":
+            self.de = "Xfce"
+            self.configuration_tools = {"keyboard": "xfce4-keyboard-settings", "mouse": "xfce4-mouse-settings"}
+            if os.path.exists("/usr/bin/pavucontrol"):
+                self.configuration_tools["sound"] = "pavucontrol"
+            else:
+                self.configuration_tools["sound"] = "xfce4-mixer"
+        elif "Muffin" in wm_info or xdg_current_desktop == "X-Cinnamon":
+            self.de = "Cinnamon"
+            self.configuration_tools = {"sound": "cinnamon-settings sound", "keyboard": "cinnamon-settings keyboard", "mouse": "cinnamon-settings mouse"}
+        elif "Mutter" in wm_info or "GNOME" in xdg_current_desktop:
+            self.de = "Gnome"
+            self.configuration_tools = {"sound": "gnome-control-center sound", "keyboard": "gnome-control-center keyboard", "mouse": "gnome-control-center mouse"}
+        elif "Unity" in wm_info or xdg_current_desktop == "Unity":
+            self.de = "Unity"
+            self.configuration_tools = {"sound": "unity-control-center sound", "keyboard": "unity-control-center keyboard", "mouse": "unity-control-center mouse"}
+        elif xdg_current_desktop == "LXDE":
+            self.de = "LXDE"
+            self.configuration_tools = {"sound": "pavucontrol", "keyboard": "lxinput", "mouse": "lxinput"}
+        else:
+            self.de = "Unknown"
+            print "Warning: DE could not be detected!"
+            self.configuration_tools = {}
+            if os.path.exists("/usr/bin/pavucontrol"):
+                self.configuration_tools["sound"] = "pavucontrol"
 
     def create_window(self):
         self.window = Gtk.Window(Gtk.WindowType.TOPLEVEL)
@@ -73,27 +80,58 @@ class Blueberry(Gtk.Application):
 
         self.main_box = Gtk.VBox()
 
+        # Toolbar
+        toolbar = Gtk.Toolbar()
+        toolbar.get_style_context().add_class("primary-toolbar")
+        self.main_box.pack_start(toolbar, False, False, 0)
+
+        self.main_stack = Gtk.Stack()
+        self.main_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
+        self.main_stack.set_transition_duration(150)
+        self.main_box.pack_start(self.main_stack, True, True, 0)
+
+        stack_switcher = Gtk.StackSwitcher()
+        stack_switcher.set_stack(self.main_stack)
+
+        tool_item = Gtk.ToolItem()
+        tool_item.set_expand(True)
+        tool_item.get_style_context().add_class("raised")
+        toolbar.insert(tool_item, 0)
+        switch_holder = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        switch_holder.set_border_width(1)
+        tool_item.add(switch_holder)
+        switch_holder.pack_start(stack_switcher, True, True, 0)
+        stack_switcher.set_halign(Gtk.Align.CENTER)
+        toolbar.show_all()
+
+        self.settings = Gio.Settings("org.blueberry")
+
+        debug = False
+        if len(sys.argv) > 1 and sys.argv[1] == "debug":
+            debug = True
+
+        # Devices
+        self.devices_box = Gtk.VBox()
+        self.devices_box.set_border_width(12)
+
+        self.rf_switch = Gtk.Switch()
+        self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
+        self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
+
         self.status_image = Gtk.Image()
         self.status_image.set_from_icon_name("blueberry", Gtk.IconSize.DIALOG)
         self.status_image.show()
 
         self.stack = Gtk.Stack()
-        self.rf_switch = Gtk.Switch()
-
         self.add_stack_page(_("Bluetooth is disabled"), BLUETOOTH_DISABLED_PAGE);
         self.add_stack_page(_("No Bluetooth adapters found"), BLUETOOTH_NO_DEVICES_PAGE);
         self.add_stack_page(_("Bluetooth is disabled by hardware switch"), BLUETOOTH_HW_DISABLED_PAGE);
 
         self.lib_widget = GnomeBluetooth.SettingsWidget.new();
-
         self.lib_widget.connect("panel-changed", self.panel_changed);
-
         self.stack.add_named(self.lib_widget, BLUETOOTH_WORKING_PAGE)
-
         self.lib_widget.show()
         self.stack.show();
-        self.main_box.show();
-        self.main_box.set_border_width(12)
 
         switchbox = Gtk.VBox()
         hbox = Gtk.HBox()
@@ -102,38 +140,49 @@ class Blueberry(Gtk.Application):
         switchbox.pack_start(self.status_image, False, False, 0)
         switchbox.show_all()
 
-        self.main_box.pack_start(switchbox, False, False, 0)
-        self.main_box.pack_start(self.stack, True, True, 0)
+        self.devices_box.pack_start(switchbox, False, False, 0)
+        self.devices_box.pack_start(self.stack, True, True, 0)
+
+        self.main_stack.add_titled(self.devices_box, "devices", _("Devices"))
+
+        # Settings
+
+        page = SettingsPage()
+
+        section = page.add_section(_("Bluetooth settings"))
+        self.adapter_name_entry = Gtk.Entry()
+        self.adapter_name_entry.set_text(self.get_default_adapter_name())
+        self.adapter_name_entry.connect("changed", self.on_adapter_name_changed)
+        row = SettingsRow(Gtk.Label(_("Name")), self.adapter_name_entry)
+        row.set_tooltip_text(_("This is the Bluetooth name of your computer"))
+        section.add_row(row)
+
+        self.obex_switch = Gtk.Switch()
+        self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
+        self.obex_switch.connect("notify::active", self.on_obex_switch_toggled)
+        self.settings.connect("changed", self.on_settings_changed)
+        row = SettingsRow(Gtk.Label(_("Receive files from remote devices")), self.obex_switch)
+        row.set_tooltip_text(_("This option allows your computer to receive files transferred over Bluetooth (OBEX)"))
+        section.add_row(row)
+
+        self.tray_switch = Gtk.Switch()
+        self.tray_switch.set_active(self.settings.get_boolean("tray-enabled"))
+        self.tray_switch.connect("notify::active", self.on_tray_switch_toggled)
+        self.settings.connect("changed", self.on_settings_changed)
+        if self.de != "Cinnamon":
+            # In Cinnamon we're using an applet instead
+            section.add_row(SettingsRow(Gtk.Label(_("Show a tray icon")), self.tray_switch))
 
         self.window.add(self.main_box)
 
-        debug = False
-        if len(sys.argv) > 1 and sys.argv[1] == "debug":
-            debug = True
+        self.main_stack.add_titled(page, "settings", _("Settings"))
 
-        self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
-        self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
-
-        self.settings = Gio.Settings("org.blueberry")
-
-        traybox = Gtk.HBox()
-        self.traybutton = Gtk.CheckButton(label=_("Show a tray icon"))
-        self.traybutton.set_active(self.settings.get_boolean("tray-enabled"))
-        self.traybutton.connect("toggled", self.on_tray_button_toggled)
-        self.settings.connect("changed::tray-enabled", self.on_settings_changed)
-
-        self.obex_enabled = self.settings.get_boolean("obex-enabled")
-
-        traybox.pack_start(self.traybutton, False, False, 0)
-        traybox.show_all()
-
-        self.main_box.pack_start(traybox, False, False, 0)
-
-        self.window.show()
+        self.devices_box.show_all()
 
         self.update_ui_callback()
 
         self.add_window(self.window)
+        self.window.show_all()
 
         self.client = GnomeBluetooth.Client()
         self.model = self.client.get_model()
@@ -143,20 +192,34 @@ class Blueberry(Gtk.Application):
         self.update_status()
 
     def panel_changed(self, widget, panel):
-        if not panel in CONF_TOOLS:
+        if not panel in self.configuration_tools:
             print "Warning, no configuration tool known for panel '%s'" % panel
         else:
-            os.system("%s &" % CONF_TOOLS[panel])
+            os.system("%s &" % self.configuration_tools[panel])
 
-    def on_tray_button_toggled(self, widget, data=None):
+    def on_tray_switch_toggled(self, widget, data=None):
         if widget.get_active():
             self.settings.set_boolean("tray-enabled", True)
             subprocess.Popen(["blueberry-tray"])
         else:
             self.settings.set_boolean("tray-enabled", False)
 
+    def on_obex_switch_toggled(self, widget, data=None):
+        if widget.get_active():
+            self.settings.set_boolean("obex-enabled", True)
+            os.system("/usr/lib/blueberry/blueberry-obex-agent.py &")
+        else:
+            self.settings.set_boolean("obex-enabled", False)
+            os.system("killall -9 blueberry-obex-agent");
+        self.update_status()
+
+    def on_adapter_name_changed(self, entry):
+        subprocess.call(["bt-adapter", "--set", "Alias", entry.get_text()])
+        self.update_status()
+
     def on_settings_changed(self, settings, key):
-        self.traybutton.set_active(self.settings.get_boolean("tray-enabled"))
+        self.tray_switch.set_active(self.settings.get_boolean("tray-enabled"))
+        self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
 
     def add_stack_page(self, message, name):
         label = Gtk.Label(message)
@@ -186,7 +249,7 @@ class Blueberry(Gtk.Application):
             explanation_label = vbox.get_children()[0]
             name = self.get_default_adapter_name()
             if name is not None:
-                if self.obex_enabled:
+                if self.settings.get_boolean('obex-enabled'):
                     text = _("Visible as %s and available for Bluetooth file transfers.")
                 else:
                     text = _("Visible as %s.")

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 23:27+0000\n"
+"POT-Creation-Date: 2017-02-17 11:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,51 +81,81 @@ msgid_plural "Received %d more files in the background"
 msgstr[0] ""
 msgstr[1] ""
 
-#: usr/lib/blueberry/blueberry.py:70 usr/lib/blueberry/blueberry-tray.py:38
-#: usr/lib/blueberry/blueberry-tray.py:68 generate_desktop_files:25
+#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
+#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:84 usr/lib/blueberry/blueberry-tray.py:55
+#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
 msgid "Bluetooth is disabled"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:85
+#: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:86
+#: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:121
+#: usr/lib/blueberry/blueberry.py:146
+msgid "Devices"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:152
+msgid "Bluetooth settings"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:156
+msgid "Name"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:157
+msgid "This is the Bluetooth name of your computer"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:164
+msgid "Receive files from remote devices"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:165
+msgid ""
+"This option allows your computer to receive files transferred over Bluetooth "
+"(OBEX)"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:191
+#: usr/lib/blueberry/blueberry.py:178
+msgid "Settings"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:253
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:193
+#: usr/lib/blueberry/blueberry.py:255
 #, python-format
 msgid "Visible as %s."
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:65
+#: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:108
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:112
+#: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:118
+#: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"
 msgstr ""
 
