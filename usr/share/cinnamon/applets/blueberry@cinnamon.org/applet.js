@@ -128,7 +128,6 @@ MyApplet.prototype = {
                 for (let i = 0; i < lines.length; i++) {
                     let line = lines[i];
                     if (line.search("Bluetooth") != -1) {
-                        global.logError("Found BT Adapter: " + line);
                         return true;
                     }
                 }
