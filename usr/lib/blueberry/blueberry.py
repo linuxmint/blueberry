@@ -78,7 +78,7 @@ class Blueberry(Gtk.Application):
         self.window.connect("destroy", self.terminate)
         self.window.set_default_size(640, 400)
 
-        self.main_box = Gtk.VBox()
+        self.main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         # Toolbar
         toolbar = Gtk.Toolbar()
@@ -111,7 +111,7 @@ class Blueberry(Gtk.Application):
             debug = True
 
         # Devices
-        self.devices_box = Gtk.VBox()
+        self.devices_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.devices_box.set_border_width(12)
 
         self.rf_switch = Gtk.Switch()
@@ -133,8 +133,8 @@ class Blueberry(Gtk.Application):
         self.lib_widget.show()
         self.stack.show();
 
-        switchbox = Gtk.VBox()
-        hbox = Gtk.HBox()
+        switchbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         hbox.pack_end(self.rf_switch, False, False, 10)
         switchbox.pack_start(hbox, False, False, 0)
         switchbox.pack_start(self.status_image, False, False, 0)
