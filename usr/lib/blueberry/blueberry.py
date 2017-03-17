@@ -76,7 +76,7 @@ class Blueberry(Gtk.Application):
         self.window.set_title(_("Bluetooth"))
         self.window.set_icon_name("bluetooth")
         self.window.connect("destroy", self.terminate)
-        self.window.set_default_size(640, 400)
+        self.window.set_default_size(800, 400)
 
         self.main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
