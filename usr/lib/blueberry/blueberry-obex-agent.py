@@ -714,16 +714,21 @@ class AgentManager(Base):
 if __name__ == '__main__':
     settings = Gio.Settings("org.blueberry")
     if settings.get_boolean("obex-enabled"):
-        dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
-        mainloop = GObject.MainLoop()
-        service = TransferService()
-        service.load()
-        cont = True
-        while cont:
-            try:
-                mainloop.run()
-            except KeyboardInterrupt:
-                service.unload()
-                cont = False
+        try:
+            dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
+            mainloop = GObject.MainLoop()
+            service = TransferService()
+            service.load()
+            cont = True
+            while cont:
+                try:
+                    mainloop.run()
+                except KeyboardInterrupt:
+                    service.unload()
+                    cont = False
+        except Exception as e:
+            dprint("Something went wrong in blueberry-obex-agent: %s" % e)
+            dprint("Setting org.blueberry obex-enabled to False and exiting.")
+            settings.set_boolean("obex-enabled", False)
     else:
         dprint("org.blueberry obex-enabled is False, exiting.")
