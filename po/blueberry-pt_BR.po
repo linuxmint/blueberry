@@ -7,55 +7,158 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-06-15 11:46+0100\n"
-"PO-Revision-Date: 2016-06-15 13:47+0000\n"
+"POT-Creation-Date: 2017-02-17 11:24+0000\n"
+"PO-Revision-Date: 2017-02-17 13:57+0000\n"
 "Last-Translator: Sitonir de Oliveira <sitonir@outlook.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:15+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:39+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 
-#: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
-#: usr/lib/blueberry/blueberry-tray.py:52
+#: usr/lib/blueberry/blueberry-obex-agent.py:303
+msgid "Incoming file over Bluetooth"
+msgstr "Recebendo arquivo por Bluetooth"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:304
+#, python-format
+msgid "Incoming file %(0)s from %(1)s"
+msgstr "Recebendo arquivo %(0)s de %(1)s"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:306
+msgid "Accept"
+msgstr "Aceitar"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:306
+msgid "Reject"
+msgstr "Rejeitar"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:309
+msgid "Receiving file"
+msgstr "Recebendo arquivo"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:310
+#, python-format
+msgid "Receiving file %(0)s from %(1)s"
+msgstr "Recebendo arquivo %(0)s de %(1)s"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:402
+msgid "File received"
+msgstr "Arquivo recebido"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:403
+#, python-format
+msgid "File %(0)s from %(1)s successfully received"
+msgstr "Arquivo %(0)s de %(1)s recebido com sucesso"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:408
+msgid "Transfer failed"
+msgstr "Falha na transferência"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:409
+#, python-format
+msgid "Transfer of file %(0)s failed"
+msgstr "Transferência de arquivo %(0)s falhou"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:425
+#: usr/lib/blueberry/blueberry-obex-agent.py:431
+msgid "Files received"
+msgstr "Arquivos recebidos"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:426
+#, python-format
+msgid "Received %d file in the background"
+msgid_plural "Received %d files in the background"
+msgstr[0] "Recebeu %d arquivo em segundo plano"
+msgstr[1] "Recebeu %d arquivos em segundo plano"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:432
+#, python-format
+msgid "Received %d more file in the background"
+msgid_plural "Received %d more files in the background"
+msgstr[0] "Recebeu mais %d arquivo em segundo plano"
+msgstr[1] "Recebeu mais %d arquivos em segundo plano"
+
+#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:82
+#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth está desativado"
 
-#: usr/lib/blueberry/blueberry.py:83
+#: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
 msgstr "Nenhum adaptador bluetooth encontrado"
 
-#: usr/lib/blueberry/blueberry.py:84
+#: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Bluetooth desativado via hardware"
 
-#: usr/lib/blueberry/blueberry.py:119
+#: usr/lib/blueberry/blueberry.py:146
+msgid "Devices"
+msgstr "Dispositivos"
+
+#: usr/lib/blueberry/blueberry.py:152
+msgid "Bluetooth settings"
+msgstr "Configurações do bluetooth"
+
+#: usr/lib/blueberry/blueberry.py:156
+msgid "Name"
+msgstr "Nome"
+
+#: usr/lib/blueberry/blueberry.py:157
+msgid "This is the Bluetooth name of your computer"
+msgstr "Este é o nome do Bluetooth do seu computador"
+
+#: usr/lib/blueberry/blueberry.py:164
+msgid "Receive files from remote devices"
+msgstr "Receber arquivos de dispositivos remotos"
+
+#: usr/lib/blueberry/blueberry.py:165
+msgid ""
+"This option allows your computer to receive files transferred over Bluetooth "
+"(OBEX)"
+msgstr ""
+"Esta opção permite que seu computador receba arquivos transferidos pelo "
+"bluetooth (OBEX)"
+
+#: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
 msgstr "Mostrar ícone na bandeja"
 
-#: usr/lib/blueberry/blueberry-tray.py:62
-#, python-format
-msgid "Bluetooth: %d device connected"
-msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] "Bluetooth: %d dispositivo conectado"
-msgstr[1] "Bluetooth: %d dispositivos conectados"
+#: usr/lib/blueberry/blueberry.py:178
+msgid "Settings"
+msgstr "Configurações"
 
-#: usr/lib/blueberry/blueberry-tray.py:109
+#: usr/lib/blueberry/blueberry.py:253
+#, python-format
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr ""
+"Visível como %s e disponível para transferência de arquivos pelo Bluetooth."
+
+#: usr/lib/blueberry/blueberry.py:255
+#, python-format
+msgid "Visible as %s."
+msgstr "Visível como %s."
+
+#: usr/lib/blueberry/blueberry-tray.py:64
+#, python-format
+msgid "Bluetooth: Connected to %s"
+msgstr "Bluetooth: Conectado a %s"
+
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
 msgstr "Enviar arquivos para um dispositivo"
 
-#: usr/lib/blueberry/blueberry-tray.py:113
+#: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
 msgstr "Abrir gerenciador de dispositivos Bluetooth"
 
-#: usr/lib/blueberry/blueberry-tray.py:119
+#: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"
 msgstr "Sair"
 

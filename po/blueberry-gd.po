@@ -2,66 +2,173 @@
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
+# GunChleoc <fios@foramnagaidhlig.net>, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-06-15 11:46+0100\n"
-"PO-Revision-Date: 2015-03-25 09:10+0000\n"
-"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
-"Language-Team: Gaelic; Scottish <gd@li.org>\n"
+"POT-Creation-Date: 2017-02-17 11:24+0000\n"
+"PO-Revision-Date: 2017-03-10 17:39+0000\n"
+"Last-Translator: GunChleoc <Unknown>\n"
+"Language-Team: Fòram na Gàidhlig\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:15+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:39+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
+"Language: gd\n"
 
-#: usr/lib/blueberry/blueberry.py:68 usr/lib/blueberry/blueberry-tray.py:35
-#: usr/lib/blueberry/blueberry-tray.py:52
+#: usr/lib/blueberry/blueberry-obex-agent.py:303
+msgid "Incoming file over Bluetooth"
+msgstr "Tha faidhle a' tighinn a-steach thar Bluetooth"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:304
+#, python-format
+msgid "Incoming file %(0)s from %(1)s"
+msgstr "Tha faidhle %(0)s a' tighinn a-steach o %(1)s"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:306
+msgid "Accept"
+msgstr "Gabh ris"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:306
+msgid "Reject"
+msgstr "Diùlt"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:309
+msgid "Receiving file"
+msgstr "A' faighinn faidhle"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:310
+#, python-format
+msgid "Receiving file %(0)s from %(1)s"
+msgstr "A' faighinn faidhle %(0)s à %(1)s"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:402
+msgid "File received"
+msgstr "Fhuair thu faidhle"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:403
+#, python-format
+msgid "File %(0)s from %(1)s successfully received"
+msgstr "Tha thu air an fhaidhle %(0)s fhaighinn o %(1)s"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:408
+msgid "Transfer failed"
+msgstr "Dh'fhàillig leis an tar-chur"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:409
+#, python-format
+msgid "Transfer of file %(0)s failed"
+msgstr "Dh'fhàillig le tar-chur an fhaidhle %(0)s"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:425
+#: usr/lib/blueberry/blueberry-obex-agent.py:431
+msgid "Files received"
+msgstr "Fhuair thu faidhlichean"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:426
+#, python-format
+msgid "Received %d file in the background"
+msgid_plural "Received %d files in the background"
+msgstr[0] "Fhuair thu %d fhaidhle sa chùlaibh"
+msgstr[1] "Fhuair thu %d fhaidhle sa chùlaibh"
+msgstr[2] "Fhuair thu %d faidhlichean sa chùlaibh"
+msgstr[3] "Fhuair thu %d faidhle sa chùlaibh"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:432
+#, python-format
+msgid "Received %d more file in the background"
+msgid_plural "Received %d more files in the background"
+msgstr[0] "Fhuair thu %d fhaidhle a bharrachd sa chùlaibh"
+msgstr[1] "Fhuair thu %d fhaidhle a bharrachd sa chùlaibh"
+msgstr[2] "Fhuair thu %d faidhlichean a bharrachd sa chùlaibh"
+msgstr[3] "Fhuair thu %d faidhle a bharrachd sa chùlaibh"
+
+#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:82
+#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
 msgid "Bluetooth is disabled"
 msgstr "Tha Bluetooth à comas"
 
-#: usr/lib/blueberry/blueberry.py:83
+#: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
 msgstr "Cha deach freagarraichearan Bluetooth a lorg"
 
-#: usr/lib/blueberry/blueberry.py:84
+#: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Chaidh Bluetooth a chur à comas le suidse bathair-chruaidh"
 
-#: usr/lib/blueberry/blueberry.py:119
-msgid "Show a tray icon"
+#: usr/lib/blueberry/blueberry.py:146
+msgid "Devices"
+msgstr "Uidheaman"
+
+#: usr/lib/blueberry/blueberry.py:152
+msgid "Bluetooth settings"
+msgstr "Roghainnean Bluetooth"
+
+#: usr/lib/blueberry/blueberry.py:156
+msgid "Name"
+msgstr "Ainm"
+
+#: usr/lib/blueberry/blueberry.py:157
+msgid "This is the Bluetooth name of your computer"
+msgstr "Seo ainm Bluetooth a' choimpiutair agad"
+
+#: usr/lib/blueberry/blueberry.py:164
+msgid "Receive files from remote devices"
+msgstr "Faigh faidhlichean o innealan cèine"
+
+#: usr/lib/blueberry/blueberry.py:165
+msgid ""
+"This option allows your computer to receive files transferred over Bluetooth "
+"(OBEX)"
 msgstr ""
+"Leigidh an roghainn seo leis a' choimpiutair agad faidhlichean fhaighinn a "
+"thèid a thar-chur le Bluetooth (OBEX)"
 
-#: usr/lib/blueberry/blueberry-tray.py:62
+#: usr/lib/blueberry/blueberry.py:174
+msgid "Show a tray icon"
+msgstr "Seall ìomhaigheag treidhe"
+
+#: usr/lib/blueberry/blueberry.py:178
+msgid "Settings"
+msgstr "Roghainnean"
+
+#: usr/lib/blueberry/blueberry.py:253
 #, python-format
-msgid "Bluetooth: %d device connected"
-msgid_plural "Bluetooth: %d devices connected"
-msgstr[0] "Bluetooth: %d uidheam ceangailte"
-msgstr[1] "Bluetooth: %d uidheam ceangailte"
-msgstr[2] "Bluetooth: %d uidheaman ceangailte"
-msgstr[3] "Bluetooth: %d uidheam ceangailte"
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr ""
+"Nochdaidh e mar \"%s\" agus bidh e ri fhaighinn airson tar-chur "
+"fhaidhlichean le Bluetooth."
 
-#: usr/lib/blueberry/blueberry-tray.py:109
+#: usr/lib/blueberry/blueberry.py:255
+#, python-format
+msgid "Visible as %s."
+msgstr "Nochdaidh e mar \"%s\"."
+
+#: usr/lib/blueberry/blueberry-tray.py:64
+#, python-format
+msgid "Bluetooth: Connected to %s"
+msgstr "Bluetooth: Ceangailte ri %s"
+
+#: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
 msgstr "Cuir faidhlichean gu uidheam"
 
-#: usr/lib/blueberry/blueberry-tray.py:113
+#: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
 msgstr "Fosgail manaidsear uidheaman Bluetooth"
 
-#: usr/lib/blueberry/blueberry-tray.py:119
+#: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"
 msgstr "Fàg an-seo"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr ""
+msgstr "Rèitich na roghainnean Bluetooth"
