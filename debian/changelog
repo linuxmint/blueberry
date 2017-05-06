@@ -1,3 +1,22 @@
+blueberry (1.1.11) sonya; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Remove debug log
+
+  [ Björn Esser ]
+  * add GPLv3 license-text
+  * Remove AutostartCondition
+
+  [ JosephMcc ]
+  * Stop using GtkV/HBox
+
+  [ Clement Lefebvre ]
+  * Bail out if something goes wrong
+  * l10n: Update translations
+  * l10n: Generate additional files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 06 May 2017 15:11:06 +0100
+
 blueberry (1.1.10) serena; urgency=medium
 
   * Add OBEX support
