@@ -169,9 +169,7 @@ class Blueberry(Gtk.Application):
         self.tray_switch.set_active(self.settings.get_boolean("tray-enabled"))
         self.tray_switch.connect("notify::active", self.on_tray_switch_toggled)
         self.settings.connect("changed", self.on_settings_changed)
-        if self.de != "Cinnamon":
-            # In Cinnamon we're using an applet instead
-            section.add_row(SettingsRow(Gtk.Label(_("Show a tray icon")), self.tray_switch))
+        section.add_row(SettingsRow(Gtk.Label(_("Show a tray icon")), self.tray_switch))
 
         self.window.add(self.main_box)
 

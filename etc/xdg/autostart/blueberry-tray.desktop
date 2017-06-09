@@ -3,6 +3,7 @@
 Name=blueberry
 Comment=Blueberry tray icon
 Exec=blueberry-tray
+AutostartCondition=GSettings org.blueberry tray-enabled
 Terminal=false
 Type=Application
 Categories=GTK;GNOME;Settings;X-GNOME-NetworkSettings;
