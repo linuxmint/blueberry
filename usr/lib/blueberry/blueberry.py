@@ -151,7 +151,9 @@ class Blueberry(Gtk.Application):
 
         section = page.add_section(_("Bluetooth settings"))
         self.adapter_name_entry = Gtk.Entry()
-        self.adapter_name_entry.set_text(self.get_default_adapter_name())
+        adapter_name = self.get_default_adapter_name()
+        if adapter_name is not None:
+            self.adapter_name_entry.set_text(adapter_name)
         self.adapter_name_entry.connect("changed", self.on_adapter_name_changed)
         row = SettingsRow(Gtk.Label(_("Name")), self.adapter_name_entry)
         row.set_tooltip_text(_("This is the Bluetooth name of your computer"))
@@ -226,12 +228,15 @@ class Blueberry(Gtk.Application):
 
     def get_default_adapter_name(self):
         name = None
-        output = subprocess.check_output(["bt-adapter", "-i"]).strip()
-        for line in output.split("\n"):
-            line = line.strip()
-            if line.startswith("Alias: "):
-                name = line.replace("Alias: ", "").replace(" [rw]", "").replace(" [ro]", "")
-                break
+        try:
+            output = subprocess.check_output(["bt-adapter", "-i"]).strip()
+            for line in output.split("\n"):
+                line = line.strip()
+                if line.startswith("Alias: "):
+                    name = line.replace("Alias: ", "").replace(" [rw]", "").replace(" [ro]", "")
+                    break
+        except Exception as cause:
+            print ("Could not retrieve the BT adapter name with 'bt-adapter -i': %s" % cause)
         return name
 
     def update_status(self, path=None, iter=None, data=None):
