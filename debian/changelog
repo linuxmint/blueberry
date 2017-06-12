@@ -1,3 +1,13 @@
+blueberry (1.1.13) sonya; urgency=medium
+
+  [ JosephMcc ]
+  * Fix how autostart of the tray icon is handled (#37)
+
+  [ Clement Lefebvre ]
+  * Add exception handling around bt-adapter -i
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 12 Jun 2017 16:56:30 +0100
+
 blueberry (1.1.12) sonya; urgency=medium
 
   * l10n: Update translations
