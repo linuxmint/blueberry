@@ -414,7 +414,7 @@ class TransferService():
                              _("File %(0)s from %(1)s successfully received") % {
                                  "0": filename,
                                  "1": attr})
-            self._add_open(n, "Open", dest)
+            self._add_open(n, _("Open"), dest)
         elif not success:
             NotificationBubble(_("Transfer failed"),
                          _("Transfer of file %(0)s failed") % {
@@ -437,13 +437,13 @@ class TransferService():
                              ngettext("Received %d file in the background", "Received %d files in the background",
                                       self._silent_transfers) % self._silent_transfers)
 
-            self._add_open(n, "Open Location", SHARED_PATH)
+            self._add_open(n, _("Open"), SHARED_PATH)
         else:
             n = NotificationBubble(_("Files received"),
                              ngettext("Received %d more file in the background",
                                       "Received %d more files in the background",
                                       self._silent_transfers) % self._silent_transfers)
-            self._add_open(n, "Open Location", SHARED_PATH)
+            self._add_open(n, _("Open"), SHARED_PATH)
 
 class ObexdNotFoundError(Exception):
     pass
