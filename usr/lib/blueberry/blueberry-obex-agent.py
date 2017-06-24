@@ -284,6 +284,7 @@ class _Agent:
             # FIXME: /tmp is only the default. Can we get the actual root
             # directory from stand-alone obexd?
             root = '/tmp'
+            name = _("Unknown device")
         else:
             # BlueZ 5 integrated obexd
             transfer = Transfer(transfer_path)
@@ -292,23 +293,26 @@ class _Agent:
             address = session.address
             filename = transfer.name
             size = transfer.size
-            name = subprocess.check_output(["hcitool", "name", session.address]).strip()
+            name = subprocess.check_output(["hcitool", "name", session.address]).decode("utf-8").strip()
 
         self._pending_transfer = {'transfer_path': transfer_path, 'address': address, 'root': root,
                                   'filename': filename, 'size': size, 'name': name}
 
+        try:
+            name = str("<b>%s</b>" % name)
+            filename = str("<b>%s</b>" % filename)
+        except Exception as e:
+            print (e)
 
         # This device was not allowed yet -> ask for confirmation
         if address not in self._allowed_devices:
             self._notification = NotificationBubble(_("Incoming file over Bluetooth"),
-                _("Incoming file %(0)s from %(1)s") % {"0": "<b>" + filename + "</b>",
-                                                       "1": "<b>" + name + "</b>"},
+                _("Incoming file %(0)s from %(1)s") % {"0": filename, "1": name},
                 30000, [["accept", _("Accept"), "help-about"], ["reject", _("Reject"), "help-about"]], self._on_action)
         # Device was already allowed, larger file -> display a notification, but auto-accept
         elif size > 350000:
             self._notification = NotificationBubble(_("Receiving file"),
-                _("Receiving file %(0)s from %(1)s") % {"0": "<b>" + filename + "</b>",
-                                                        "1": "<b>" + name + "</b>"})
+                _("Receiving file %(0)s from %(1)s") % {"0": filename, "1": name})
             self._on_action(self._notification, 'accept')
         # Device was already allowed. very small file -> auto-accept and transfer silently
         else:
