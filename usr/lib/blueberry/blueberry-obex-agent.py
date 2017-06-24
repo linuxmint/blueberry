@@ -276,7 +276,7 @@ class _Agent:
             self._allowed_devices.append(self._pending_transfer['address'])
             GObject.timeout_add(60000, self._allowed_devices.remove, self._pending_transfer['address'])
         else:
-            self._agent.reply_rejected()
+            self._agent.reply_rejected(None)
 
     def _on_authorize(self, _agent, transfer_path, address=None, filename=None, size=None):
         if address and filename and size:
@@ -321,7 +321,7 @@ class _Agent:
 
     def _on_cancel(self, agent):
         self._notification.close()
-        agent.reply_cancelled()
+        agent.reply_cancelled(None)
 
 
 class TransferService():
@@ -402,17 +402,24 @@ class TransferService():
         dest = os.path.join(dest_dir, filename)
         shutil.move(src, dest)
 
+        attr = attributes['name']
+        try:
+            filename = str("<b>%s</b>" % filename)
+            attr = str("<b>%s</b>" % attr)
+        except Exception as e:
+            print(e)
+
         if success:
             n = NotificationBubble(_("File received"),
                              _("File %(0)s from %(1)s successfully received") % {
-                                 "0": "<b>" + filename + "</b>",
-                                 "1": "<b>" + attributes['name'] + "</b>"})
+                                 "0": filename,
+                                 "1": attr})
             self._add_open(n, "Open", dest)
         elif not success:
             NotificationBubble(_("Transfer failed"),
                          _("Transfer of file %(0)s failed") % {
-                             "0": "<b>" + filename + "</b>",
-                             "1": "<b>" + attributes['name'] + "</b>"})
+                             "0": filename,
+                             "1": attr})
 
             if attributes['size'] > 350000:
                 self._normal_transfers -= 1
