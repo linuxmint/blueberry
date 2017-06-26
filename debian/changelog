@@ -1,3 +1,16 @@
+blueberry (1.1.14) sonya; urgency=medium
+
+  [ Michael Webster ]
+  * Add a small delay to the autostart tray process, it occasionally starts too soon and throws needless warnings.
+
+  [ Clement Lefebvre ]
+  * Fix unicode errors during OBEX file transfers
+  * Fix more unicode errors and missing arguments
+  * Obex: Fix non-translated strings
+  * l10n: Update POT file
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 26 Jun 2017 11:50:24 +0200
+
 blueberry (1.1.13) sonya; urgency=medium
 
   [ JosephMcc ]
