@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-17 11:24+0000\n"
+"POT-Creation-Date: 2017-06-24 12:16+0200\n"
 "PO-Revision-Date: 2015-07-21 14:08+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Shan <shn@li.org>\n"
@@ -15,66 +15,76 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n == 1) ? 0 : 1;\n"
-"X-Launchpad-Export-Date: 2017-05-23 10:30+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-06-28 07:51+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:303
-msgid "Incoming file over Bluetooth"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry-obex-agent.py:304
-#, python-format
-msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry-obex-agent.py:306
-msgid "Accept"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry-obex-agent.py:306
-msgid "Reject"
+#: usr/lib/blueberry/blueberry-obex-agent.py:287
+msgid "Unknown device"
 msgstr ""
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
-msgid "Receiving file"
+msgid "Incoming file over Bluetooth"
 msgstr ""
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
+msgid "Incoming file %(0)s from %(1)s"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:311
+msgid "Accept"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:311
+msgid "Reject"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:314
+msgid "Receiving file"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:315
+#, python-format
 msgid "Receiving file %(0)s from %(1)s"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:402
+#: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:403
+#: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:408
+#: usr/lib/blueberry/blueberry-obex-agent.py:417
+#: usr/lib/blueberry/blueberry-obex-agent.py:440
+#: usr/lib/blueberry/blueberry-obex-agent.py:446
+msgid "Open"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:409
+#: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:425
-#: usr/lib/blueberry/blueberry-obex-agent.py:431
+#: usr/lib/blueberry/blueberry-obex-agent.py:436
+#: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:426
+#: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
 msgstr[0] ""
 msgstr[1] ""
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:432
+#: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
@@ -106,19 +116,19 @@ msgstr ""
 msgid "Bluetooth settings"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:156
+#: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:157
+#: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:164
+#: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:165
+#: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -132,12 +142,12 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:253
+#: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:255
+#: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
 msgstr ""

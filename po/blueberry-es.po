@@ -7,74 +7,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-17 11:24+0000\n"
-"PO-Revision-Date: 2017-05-06 08:15+0000\n"
-"Last-Translator: toniem <toni.estevez@gmail.com>\n"
+"POT-Creation-Date: 2017-06-24 12:16+0200\n"
+"PO-Revision-Date: 2017-06-25 21:42+0000\n"
+"Last-Translator: Robert  <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-05-23 10:30+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-06-28 07:51+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:303
+#: usr/lib/blueberry/blueberry-obex-agent.py:287
+msgid "Unknown device"
+msgstr "Dispositivo desconocido"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
 msgstr "Recibiendo archivo por Bluetooth"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:304
+#: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
 msgstr "Archivo entrante %(0)s de %(1)s"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:306
+#: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
 msgstr "Aceptar"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:306
+#: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Reject"
 msgstr "Rechazar"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:309
+#: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
 msgstr "Recibiendo archivo"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:310
+#: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
 msgstr "Recibiendo el archivo%(0)s de%(1)s"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:402
+#: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
 msgstr "Archivo recibido"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:403
+#: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
 msgstr "Archivo %(0)s de %(1)s recibido correctamente"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:408
+#: usr/lib/blueberry/blueberry-obex-agent.py:417
+#: usr/lib/blueberry/blueberry-obex-agent.py:440
+#: usr/lib/blueberry/blueberry-obex-agent.py:446
+msgid "Open"
+msgstr "Abrir"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
 msgstr "Transferencia fallida"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:409
+#: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
 msgstr "La transferencia del archivo %(0)s ha fallado"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:425
-#: usr/lib/blueberry/blueberry-obex-agent.py:431
+#: usr/lib/blueberry/blueberry-obex-agent.py:436
+#: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
 msgstr "Archivos recibidos"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:426
+#: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
 msgstr[0] "Recibido %d archivo en segundo plano"
 msgstr[1] "Recibidos %d archivos en segundo plano"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:432
+#: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
@@ -106,19 +116,19 @@ msgstr "Dispositivos"
 msgid "Bluetooth settings"
 msgstr "Configuración de Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:156
+#: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
 msgstr "Nombre"
 
-#: usr/lib/blueberry/blueberry.py:157
+#: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
 msgstr "Éste es el nombre bluetooth del equipo"
 
-#: usr/lib/blueberry/blueberry.py:164
+#: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
 msgstr "Recibir archivos de dispositivos remotos"
 
-#: usr/lib/blueberry/blueberry.py:165
+#: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -134,13 +144,13 @@ msgstr "Mostrar un icono en la bandeja"
 msgid "Settings"
 msgstr "Ajustes"
 
-#: usr/lib/blueberry/blueberry.py:253
+#: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
 "Visible como %s y disponible para la transferencia de archivos por Bluetooth."
 
-#: usr/lib/blueberry/blueberry.py:255
+#: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
 msgstr "Visible como %s."
