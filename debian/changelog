@@ -1,3 +1,9 @@
+blueberry (1.1.15) sonya; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 28 Jun 2017 10:06:49 +0200
+
 blueberry (1.1.14) sonya; urgency=medium
 
   [ Michael Webster ]
