@@ -1,3 +1,10 @@
+blueberry (1.1.16) sylvia; urgency=medium
+
+  * Move window declaration to init()
+  * l10n: Generate desktop files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 27 Oct 2017 13:47:12 +0100
+
 blueberry (1.1.15) sonya; urgency=medium
 
   * l10n: Update translations
