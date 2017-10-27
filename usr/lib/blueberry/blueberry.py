@@ -23,6 +23,7 @@ class Blueberry(Gtk.Application):
     def __init__(self):
 
         Gtk.Application.__init__(self, application_id='com.linuxmint.blueberry', flags=Gio.ApplicationFlags.FLAGS_NONE)
+        self.window = Gtk.Window(Gtk.WindowType.TOPLEVEL)
         self.detect_desktop_environment()
         self.connect("activate", self.on_activate)
 
@@ -71,7 +72,6 @@ class Blueberry(Gtk.Application):
                 self.configuration_tools["sound"] = "pavucontrol"
 
     def create_window(self):
-        self.window = Gtk.Window(Gtk.WindowType.TOPLEVEL)
 
         self.window.set_title(_("Bluetooth"))
         self.window.set_icon_name("bluetooth")
