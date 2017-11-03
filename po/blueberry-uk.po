@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-24 12:16+0200\n"
-"PO-Revision-Date: 2017-06-25 14:00+0000\n"
-"Last-Translator: stuartlittle <Stuartlittle1970@gmail.com>\n"
+"POT-Creation-Date: 2017-10-27 13:45+0100\n"
+"PO-Revision-Date: 2017-09-19 09:43+0000\n"
+"Last-Translator: sharksoft <sharksmail@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:51+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:43+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -25,7 +25,7 @@ msgstr "Невідомий пристрій"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr "Вхідний файл через bluetooth"
+msgstr "Вхідний файл через Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
@@ -82,17 +82,17 @@ msgstr "Файли отримано"
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] "Отримано %d файл у тловому режимі"
-msgstr[1] "Отримано %d файли у тловому режимі"
-msgstr[2] "Отримано %d файлів у тловому режимі"
+msgstr[0] "Отримано %d файл у фоновому режимі"
+msgstr[1] "Отримано %d файли у фоновому режимі"
+msgstr[2] "Отримано %d файлів у фоновому режимі"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "Отримано ще %d файл у тловому режимі"
-msgstr[1] "Отримано ще %d файли у тловому режимі"
-msgstr[2] "Отримано ще %d файлів у тловому режимі"
+msgstr[0] "Отримано ще %d файл у фоновому режимі"
+msgstr[1] "Отримано ще %d файли у фоновому режимі"
+msgstr[2] "Отримано ще %d файлів у фоновому режимі"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -140,7 +140,7 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
-msgstr "Показувати піктограму у системній таці"
+msgstr "Показувати піктограму у системному лотку"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"

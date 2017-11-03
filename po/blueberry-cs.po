@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-24 12:16+0200\n"
-"PO-Revision-Date: 2017-06-27 11:01+0000\n"
-"Last-Translator: AsciiWolf <mail@asciiwolf.com>\n"
+"POT-Creation-Date: 2017-10-27 13:45+0100\n"
+"PO-Revision-Date: 2017-09-06 14:54+0000\n"
+"Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:51+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:43+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -24,12 +24,12 @@ msgstr "Neznámé zařízení"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr "Příchozí soubor přes bluetooth"
+msgstr "Příchozí soubor přes Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr "Příchozí soubor %(0)s ze %(1)s"
+msgstr "Příchozí soubor %(0)s z %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
@@ -41,12 +41,12 @@ msgstr "Odmítnout"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
-msgstr "Příjmám soubor"
+msgstr "Přijímání souboru"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Příjímám soubor %(0)s from %(1)s"
+msgstr "Přijímání souboru %(0)s z %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
@@ -65,12 +65,12 @@ msgstr "Otevřít"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
-msgstr "Přenos selhal"
+msgstr "Přenos se nezdařil"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "Přenos souboru %(0)s selhal"
+msgstr "Přenos souboru %(0)s se nezdařil"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 #: usr/lib/blueberry/blueberry-obex-agent.py:442
@@ -81,16 +81,16 @@ msgstr "Soubory přijaty"
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] "Příjem %d souboru na pozadí"
-msgstr[1] "Příjem %d souborů na pozadí"
-msgstr[2] "Příjem %d souborů na pozadí"
+msgstr[0] "Přijat %d soubor na pozadí"
+msgstr[1] "Přijaty %d soubory na pozadí"
+msgstr[2] "Přijato %d souborů na pozadí"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "Příjem %d souboru na pozadí."
-msgstr[1] "Přijato %d dalších souborů na pozadí"
+msgstr[0] "Přijat %d další soubor na pozadí"
+msgstr[1] "Přijaty %d další soubory na pozadí"
 msgstr[2] "Přijato %d dalších souborů na pozadí"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
@@ -100,7 +100,7 @@ msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth je vypnut"
+msgstr "Bluetooth je vypnuto"
 
 #: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
@@ -108,7 +108,7 @@ msgstr "Nebyl nalezen žádný adaptér Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth je vypnut hardwarovým vypínačem"
+msgstr "Bluetooth je vypnuto hardwarovým vypínačem"
 
 #: usr/lib/blueberry/blueberry.py:146
 msgid "Devices"
@@ -120,25 +120,26 @@ msgstr "Nastavení Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
-msgstr "Jméno"
+msgstr "Název"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr "Toto je Bluetooth jméno vašeho počítače"
+msgstr "Toto je název vašeho počítače pro Bluetooth služby"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr "Přijímat soubory ze vzdálených zařízení"
+msgstr "Přijímat soubory z ostatních zařízení"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
-msgstr "Tímto povolíte přijímat soubory přenášené přes Bluetooth (OBEX)"
+msgstr ""
+"Tímto povolíte přijímání souborů přenášených přes Bluetooth (protokol OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
-msgstr "Zobrazit ikonu v oznamovací oblasti"
+msgstr "Zobrazovat ikonu v oznamovací oblasti"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
@@ -157,15 +158,15 @@ msgstr "Viditelný jako %s."
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "Bluetooth: připojeno k %s"
+msgstr "Bluetooth: Připojeno k %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
-msgstr "Poslat soubor do zařízení"
+msgstr "Poslat soubory do zařízení"
 
 #: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
-msgstr "Otevřít správce Bluetooth zařízení"
+msgstr "Otevřít správu Bluetooth zařízení"
 
 #: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"
