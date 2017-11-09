@@ -12,8 +12,20 @@ import subprocess
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
 
-class BluetoothTray:
+class BluetoothTray(Gtk.Application):
     def __init__(self):
+        super(BluetoothTray, self).__init__(register_session=True)
+
+    def do_activate(self):
+        self.hold()
+
+    def do_shutdown(self):
+        self.terminate()
+        Gtk.Application.do_shutdown(self)
+
+    def do_startup(self):
+        Gtk.Application.do_startup(self)
+
         debug = False
         if len(sys.argv) > 1 and sys.argv[1] == "debug":
             debug = True
@@ -131,8 +143,7 @@ class BluetoothTray:
 
     def terminate(self, window = None, data = None):
         self.rfkill.terminate()
-        Gtk.main_quit()
+        self.release()
 
 if __name__ == "__main__":
-    BluetoothTray()
-    Gtk.main()
+    BluetoothTray().run()
