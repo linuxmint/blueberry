@@ -5,27 +5,15 @@ import gettext
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
-from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio
+from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio, GLib
 import rfkillMagic
 import subprocess
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
 
-class BluetoothTray(Gtk.Application):
+class BluetoothTray:
     def __init__(self):
-        super(BluetoothTray, self).__init__(register_session=True)
-
-    def do_activate(self):
-        self.hold()
-
-    def do_shutdown(self):
-        self.terminate()
-        Gtk.Application.do_shutdown(self)
-
-    def do_startup(self):
-        Gtk.Application.do_startup(self)
-
         debug = False
         if len(sys.argv) > 1 and sys.argv[1] == "debug":
             debug = True
@@ -142,8 +130,8 @@ class BluetoothTray(Gtk.Application):
         subprocess.Popen(["blueberry"])
 
     def terminate(self, window = None, data = None):
-        self.rfkill.terminate()
-        self.release()
+        Gtk.main_quit()
 
 if __name__ == "__main__":
-    BluetoothTray().run()
+    BluetoothTray()
+    Gtk.main()
