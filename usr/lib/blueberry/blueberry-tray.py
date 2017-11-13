@@ -5,7 +5,7 @@ import gettext
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
-from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio
+from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio, GLib
 import rfkillMagic
 import subprocess
 
@@ -130,7 +130,6 @@ class BluetoothTray:
         subprocess.Popen(["blueberry"])
 
     def terminate(self, window = None, data = None):
-        self.rfkill.terminate()
         Gtk.main_quit()
 
 if __name__ == "__main__":

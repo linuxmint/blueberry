@@ -2,13 +2,14 @@
 import thread
 import subprocess
 import os
-from gi.repository import GObject
+from gi.repository import GObject, Gio, GLib
+import signal
 
 RFKILL_CHK = ["/usr/sbin/rfkill", "list", "bluetooth"]
 RFKILL_BLOCK = ["/usr/sbin/rfkill", "block", "bluetooth"]
 RFKILL_UNBLOCK = ["/usr/sbin/rfkill", "unblock", "bluetooth"]
 
-RFKILL_EVENT_MONITOR = ["/usr/sbin/rfkill", "event"]
+RFKILL_EVENT_MONITOR = ["/usr/lib/blueberry/safechild", "/usr/sbin/rfkill", "event"]
 
 # index of .split() from rfkill event output where lines are:
 #     1426095957.906704: idx 0 type 1 op 0 soft 0 hard 0
@@ -40,7 +41,15 @@ class Interface:
             self.start_event_monitor()
 
     def adapter_check(self):
-        res = subprocess.check_output(RFKILL_CHK)
+        # res = subprocess.check_output(RFKILL_CHK)
+
+        try:
+            proc = Gio.Subprocess.new(RFKILL_CHK, Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE)
+
+            ret, out, err = proc.communicate(None, None)
+        except GLib.Error as e:
+            print(e.message)
+            return
 
         '''
         Assume the output of:
@@ -53,6 +62,8 @@ class Interface:
             Soft blocked: yes
             Hard blocked: no
         '''
+
+        res = out.get_data().decode()
 
         self.debug("adapter_check full output:\n%s" % res)
 
@@ -72,16 +83,31 @@ class Interface:
 
     def start_event_monitor(self):
         if not self.tproc and not self.monitor_killer:
-            thread.start_new_thread(self.event_monitor_thread, (None,))
+            self.tproc = Gio.Subprocess.new(RFKILL_EVENT_MONITOR,
+                                            Gio.SubprocessFlags.STDIN_PIPE |
+                                            Gio.SubprocessFlags.STDOUT_PIPE |
+                                            Gio.SubprocessFlags.STDERR_SILENCE)
 
-    def event_monitor_thread(self, data):
-        self.tproc = subprocess.Popen(RFKILL_EVENT_MONITOR, stdout=subprocess.PIPE)
-        while self.tproc.poll() is None and not self.monitor_killer:
-            l = self.tproc.stdout.readline() # This blocks until it receives a newline.
-            self.update_state(l)
+            stream = Gio.DataInputStream.new(self.tproc.get_stdout_pipe())
+            stream.read_line_async(GLib.PRIORITY_DEFAULT, None, self.on_event_line_read, None)
+
+            self.tproc.wait_async(None, self.on_event_mon_terminated, stream)
+
+    def on_event_line_read(self, stream, result, data=None):
+        line, length = stream.read_line_finish_utf8(result)
+
+        if line != None:
+            self.update_state(line)
+
+        if not self.monitor_killer:
+            stream.read_line_async(GLib.PRIORITY_DEFAULT, None, self.on_event_line_read, None)
+
+    def on_event_mon_terminated(self, process, result, data=None):
+        stream = data
+        stream.clear_pending()
+        stream.close()
 
         self.tproc = None
-        thread.exit()
 
     def update_state(self, line):
         self.debug("update_state line: %s" % line)
@@ -95,10 +121,7 @@ class Interface:
             self.soft_block = int(elements[EVENT_INDEX_SOFT_BLOCK]) == 1
             self.hard_block = int(elements[EVENT_INDEX_HARD_BLOCK]) == 1
 
-        self.update_ui()
-
-    def update_ui(self):
-        GObject.idle_add(self.output_callback)
+        self.output_callback()
 
     def try_set_blocked(self, blocked):
         thread.start_new_thread(self.set_block_thread, (blocked,))
@@ -106,25 +129,25 @@ class Interface:
     def set_block_thread(self, data):
         block = data
 
+        block_cmd = None
+
         if block:
             self.debug("set_block_thread blocking")
-            self.blockproc = subprocess.Popen(RFKILL_BLOCK)
+            block_cmd = RFKILL_BLOCK
         else:
             self.debug("set_block_thread unblocking")
-            self.blockproc = subprocess.Popen(RFKILL_UNBLOCK)
+            block_cmd = RFKILL_UNBLOCK
 
-        while self.blockproc.poll() is None:
-            pass
+        self.blockproc = Gio.Subprocess.new(block_cmd, Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE)
+
+        try:
+            self.blockproc.wait(None)
+        except GLib.Error as e:
+            print(e.message)
 
         self.blockproc = None
         self.debug("set_block_thread finished")
         thread.exit()
-
-    def terminate(self):
-        if self.tproc:
-            self.tproc.kill()
-        if self.blockproc:
-            self.blockproc.kill()
 
     def debug(self, msg):
         if self.enable_debugging:
