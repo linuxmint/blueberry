@@ -14,7 +14,7 @@ gettext.install("blueberry", "/usr/share/locale")
 
 class BluetoothTray(Gtk.Application):
     def __init__(self):
-        super(BluetoothTray, self).__init__(register_session=True)
+        super(BluetoothTray, self).__init__(register_session=True, application_id="org.linuxmint.blueberry.tray")
 
     def do_activate(self):
         self.hold()

@@ -200,6 +200,7 @@ class Blueberry(Gtk.Application):
     def on_tray_switch_toggled(self, widget, data=None):
         if widget.get_active():
             self.settings.set_boolean("tray-enabled", True)
+            subprocess.Popen(["blueberry-tray"])
         else:
             self.settings.set_boolean("tray-enabled", False)
 
