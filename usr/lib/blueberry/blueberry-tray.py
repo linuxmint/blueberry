@@ -19,10 +19,6 @@ class BluetoothTray(Gtk.Application):
     def do_activate(self):
         self.hold()
 
-    def do_shutdown(self):
-        self.terminate()
-        Gtk.Application.do_shutdown(self)
-
     def do_startup(self):
         Gtk.Application.do_startup(self)
 
@@ -142,8 +138,7 @@ class BluetoothTray(Gtk.Application):
         subprocess.Popen(["blueberry"])
 
     def terminate(self, window = None, data = None):
-        self.rfkill.terminate()
-        self.release()
+        self.quit()
 
 if __name__ == "__main__":
     BluetoothTray().run()
