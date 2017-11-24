@@ -75,7 +75,6 @@ class Blueberry(Gtk.Application):
 
         self.window.set_title(_("Bluetooth"))
         self.window.set_icon_name("bluetooth")
-        self.window.connect("destroy", self.terminate)
         self.window.set_default_size(640, 400)
 
         self.main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -296,9 +295,6 @@ class Blueberry(Gtk.Application):
     def on_switch_changed(self, widget, state):
         self.rfkill.try_set_blocked(not state)
         return True
-
-    def terminate(self, window):
-        self.rfkill.terminate()
 
 if __name__ == "__main__":
     app = Blueberry()

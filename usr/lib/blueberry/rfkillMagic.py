@@ -8,7 +8,7 @@ RFKILL_CHK = ["/usr/sbin/rfkill", "list", "bluetooth"]
 RFKILL_BLOCK = ["/usr/sbin/rfkill", "block", "bluetooth"]
 RFKILL_UNBLOCK = ["/usr/sbin/rfkill", "unblock", "bluetooth"]
 
-RFKILL_EVENT_MONITOR = ["/usr/sbin/rfkill", "event"]
+RFKILL_EVENT_MONITOR = ["/usr/lib/blueberry/safechild", "/usr/sbin/rfkill", "event"]
 
 # index of .split() from rfkill event output where lines are:
 #     1426095957.906704: idx 0 type 1 op 0 soft 0 hard 0
@@ -75,7 +75,7 @@ class Interface:
             thread.start_new_thread(self.event_monitor_thread, (None,))
 
     def event_monitor_thread(self, data):
-        self.tproc = subprocess.Popen(RFKILL_EVENT_MONITOR, stdout=subprocess.PIPE)
+        self.tproc = subprocess.Popen(RFKILL_EVENT_MONITOR, stdout=subprocess.PIPE, stdin=subprocess.PIPE)
         while self.tproc.poll() is None and not self.monitor_killer:
             l = self.tproc.stdout.readline() # This blocks until it receives a newline.
             self.update_state(l)
@@ -121,8 +121,6 @@ class Interface:
         thread.exit()
 
     def terminate(self):
-        if self.tproc:
-            self.tproc.kill()
         if self.blockproc:
             self.blockproc.kill()
 
