@@ -1,3 +1,13 @@
+blueberry (1.1.20) sylvia; urgency=medium
+
+  [ Jeremy Fleischman ]
+  * Use a regex instead of the more brittle split implementation. This fixes #45.
+
+  [ Clement Lefebvre ]
+  * Fix python shebangs
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 18 Dec 2017 12:25:48 +0000
+
 blueberry (1.1.19) sylvia; urgency=medium
 
   [ Michael Webster ]
