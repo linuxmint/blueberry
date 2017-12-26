@@ -723,11 +723,11 @@ class AgentManager(Base):
         self._interface.UnregisterAgent(agent_path, reply_handler=on_unregistered, error_handler=on_unregister_failed)
 
 if __name__ == '__main__':
-    settings = Gio.Settings("org.blueberry")
+    settings = Gio.Settings(schema="org.blueberry")
     if settings.get_boolean("obex-enabled"):
         try:
             dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
-            mainloop = GObject.MainLoop()
+            mainloop = GLib.MainLoop()
             service = TransferService()
             service.load()
             cont = True
