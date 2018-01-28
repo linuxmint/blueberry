@@ -23,7 +23,7 @@ class Blueberry(Gtk.Application):
     def __init__(self):
 
         Gtk.Application.__init__(self, application_id='com.linuxmint.blueberry', flags=Gio.ApplicationFlags.FLAGS_NONE)
-        self.window = Gtk.Window(Gtk.WindowType.TOPLEVEL)
+        self.window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
         self.detect_desktop_environment()
         self.connect("activate", self.on_activate)
 
