@@ -3,7 +3,7 @@ import thread
 import subprocess
 import os
 import re
-from gi.repository import GObject
+from gi.repository import GLib
 
 RFKILL_CHK = ["/usr/sbin/rfkill", "list", "bluetooth"]
 RFKILL_BLOCK = ["/usr/sbin/rfkill", "block", "bluetooth"]
@@ -108,7 +108,7 @@ class Interface:
         self.update_ui()
 
     def update_ui(self):
-        GObject.idle_add(self.output_callback)
+        GLib.idle_add(self.output_callback)
 
     def try_set_blocked(self, blocked):
         thread.start_new_thread(self.set_block_thread, (blocked,))

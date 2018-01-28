@@ -103,7 +103,7 @@ class Blueberry(Gtk.Application):
         stack_switcher.set_halign(Gtk.Align.CENTER)
         toolbar.show_all()
 
-        self.settings = Gio.Settings("org.blueberry")
+        self.settings = Gio.Settings(schema="org.blueberry")
 
         debug = False
         if len(sys.argv) > 1 and sys.argv[1] == "debug":
@@ -162,7 +162,7 @@ class Blueberry(Gtk.Application):
         self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
         self.obex_switch.connect("notify::active", self.on_obex_switch_toggled)
         self.settings.connect("changed", self.on_settings_changed)
-        row = SettingsRow(Gtk.Label(_("Receive files from remote devices")), self.obex_switch)
+        row = SettingsRow(Gtk.Label(label=_("Receive files from remote devices")), self.obex_switch)
         row.set_tooltip_text(_("This option allows your computer to receive files transferred over Bluetooth (OBEX)"))
         section.add_row(row)
 
@@ -170,7 +170,7 @@ class Blueberry(Gtk.Application):
         self.tray_switch.set_active(self.settings.get_boolean("tray-enabled"))
         self.tray_switch.connect("notify::active", self.on_tray_switch_toggled)
         self.settings.connect("changed", self.on_settings_changed)
-        section.add_row(SettingsRow(Gtk.Label(_("Show a tray icon")), self.tray_switch))
+        section.add_row(SettingsRow(Gtk.Label(label=_("Show a tray icon")), self.tray_switch))
 
         self.window.add(self.main_box)
 
@@ -221,7 +221,7 @@ class Blueberry(Gtk.Application):
         self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
 
     def add_stack_page(self, message, name):
-        label = Gtk.Label(message)
+        label = Gtk.Label(label=message)
         self.stack.add_named(label, name)
         label.show()
 
