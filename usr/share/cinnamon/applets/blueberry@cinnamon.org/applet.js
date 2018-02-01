@@ -22,10 +22,10 @@ function MyApplet(metadata, orientation, panel_height, instance_id) {
 }
 
 MyApplet.prototype = {
-    __proto__: Applet.TextIconApplet.prototype,
+    __proto__: Applet.IconApplet.prototype,
 
     _init: function(metadata, orientation, panel_height, instance_id) {
-        Applet.TextIconApplet.prototype._init.call(this, orientation, panel_height, instance_id);
+        Applet.IconApplet.prototype._init.call(this, orientation, panel_height, instance_id);
 
         this.setAllowedLayout(Applet.AllowedLayout.BOTH);
 
@@ -51,8 +51,6 @@ MyApplet.prototype = {
             }));
             this.menu.addMenuItem(item);
 
-            this.on_orientation_changed(orientation);
-
             this._client = new GnomeBluetooth.Client();
             this._model = this._client.get_model();
             this._model.connect('row-changed', Lang.bind(this, this._sync));
@@ -71,13 +69,6 @@ MyApplet.prototype = {
 
     on_applet_removed_from_panel: function() {
         Main.systrayManager.unregisterId(this.metadata.uuid);
-    },
-
-    on_orientation_changed: function(orientation) {
-        if (orientation == St.Side.LEFT || orientation == St.Side.RIGHT)
-            this.hide_applet_label(true);
-        else
-            this.hide_applet_label(false);
     },
 
     _getDefaultAdapter: function() {
