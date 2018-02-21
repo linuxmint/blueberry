@@ -27,7 +27,7 @@ class BluetoothTray(Gtk.Application):
             debug = True
 
         self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
-        self.settings = Gio.Settings("org.blueberry")
+        self.settings = Gio.Settings(schema="org.blueberry")
         self.settings.connect("changed::tray-enabled", self.on_settings_changed_cb)
 
         # If we have no adapter, or disabled tray, end early
