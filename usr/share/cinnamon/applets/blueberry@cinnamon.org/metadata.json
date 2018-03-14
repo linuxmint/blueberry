@@ -1,7 +1,6 @@
 {
-    "dangerous": false, 
-    "description": "Blueberry applet", 
-    "uuid": "blueberry@cinnamon.org", 
-    "name": "Bluetooth", 
-    "last-edited": "1517395944"
+    "description": "Blueberry applet",
+    "uuid": "blueberry@cinnamon.org",
+    "name": "Bluetooth",
+    "icon": "bluetooth"
 }
