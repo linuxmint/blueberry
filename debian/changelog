@@ -1,3 +1,25 @@
+blueberry (1.2.0) tara; urgency=medium
+
+  [ FriedrichFroebel ]
+  * Fix PyGIDeprecationWarnings (#51)
+
+  [ Leigh Scott ]
+  * fix some depreciation warnings (#49)
+
+  [ Germán Franco ]
+  * Remove unused applet label (#53)
+
+  [ NikoKrause ]
+  * applet: use bluetooth icon, remove dangerous flag (#57)
+
+  [ Leigh Scott ]
+  * Fix PyGIDeprecationWarning (#56)
+
+  [ Clement Lefebvre ]
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 07 May 2018 15:25:00 +0100
+
 blueberry (1.1.20) sylvia; urgency=medium
 
   [ Jeremy Fleischman ]
