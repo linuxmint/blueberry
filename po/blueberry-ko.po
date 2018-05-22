@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-11-11 15:44+0000\n"
+"PO-Revision-Date: 2017-11-24 11:30+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 "Language: ko\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
@@ -162,7 +162,7 @@ msgstr "장치에 파일 보내기"
 
 #: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
-msgstr "블루투스 장치 관리자 열기"
+msgstr "블루투스 장치 관리 열기"
 
 #: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"

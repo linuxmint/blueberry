@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-10-13 17:54+0000\n"
-"Last-Translator: jure <petric.jure@gmail.com>\n"
+"PO-Revision-Date: 2018-02-16 14:42+0000\n"
+"Last-Translator: Matic Gradišer <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -82,15 +82,19 @@ msgstr "Datoteke so sprejete"
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Prejetih %d datotek v ozadju"
+msgstr[1] "Prejeta %d datoteka v ozadju"
+msgstr[2] "Prejeti %d datoteki v ozadju"
+msgstr[3] "Prejetih %d datotek v ozadju"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Prejetih še %d datotek v ozadju"
+msgstr[1] "Prejeta še %d datoteka v ozadju"
+msgstr[2] "Prejeti še %d datoteki v ozadju"
+msgstr[3] "Prejetih še %d datotek v ozadju"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -115,48 +119,50 @@ msgstr "Naprave"
 
 #: usr/lib/blueberry/blueberry.py:152
 msgid "Bluetooth settings"
-msgstr ""
+msgstr "Bluetooth nastavitve"
 
 #: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
-msgstr ""
+msgstr "Ime"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "To je Bluetooth ime vašega računalnika"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr ""
+msgstr "Prejmi datoteke z oddaljenih naprav"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
+"Ta možnost omogoča vašemu računalniku prejemanje datotek preko Bluetooth "
+"(OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
-msgstr ""
+msgstr "Prikaži ikono v orodni vrstici"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
-msgstr ""
+msgstr "Nastavitve"
 
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "Viden kot %s in na voljo za prenos datotek preko Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "Viden kot %s."
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "Bluetooth: Povezan z %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
@@ -172,4 +178,4 @@ msgstr "Končaj"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr ""
+msgstr "Nastavitve za Bluetooth"

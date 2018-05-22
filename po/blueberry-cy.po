@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-11-01 11:19+0000\n"
+"PO-Revision-Date: 2018-03-06 10:33+0000\n"
 "Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
 "Language-Team: Welsh <cy@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : (n != 8 && n != 11) ? "
 "2 : 3;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -131,7 +131,7 @@ msgstr "Hwn yw enw Bluetooth eich cyfrifiadur"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr "Derbyn ffeiliau gan ddyfais pell"
+msgstr "Derbyn ffeiliau gan ddyfais bell"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""

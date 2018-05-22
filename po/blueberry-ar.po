@@ -8,168 +8,177 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-05-22 09:25+0000\n"
-"Last-Translator: oussama guellati <Unknown>\n"
-"Language-Team: Arabic <ar@li.org>\n"
+"PO-Revision-Date: 2018-04-09 18:28+0000\n"
+"Last-Translator: انور الاسكندرانى <Unknown>\n"
+"Language-Team: anwar AL_iskandrany <anwareleskndrany13@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
+"Language: ar_EG\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
-msgstr ""
+msgstr "جهاز غير معروف"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr ""
+msgstr "ملف وارد عبر البلوتوث"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
+msgstr "ملف %(0)s وارد من %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
-msgstr ""
+msgstr "قبول"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Reject"
-msgstr ""
+msgstr "رفض"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
-msgstr ""
+msgstr "استقبال الملف"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "استقبال ملف %(0)s من %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
-msgstr ""
+msgstr "تم استقبال الملف"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
+msgstr "تم استقبال الملف %(0)s من %(1)s بنجاح"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:417
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 #: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
-msgstr ""
+msgstr "فتح"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
-msgstr ""
+msgstr "فشل النقل"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "فشل نقل الملف %(0)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 #: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
-msgstr ""
+msgstr "الملفات المستلمة"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تم استلام %d ملف في الخلفية"
+msgstr[1] "تم استقبال %d ملف في الخلفية"
+msgstr[2] "تم استقبال %d ملفات في الخلفية"
+msgstr[3] "تم استقبال %d ملفات في الخلفية"
+msgstr[4] "تم استقبال %d ملفات في الخلفية"
+msgstr[5] "تم استقبال %d ملفات في الخلفية"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تم استقبال %d ملف إضافي في الخلفية"
+msgstr[1] "تم استقبال %d ملف إضافي في الخلفية"
+msgstr[2] "تم استقبال %d ملفات إضافية في الخلفية"
+msgstr[3] "تم استقبال %d ملفات إضافية في الخلفية"
+msgstr[4] "تم استقبال %d ملفات إضافية في الخلفية"
+msgstr[5] "تم استقبال %d ملفات إضافية في الخلفية"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
 msgid "Bluetooth"
-msgstr "بلوتوث"
+msgstr "البلوتوث"
 
 #: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
 msgid "Bluetooth is disabled"
-msgstr "البلوتوث معطّل"
+msgstr "تم تعطيل البلوتوث"
 
 #: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
-msgstr "لم يُعثر على مُحولات بلوتوث"
+msgstr "لا توجد محولات بلوتوث"
 
 #: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "البلوتوث مُعطّل بواسطة مفتاح العتاد"
+msgstr "تم تعطيل البلوتوث عن طريق تبديل الأجهزة"
 
 #: usr/lib/blueberry/blueberry.py:146
 msgid "Devices"
-msgstr ""
+msgstr "الأجهزة"
 
 #: usr/lib/blueberry/blueberry.py:152
 msgid "Bluetooth settings"
-msgstr ""
+msgstr "إعدادات البلوتوث"
 
 #: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
-msgstr ""
+msgstr "الإسم"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "هذا هو اسم البلوتوث للكمبيوتر الخاص بك"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr ""
+msgstr "استقبال الملفات من الأجهزة البعيدة"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
-msgstr ""
+msgstr "(OBEX) يتيح هذا الخيار للكمبيوتر استلام الملفات عبر بلوتوث"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
-msgstr ""
+msgstr "عرض أيقونة الصينية"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
-msgstr ""
+msgstr "إعدادات"
 
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "مرئي بأسم %s ومتاح لعمليات نقل ملفات بلوتوث."
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "%s مرئي بأسم"
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "%s البلوتوث: متصل إلى"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
-msgstr "أرسل ملفات للجهاز"
+msgstr "إرسال ملفات إلى جهاز"
 
 #: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
-msgstr "افتح مدير جهاز البلوتوث"
+msgstr "فتح مدير جهاز البلوتوث"
 
 #: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"
-msgstr "خروج"
+msgstr "إنهاء"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr ""
+msgstr "تكوين إعدادات بلوتوث"

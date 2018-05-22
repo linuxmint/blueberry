@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-06-25 19:31+0000\n"
-"Last-Translator: Alberlan Lopes <alberlan@gmail.com>\n"
+"PO-Revision-Date: 2018-01-03 13:43+0000\n"
+"Last-Translator: Sitonir de Oliveira <sitonir@outlook.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -81,15 +81,15 @@ msgstr "Arquivos recebidos"
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] "Recebeu %d arquivo em segundo plano"
-msgstr[1] "Recebeu %d arquivos em segundo plano"
+msgstr[0] "Recebido %d arquivo em segundo plano"
+msgstr[1] "Recebidos %d arquivos em segundo plano"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "Recebeu mais %d arquivo em segundo plano"
-msgstr[1] "Recebeu mais %d arquivos em segundo plano"
+msgstr[0] "Recebido mais %d arquivo em segundo plano"
+msgstr[1] "Recebidos mais %d arquivos em segundo plano"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -106,7 +106,7 @@ msgstr "Nenhum adaptador bluetooth encontrado"
 
 #: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth desativado via hardware"
+msgstr "O Bluetooth está desativado via hardware"
 
 #: usr/lib/blueberry/blueberry.py:146
 msgid "Devices"

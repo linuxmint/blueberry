@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-09-30 14:06+0000\n"
-"Last-Translator: Karlis <Unknown>\n"
+"PO-Revision-Date: 2018-02-25 06:54+0000\n"
+"Last-Translator: mahfiaz <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -24,7 +24,7 @@ msgstr "Tundmatu seade"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr "Bluetoothi kaudu saadetakse faili"
+msgstr "Bluetoothi kaudu saabuv fail"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
@@ -81,15 +81,15 @@ msgstr "Failid vastu võetud"
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Taustal võeti vastu %d fail"
+msgstr[1] "Taustal võeti vastu %d faili"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Taustal võeti vastu veel %d fail"
+msgstr[1] "Taustal võeti vastu veel %d faili"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -102,7 +102,7 @@ msgstr "Bluetooth on väljas"
 
 #: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
-msgstr "Bluetoothi adaptereid ei leitud"
+msgstr "Bluetooth'i adaptereid ei leitud"
 
 #: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
@@ -122,7 +122,7 @@ msgstr "Nimi"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "Selle nimega on sinu arvuti Bluetooth'i kaudu nähtav"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
@@ -132,7 +132,7 @@ msgstr "Failide vastuvõtmine kaugseadmetest"
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
-msgstr ""
+msgstr "See võimaldab su arvutil võtta vastu faile üle Bluetoothi (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
@@ -145,17 +145,17 @@ msgstr "Seaded"
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "Nähtav nimega %s ja võtab vastu faile üle Bluetoothi."
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "Nähtav nimega %s."
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "Bluetooth: ühendatud seadmega %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"

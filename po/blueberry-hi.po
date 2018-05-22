@@ -8,88 +8,88 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2016-07-17 11:22+0000\n"
-"Last-Translator: Abhilash <Unknown>\n"
+"PO-Revision-Date: 2018-01-07 07:38+0000\n"
+"Last-Translator: Panwar <Unknown>\n"
 "Language-Team: Hindi <hi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
-msgstr ""
+msgstr "अज्ञात डिवाइस"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr ""
+msgstr "ब्लूटूथ द्वारा आवक फ़ाइल"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
+msgstr "आवक फ़ाइल %(0)s से %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
-msgstr ""
+msgstr "स्वीकारें"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Reject"
-msgstr ""
+msgstr "अस्‍वीकारें"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
-msgstr ""
+msgstr "फाइल प्राप्त हो रही है"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "फाइल प्राप्त हो रही है %(0)s से %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
-msgstr ""
+msgstr "फाइल प्राप्त हो गयी"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
+msgstr "फाइल %(0)s से %(1)s की सफलतापूर्वक प्राप्ति"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:417
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 #: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
-msgstr ""
+msgstr "खोलें"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
-msgstr ""
+msgstr "ट्रांसफ़र विफल रहा"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "%(0)s फाइल का ट्रांसफर विफल रहा"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 #: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
-msgstr ""
+msgstr "फ़ाइलें जो प्राप्त हुईं"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "बैकग्राउंड में प्राप्त फ़ाइल %d"
+msgstr[1] "बैकग्राउंड में प्राप्त फ़ाइलें %d"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "बैकग्राउंड में प्राप्त और फ़ाइल %d"
+msgstr[1] "बैकग्राउंड में प्राप्त और फ़ाइलें %d"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -98,77 +98,79 @@ msgstr "ब्लूटूथ"
 
 #: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
 msgid "Bluetooth is disabled"
-msgstr "ब्लूटूथ निष्क्रिय है"
+msgstr "ब्लूटूथ बंद है"
 
 #: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
-msgstr "कोई ब्लूटूथ एडाप्टर मौजूद नहीं है"
+msgstr "कोई ब्लूटूथ अडैप्टर नहीं मिला"
 
 #: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "ब्लूटूथ हार्डवेयर स्विच से निष्क्रिय किया गया है"
+msgstr "हार्डवेयर स्विच द्वारा ब्लूटूथ बंद है"
 
 #: usr/lib/blueberry/blueberry.py:146
 msgid "Devices"
-msgstr ""
+msgstr "डिवाइस"
 
 #: usr/lib/blueberry/blueberry.py:152
 msgid "Bluetooth settings"
-msgstr ""
+msgstr "ब्लूटूथ सेटिंग्स"
 
 #: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
-msgstr ""
+msgstr "नाम"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "यह आपके कंप्यूटर का ब्लूटूथ नाम है"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr ""
+msgstr "सुदूर डिवाइस से फ़ाइलें प्राप्त करें"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
+"यह विकल्प आपके कंप्यूटर को ब्लूटूथ(OBEX) द्वारा ट्रांसफर हुई फ़ाइलें प्राप्त "
+"करने के लिए अनुमति देता है"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
-msgstr ""
+msgstr "ट्रे आइकन दिखाएँ"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्स"
 
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "%s के रूप में दृश्यमान व ब्लूटूथ फ़ाइल ट्रांसफर के लिए उपलब्ध है।"
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "%s के रूप में दृश्यमान"
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "ब्लूटूथ: %s से कनेक्ट हैं"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
-msgstr ""
+msgstr "डिवाइस को फ़ाइलें भेजे"
 
 #: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
-msgstr ""
+msgstr "ब्लूटूथ डिवाइस प्रबंधक खोलें"
 
 #: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"
-msgstr ""
+msgstr "छोड़ें"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr ""
+msgstr "ब्लूटूथ की सेटिंग्स बदलें"

@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-04-09 09:47+0000\n"
-"Last-Translator: Hiroshi Tagawa <Unknown>\n"
+"PO-Revision-Date: 2018-02-20 18:34+0000\n"
+"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:42+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
-msgstr ""
+msgstr "不明なデバイス"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
@@ -29,7 +29,7 @@ msgstr "Bluetooth 経由のファイル受信"
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
+msgstr "%(1)s からファイル %(0)s が届いています"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
@@ -41,55 +41,53 @@ msgstr "拒否"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
-msgstr ""
+msgstr "受信ファイル"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "%(1)s からファイル %(0)s を受信中"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
-msgstr ""
+msgstr "ファイルを受信しました"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
+msgstr "%(1)s からファイル %(0)s を受信しました"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:417
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 #: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
-msgstr ""
+msgstr "開く"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
-msgstr ""
+msgstr "転送に失敗しました"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "%(0)sの転送に失敗しました"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 #: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
-msgstr ""
+msgstr "ファイルを受信しました"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d 個のファイルをバックグラウンドで受信しました"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d 個以上のファイルをバックグラウンドで受信しました"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -136,7 +134,7 @@ msgstr "このオプションを使用すると、Bluetooth (OBEX) 経由で転�
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
-msgstr ""
+msgstr "トレイアイコンを表示する"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
@@ -145,12 +143,12 @@ msgstr "設定"
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "「%s」という名前で検出可能され、Bluetoothファイル転送で利用可能です。"
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "「%s」という名前で検出可能です。"
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
