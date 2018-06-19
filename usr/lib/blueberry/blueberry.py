@@ -228,7 +228,7 @@ class Blueberry(Gtk.Application):
     def get_default_adapter_name(self):
         name = None
         try:
-            output = subprocess.check_output(["bt-adapter", "-i"]).strip()
+            output = subprocess.check_output(["timeout", "2s", "bt-adapter", "-i"]).strip()
             for line in output.split("\n"):
                 line = line.strip()
                 if line.startswith("Alias: "):
