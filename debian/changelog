@@ -1,3 +1,9 @@
+blueberry (1.2.3) tara; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 26 Jun 2018 13:40:27 +0200
+
 blueberry (1.2.2) tara; urgency=medium
 
   * Add a 2s timeout around bt-adapter -i
