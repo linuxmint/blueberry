@@ -1,100 +1,93 @@
-# Welsh translation for linuxmint
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Armenian translation for linuxmint
+# Copyright (c) 2018 Rosetta Contributors and Canonical Ltd 2018
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2018-03-06 10:33+0000\n"
-"Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
-"Language-Team: Welsh <cy@li.org>\n"
+"PO-Revision-Date: 2018-06-11 17:12+0000\n"
+"Last-Translator: iAbaS <sosabazyan@yandex.ru>\n"
+"Language-Team: Armenian <hy@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : (n != 8 && n != 11) ? "
-"2 : 3;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2018-06-26 10:13+0000\n"
 "X-Generator: Launchpad (build 18688)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
-msgstr "Dyfais anhysbys"
+msgstr "Անհայտ սարք"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr "Ffeil yn cyrraedd dros Bluetooth"
+msgstr "Bluetooth-ով ստացվող ֆայլ"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr "FFeil y cyrraedd  %(0)s o %(1)s"
+msgstr "Ընդունել ենք %(0)s ֆայլ %(1)s-ից"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
-msgstr "Derbyn"
+msgstr "Ընդունել"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Reject"
-msgstr "Gwrthod"
+msgstr "Արգելել"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
-msgstr "Wrthi'n derbyn y ffeil"
+msgstr "Ընդունում ենք ֆայլ"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Wrthi'n derbyn y ffeil %(0)s o %(1)s"
+msgstr "Ընդունել ենք %(0)s ֆայլ %(1)s-ից"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
-msgstr "Derbyniwyd y ffeil"
+msgstr "Ֆայլը ընդունվել է"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr "Derbyniwyd y ffeil %(0)s oddi wrth %(1)s yn llwyddiannus"
+msgstr "%(1)s ֆայլից %(0)s-ը ստացվել է"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:417
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 #: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
-msgstr "Agor"
+msgstr "Բացել"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
-msgstr "Methodd y trosglwyddo"
+msgstr "Փոխանցումը չհաջողվեց"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "Methodd trosglwyddo'r ffeil %(0)s"
+msgstr "%(0)s ֆայլի փոխանցումը չհաջողվեց"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 #: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
-msgstr "Ffeiliau a dderbyniwyd"
+msgstr "Ֆայլերը ստացվել են"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] "Derbyniwyd %d ffeil yn y cefndir"
-msgstr[1] "Derbyniwyd %d ffeil yn y cefndir"
-msgstr[2] "Derbyniwyd %d o ffeiliau yn y cefndir"
-msgstr[3] "Derbyniwyd %d o ffeiliau yn y cefndir"
+msgstr[0] "Ստացվել է %d ֆայլը"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "Derbyniwyd %d ffeil arall yn y cefndir"
-msgstr[1] "Derbyniwyd %d ffeil arall yn y cefndir"
-msgstr[2] "Derbyniwyd %d o ffeiliau eraill yn y cefndir"
-msgstr[3] "Derbyniwyd %d o ffeiliau eraill yn y cefndir"
+msgstr[0] "Ստացվել է %d ավելի շատ ֆայլ"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -103,80 +96,79 @@ msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
 msgid "Bluetooth is disabled"
-msgstr "Mae bluetooth wedi ei analluogi"
+msgstr "Bluetooth անջատած է"
 
 #: usr/lib/blueberry/blueberry.py:127
 msgid "No Bluetooth adapters found"
-msgstr "Heb ganfod addaswyr Bluetooth"
+msgstr "Bluetooth ադապտեր չգտնվեց"
 
 #: usr/lib/blueberry/blueberry.py:128
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Mae Bluetooth wedi ei analluogi drwy switch caledwedd"
+msgstr "Bluetooth անջատված է սարքից"
 
 #: usr/lib/blueberry/blueberry.py:146
 msgid "Devices"
-msgstr "Dyfeisiau"
+msgstr "Սարքեր"
 
 #: usr/lib/blueberry/blueberry.py:152
 msgid "Bluetooth settings"
-msgstr "Gosodiau Bluetooth"
+msgstr "Bluetooth կարգավորումներ"
 
 #: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
-msgstr "Enw"
+msgstr "Անուն"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr "Hwn yw enw Bluetooth eich cyfrifiadur"
+msgstr "Սա համակարգչի Bluetooth-ի անունն է"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr "Derbyn ffeiliau gan ddyfais bell"
+msgstr "Ստանալ ֆայլեր այլ սարքերից"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"Mae'r dewis yma'n caniatáu i'ch cyfrifiadur dderbyn ffeiliau wedi eu "
-"trosglwyddo dros Bluetooth (OBEX)"
+"Այս կարգավորումը թույլատրում է համակարգչին ստանալ ֆայլեր Bluetooth (OBEX)-ի "
+"միջոցով"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
-msgstr "Dangos eicon cilfach"
+msgstr "Ցույց տալ պատկերակը"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
-msgstr "Gosodiadau"
+msgstr "Կարգավորումներ"
 
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
-"Yn weladwy fel %s ac ar gael ar gyfer trosglwyddo ffeiliau drwy Bluetooth"
+msgstr "Տեսանելի որպես %s և հասանելի Bluetooth-ով ֆայլեր փոխանցելու"
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr "Yn weladwy fel %s"
+msgstr "Տեսանելի որպես %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "Bluetooth: Wedi ei gysylltu i %s"
+msgstr "Bluetooth. Կապված %s սարքին"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
-msgstr "Anfon ffeiliau i'r ddyfais"
+msgstr "Ուղարկել ֆայլեր"
 
 #: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
-msgstr "Agor rheolwr dyfais Bluetooth"
+msgstr "Բացել Bluetooth Սարքերի Մենեջերը"
 
 #: usr/lib/blueberry/blueberry-tray.py:117
 msgid "Quit"
-msgstr "Gadael"
+msgstr "Փակել"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr "Ffurfweddu gosodiadau Bluetooth"
+msgstr "Կարգավորել Bluetooth–ի պարամետրերը"

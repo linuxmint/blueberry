@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2018-01-07 07:38+0000\n"
+"PO-Revision-Date: 2018-06-15 13:40+0000\n"
 "Last-Translator: Panwar <Unknown>\n"
 "Language-Team: Hindi <hi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
-"X-Generator: Launchpad (build 18658)\n"
+"X-Launchpad-Export-Date: 2018-06-26 10:13+0000\n"
+"X-Generator: Launchpad (build 18688)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -50,7 +50,7 @@ msgstr "फाइल प्राप्त हो रही है %(0)s से 
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
-msgstr "फाइल प्राप्त हो गयी"
+msgstr "फाइल प्राप्त हो गई"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
@@ -126,7 +126,7 @@ msgstr "यह आपके कंप्यूटर का ब्लूटू�
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr "सुदूर डिवाइस से फ़ाइलें प्राप्त करें"
+msgstr "दूरस्थ डिवाइस से फ़ाइलें प्राप्त करें"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
@@ -157,11 +157,11 @@ msgstr "%s के रूप में दृश्यमान"
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "ब्लूटूथ: %s से कनेक्ट हैं"
+msgstr "ब्लूटूथ: %s से जुड़ा हुआ है"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
-msgstr "डिवाइस को फ़ाइलें भेजे"
+msgstr "डिवाइस को फ़ाइल भेजे"
 
 #: usr/lib/blueberry/blueberry-tray.py:111
 msgid "Open Bluetooth device manager"
@@ -173,4 +173,4 @@ msgstr "छोड़ें"
 
 #: generate_desktop_files:25
 msgid "Configure Bluetooth settings"
-msgstr "ब्लूटूथ की सेटिंग्स बदलें"
+msgstr "ब्लूटूथ सेटिंग्स विन्यस्त करें"
