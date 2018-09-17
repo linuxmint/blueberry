@@ -1,19 +1,22 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blueberry package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: blueberry\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-27 13:45+0100\n"
+"POT-Creation-Date: 2018-09-17 14:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Launchpad-Export-Date: 2018-05-22 09:22+0000\n"
-"X-Generator: Launchpad (build 18658)\n"
-"Language: \n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
@@ -88,81 +91,81 @@ msgid_plural "Received %d more files in the background"
 msgstr[0] ""
 msgstr[1] ""
 
-#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
-#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
+#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:45
+#: usr/lib/blueberry/blueberry-tray.py:75 generate_desktop_files:25
 msgid "Bluetooth"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
+#: usr/lib/blueberry/blueberry.py:125 usr/lib/blueberry/blueberry-tray.py:62
 msgid "Bluetooth is disabled"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:127
+#: usr/lib/blueberry/blueberry.py:126
 msgid "No Bluetooth adapters found"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:128
+#: usr/lib/blueberry/blueberry.py:127
 msgid "Bluetooth is disabled by hardware switch"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:146
+#: usr/lib/blueberry/blueberry.py:145
 msgid "Devices"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:152
+#: usr/lib/blueberry/blueberry.py:151
 msgid "Bluetooth settings"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:158
+#: usr/lib/blueberry/blueberry.py:157
 msgid "Name"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:159
+#: usr/lib/blueberry/blueberry.py:158
 msgid "This is the Bluetooth name of your computer"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:166
+#: usr/lib/blueberry/blueberry.py:165
 msgid "Receive files from remote devices"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:167
+#: usr/lib/blueberry/blueberry.py:166
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:174
+#: usr/lib/blueberry/blueberry.py:173
 msgid "Show a tray icon"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:178
+#: usr/lib/blueberry/blueberry.py:177
 msgid "Settings"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:256
+#: usr/lib/blueberry/blueberry.py:255
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:258
+#: usr/lib/blueberry/blueberry.py:257
 #, python-format
 msgid "Visible as %s."
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:64
+#: usr/lib/blueberry/blueberry-tray.py:72
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:115
 msgid "Send files to a device"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:111
+#: usr/lib/blueberry/blueberry-tray.py:119
 msgid "Open Bluetooth device manager"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:117
+#: usr/lib/blueberry/blueberry-tray.py:125
 msgid "Quit"
 msgstr ""
 

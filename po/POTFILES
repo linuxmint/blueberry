@@ -1,0 +1,8 @@
+
+usr/lib/blueberry/blueberry-obex-agent.py
+usr/lib/blueberry/blueberry.py
+usr/lib/blueberry/blueberry-tray.py
+usr/lib/blueberry/BlueberrySettingsWidgets.py
+usr/lib/blueberry/rfkillMagic.py
+
+generate_desktop_files
