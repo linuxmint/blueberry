@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-import os
-os.system("/usr/lib/blueberry/blueberry-tray.py")
+import subprocess
+subprocess.call("/usr/lib/blueberry/blueberry-tray.py", shell=False)
