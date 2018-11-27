@@ -8,88 +8,88 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2016-07-07 15:45+0000\n"
-"Last-Translator: smauleon <smauleon@gmail.com>\n"
+"PO-Revision-Date: 2018-07-06 14:08+0000\n"
+"Last-Translator: Gorka Aintz Fernandez <Unknown>\n"
 "Language-Team: Catalan (Valencian) <ca@valencia@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:13+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:49+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
-msgstr ""
+msgstr "Dispositiu desconegut"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr ""
+msgstr "Arxiu entrant a través de Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
+msgstr "Arxiu entrant %(0)s de %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
-msgstr ""
+msgstr "Acceptar"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Reject"
-msgstr ""
+msgstr "Rebutja"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
-msgstr ""
+msgstr "Rebent arxiu"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "Rebent arxiu %(0)s de %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
-msgstr ""
+msgstr "Arxiu rebut"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
+msgstr "S'ha rebut correctament el fitxer %(0)s de %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:417
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 #: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
-msgstr ""
+msgstr "Obrir"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
-msgstr ""
+msgstr "Transferència fallida"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "La transferència de l'arxiu %(0)s va fallar"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 #: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
-msgstr ""
+msgstr "Arxius rebuts"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "S'ha rebut %d fitxer en segon pla"
+msgstr[1] "S'han rebut %d fitxers en segon pla"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "S'ha rebut %d fitxer més en segon pla"
+msgstr[1] "S'han rebut %d fitxers més en segon pla"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -110,29 +110,31 @@ msgstr "El Bluetooth està físicament inhabilitat"
 
 #: usr/lib/blueberry/blueberry.py:146
 msgid "Devices"
-msgstr ""
+msgstr "Dispositius"
 
 #: usr/lib/blueberry/blueberry.py:152
 msgid "Bluetooth settings"
-msgstr ""
+msgstr "Configuració del Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "Aquest és el nom Bluetooth del vostre ordinador"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr ""
+msgstr "Rep fitxers de dispositius remots"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
+"This option allows your computer to receive files transferred over Bluetooth "
+"(OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
@@ -140,22 +142,24 @@ msgstr "Mostra una icona al taulell"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
-msgstr ""
+msgstr "Configuració"
 
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
+"Visible com a %s i disponible per a la transferència de fitxers per "
+"Bluetooth."
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "Visible com a %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "Bluetooth: Connectat a %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"

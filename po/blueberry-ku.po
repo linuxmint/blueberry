@@ -8,88 +8,88 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-02-12 15:15+0000\n"
-"Last-Translator: Rokar ✌ <Unknown>\n"
+"PO-Revision-Date: 2018-08-28 10:10+0000\n"
+"Last-Translator: Bikarhêner <kaya6491@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:13+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:49+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:287
 msgid "Unknown device"
-msgstr ""
+msgstr "Cîhaza nenas"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 msgid "Incoming file over Bluetooth"
-msgstr ""
+msgstr "Peldanka ku ji ser Bluetoothê tê"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:310
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
+msgstr "Ji %(1)s peldanka %(0)s tê anîn"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Accept"
-msgstr ""
+msgstr "Qebûl bike"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:311
 msgid "Reject"
-msgstr ""
+msgstr "Red bike"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:314
 msgid "Receiving file"
-msgstr ""
+msgstr "Peldank hate anîn"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:315
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "Peldanka %(0)s ji %(1)s tê anîn"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "File received"
-msgstr ""
+msgstr "Peldank hate wergirtin"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
+msgstr "Peldanka %(0)s ji %(1)s bi awayekî serkeftî hate wergirtin"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:417
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 #: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
-msgstr ""
+msgstr "Vekirî"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:419
 msgid "Transfer failed"
-msgstr ""
+msgstr "Neqlkirin bi ser neket"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:420
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "Neqlkirina peldanka %(0)s bi ser neket"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 #: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
-msgstr ""
+msgstr "Peldankên wergirtî"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Li paşxanê %d peldank hate wergirtin"
+msgstr[1] "Li paşxanê %d peldank hatin wergirtin"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:443
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Li paşxanê %d peldankê din hate wergirtin"
+msgstr[1] "Li paşxanê %d peldankên din hatin wergirtin"
 
 #: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
 #: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
@@ -110,29 +110,31 @@ msgstr "Bluetooth ji aliyê kilîla hişkalavê ve hatiye neçalakirin"
 
 #: usr/lib/blueberry/blueberry.py:146
 msgid "Devices"
-msgstr ""
+msgstr "Cîhaz"
 
 #: usr/lib/blueberry/blueberry.py:152
 msgid "Bluetooth settings"
-msgstr ""
+msgstr "Mîhengên Bluetoothê"
 
 #: usr/lib/blueberry/blueberry.py:158
 msgid "Name"
-msgstr ""
+msgstr "Nav"
 
 #: usr/lib/blueberry/blueberry.py:159
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "Ev navê Bluetoothê ya kompûtera te ye"
 
 #: usr/lib/blueberry/blueberry.py:166
 msgid "Receive files from remote devices"
-msgstr ""
+msgstr "Ji cîhazên dûr peldankan werbigire"
 
 #: usr/lib/blueberry/blueberry.py:167
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
+"Ev vebijêrk rê dide kompûtera te ku peldankên ji ser Bluetoothê (OBEX) bêne "
+"neqlkirin werbigire"
 
 #: usr/lib/blueberry/blueberry.py:174
 msgid "Show a tray icon"
@@ -140,22 +142,22 @@ msgstr "Tray icon nîşan bide"
 
 #: usr/lib/blueberry/blueberry.py:178
 msgid "Settings"
-msgstr ""
+msgstr "Mîheng"
 
 #: usr/lib/blueberry/blueberry.py:256
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "Wek %s tê xuyan û ji bo neqlkirina peldankê ya Bluetoothê misaîd e."
 
 #: usr/lib/blueberry/blueberry.py:258
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "Wek %s tê xuyan."
 
 #: usr/lib/blueberry/blueberry-tray.py:64
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "Bluetooth: Ji %s re hate girêdan"
 
 #: usr/lib/blueberry/blueberry-tray.py:107
 msgid "Send files to a device"
