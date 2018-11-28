@@ -1,3 +1,10 @@
+blueberry (1.2.4) tessa; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 28 Nov 2018 12:55:34 +0000
+
 blueberry (1.2.3) tara; urgency=medium
 
   * l10n: Update translations
