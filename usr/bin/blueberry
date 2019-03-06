@@ -1,4 +1,3 @@
-#!/usr/bin/python3
+#!/bin/sh
 
-import os
-os.system("/usr/lib/blueberry/blueberry.py")
+/usr/lib/blueberry/blueberry.py &

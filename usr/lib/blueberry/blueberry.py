@@ -3,6 +3,7 @@
 import sys, os
 import gettext
 import rfkillMagic
+import setproctitle
 import subprocess
 from BlueberrySettingsWidgets import SettingsPage, SettingsRow
 import gi
@@ -17,6 +18,8 @@ BLUETOOTH_WORKING_PAGE       = "working-page"
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
+
+setproctitle.setproctitle("blueberry")
 
 class Blueberry(Gtk.Application):
     ''' Create the UI '''

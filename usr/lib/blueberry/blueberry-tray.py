@@ -7,10 +7,13 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
 from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio
 import rfkillMagic
+import setproctitle
 import subprocess
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
+
+setproctitle.setproctitle("blueberry-tray")
 
 class BluetoothTray(Gtk.Application):
     def __init__(self):
