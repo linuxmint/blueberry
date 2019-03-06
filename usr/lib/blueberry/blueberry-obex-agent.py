@@ -1,9 +1,4 @@
-#!/usr/bin/python2
-
-from __future__ import print_function
-from __future__ import division
-from __future__ import absolute_import
-from __future__ import unicode_literals
+#!/usr/bin/python3
 
 # CREDITS
 # --------
@@ -28,7 +23,6 @@ import traceback
 
 from datetime import datetime
 from gi.types import GObjectMeta
-from inspect import isclass
 
 gi.require_version("Gtk", "3.0")
 gi.require_version('Notify', '0.7')

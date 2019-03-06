@@ -1,7 +1,6 @@
 
-import thread
+import _thread as thread
 import subprocess
-import os
 import re
 from gi.repository import GLib
 
@@ -32,7 +31,7 @@ class Interface:
             self.start_event_monitor()
 
     def adapter_check(self):
-        res = subprocess.check_output(RFKILL_CHK)
+        res = subprocess.check_output(RFKILL_CHK).decode('utf-8')
 
         '''
         Assume the output of:
@@ -69,7 +68,7 @@ class Interface:
     def event_monitor_thread(self, data):
         self.tproc = subprocess.Popen(RFKILL_EVENT_MONITOR, stdout=subprocess.PIPE, stdin=subprocess.PIPE)
         while self.tproc.poll() is None and not self.monitor_killer:
-            l = self.tproc.stdout.readline() # This blocks until it receives a newline.
+            l = self.tproc.stdout.readline().decode('utf-8') # This blocks until it receives a newline.
             self.update_state(l)
 
         self.tproc = None

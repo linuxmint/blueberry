@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import subprocess
 import sys
@@ -32,4 +32,4 @@ try:
             proc.wait()
             break
 except Exception as e:
-    print "safechild exception: ", e
+    print("safechild exception: ", e)

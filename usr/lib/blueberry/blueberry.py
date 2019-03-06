@@ -1,10 +1,10 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
-import sys, os, commands
+import sys, os
 import gettext
 import rfkillMagic
 import subprocess
-from BlueberrySettingsWidgets import SettingsPage, SettingsBox, SettingsRow
+from BlueberrySettingsWidgets import SettingsPage, SettingsRow
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
@@ -36,7 +36,7 @@ class Blueberry(Gtk.Application):
             self.create_window()
 
     def detect_desktop_environment(self):
-        wm_info = commands.getoutput("wmctrl -m")
+        wm_info = subprocess.getoutput("wmctrl -m")
         if "XDG_CURRENT_DESKTOP" in os.environ:
             xdg_current_desktop = os.environ["XDG_CURRENT_DESKTOP"]
         else:
@@ -66,7 +66,7 @@ class Blueberry(Gtk.Application):
             self.configuration_tools = {"sound": "pavucontrol", "keyboard": "lxinput", "mouse": "lxinput"}
         else:
             self.de = "Unknown"
-            print "Warning: DE could not be detected!"
+            print("Warning: DE could not be detected!")
             self.configuration_tools = {}
             if os.path.exists("/usr/bin/pavucontrol"):
                 self.configuration_tools["sound"] = "pavucontrol"
@@ -154,7 +154,7 @@ class Blueberry(Gtk.Application):
         if adapter_name is not None:
             self.adapter_name_entry.set_text(adapter_name)
         self.adapter_name_entry.connect("changed", self.on_adapter_name_changed)
-        row = SettingsRow(Gtk.Label(_("Name")), self.adapter_name_entry)
+        row = SettingsRow(Gtk.Label(label=_("Name")), self.adapter_name_entry)
         row.set_tooltip_text(_("This is the Bluetooth name of your computer"))
         section.add_row(row)
 
@@ -192,7 +192,7 @@ class Blueberry(Gtk.Application):
 
     def panel_changed(self, widget, panel):
         if not panel in self.configuration_tools:
-            print "Warning, no configuration tool known for panel '%s'" % panel
+            print("Warning, no configuration tool known for panel '%s'" % panel)
         else:
             os.system("%s &" % self.configuration_tools[panel])
 
@@ -228,7 +228,7 @@ class Blueberry(Gtk.Application):
     def get_default_adapter_name(self):
         name = None
         try:
-            output = subprocess.check_output(["timeout", "2s", "bt-adapter", "-i"]).strip()
+            output = subprocess.check_output(["timeout", "2s", "bt-adapter", "-i"]).decode("utf-8").strip()
             for line in output.split("\n"):
                 line = line.strip()
                 if line.startswith("Alias: "):
@@ -260,7 +260,7 @@ class Blueberry(Gtk.Application):
             else:
                 explanation_label.set_label("")
         except Exception as e:
-            print (e)
+            print(e)
             return None
 
     def update_ui_callback(self):
