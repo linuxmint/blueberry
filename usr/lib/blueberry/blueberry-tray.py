@@ -107,24 +107,6 @@ class BluetoothTray(Gtk.Application):
     def on_activate(self, icon, data=None):
         subprocess.Popen(["blueberry"])
 
-    def create_paired_submenu(self):
-        paired_menu = None
-        if len(self.paired_devices) > 0:
-            paired_menu = Gtk.Menu()
-            for device in self.paired_devices:
-                label = device
-                item = Gtk.ImageMenuItem(label=label)
-                if device in self.connected_devices:
-                    image = Gtk.Image.new_from_icon_name("emblem-ok-symbolic", Gtk.IconSize.MENU)
-                    image.set_tooltip_text(_("Connected"))
-                    item.set_always_show_image(True)
-                    item.set_image(image)
-                item.connect("activate",self.toggle_connect_cb, device)
-                paired_menu.append(item)
-            m_item = Gtk.MenuItem(_("Paired devices"))
-            m_item.set_submenu(paired_menu)
-        return m_item
-
     def on_popup_menu(self, icon, button, time, data = None):
         menu = Gtk.Menu()
 
@@ -143,10 +125,22 @@ class BluetoothTray(Gtk.Application):
         item.connect("activate", self.open_manager_cb)
         menu.append(item)
 
-        menu.append(Gtk.SeparatorMenuItem())
-        paired_menu = self.create_paired_submenu()
-        if paired_menu:
-            menu.append(paired_menu)
+        if len(self.paired_devices) > 0:
+            menu.append(Gtk.SeparatorMenuItem())
+            m_item = Gtk.MenuItem(_("Paired devices"))
+            menu.append(m_item)
+            paired_menu = Gtk.Menu()
+            m_item.set_submenu(paired_menu)
+            for device in self.paired_devices:
+                label = device
+                item = Gtk.ImageMenuItem(label=label)
+                if device in self.connected_devices:
+                    image = Gtk.Image.new_from_icon_name("emblem-ok-symbolic", Gtk.IconSize.MENU)
+                    image.set_tooltip_text(_("Connected"))
+                    item.set_always_show_image(True)
+                    item.set_image(image)
+                item.connect("activate",self.toggle_connect_cb, device)
+                paired_menu.append(item)
 
         menu.append(Gtk.SeparatorMenuItem())
 
