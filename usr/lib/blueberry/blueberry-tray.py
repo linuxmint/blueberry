@@ -113,12 +113,15 @@ class BluetoothTray(Gtk.Application):
             paired_menu = Gtk.Menu()
             for device in self.paired_devices:
                 label = device
+                item = Gtk.ImageMenuItem(label=label)
                 if device in self.connected_devices:
-                    label = label + " - connected"
-                item = Gtk.MenuItem(label=label)
+                    image = Gtk.Image.new_from_icon_name("emblem-ok-symbolic", Gtk.IconSize.MENU)
+                    image.set_tooltip_text(_("Connected"))
+                    item.set_always_show_image(True)
+                    item.set_image(image)
                 item.connect("activate",self.toggle_connect_cb, device)
                 paired_menu.append(item)
-            m_item = Gtk.MenuItem("Paired Devices")
+            m_item = Gtk.MenuItem(_("Paired devices"))
             m_item.set_submenu(paired_menu)
         return m_item
 
