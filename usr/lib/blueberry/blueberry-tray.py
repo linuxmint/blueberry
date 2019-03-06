@@ -65,17 +65,18 @@ class BluetoothTray(Gtk.Application):
             self.update_connected_state()
 
     def update_connected_state(self):
-        connected_devices = self.get_connected_devices()
+        self.get_devices()
 
-        if len(connected_devices) > 0:
+        if len(self.connected_devices) > 0:
             self.icon.set_from_icon_name("blueberry-tray-active")
-            self.icon.set_tooltip_text(_("Bluetooth: Connected to %s") % (", ".join(connected_devices)))
+            self.icon.set_tooltip_text(_("Bluetooth: Connected to %s") % (", ".join(self.connected_devices)))
         else:
             self.icon.set_from_icon_name("blueberry-tray")
             self.icon.set_tooltip_text(_("Bluetooth"))
 
-    def get_connected_devices(self):
-        connected_devices = []
+    def get_devices(self):
+        self.connected_devices = []
+        self.paired_devices = {}
         default_iter = None
 
         iter = self.model.get_iter_first()
@@ -93,14 +94,33 @@ class BluetoothTray(Gtk.Application):
                 connected = self.model.get_value(iter, GnomeBluetooth.Column.CONNECTED)
                 if connected:
                     name = self.model.get_value(iter, GnomeBluetooth.Column.NAME)
-                    connected_devices.append(name)
+                    self.connected_devices.append(name)
+
+                paired = self.model.get_value(iter, GnomeBluetooth.Column.PAIRED)
+                if paired:
+                    name = self.model.get_value(iter, GnomeBluetooth.Column.NAME)
+                    proxy = self.model.get_value(iter, GnomeBluetooth.Column.PROXY)
+                    self.paired_devices[name] = proxy
 
                 iter = self.model.iter_next(iter)
 
-        return connected_devices
-
     def on_activate(self, icon, data=None):
         subprocess.Popen(["blueberry"])
+
+    def create_paired_submenu(self):
+        paired_menu = None
+        if len(self.paired_devices) > 0:
+            paired_menu = Gtk.Menu()
+            for device in self.paired_devices:
+                label = device
+                if device in self.connected_devices:
+                    label = label + " - connected"
+                item = Gtk.MenuItem(label=label)
+                item.connect("activate",self.toggle_connect_cb, device)
+                paired_menu.append(item)
+            m_item = Gtk.MenuItem("Paired Devices")
+            m_item.set_submenu(paired_menu)
+        return m_item
 
     def on_popup_menu(self, icon, button, time, data = None):
         menu = Gtk.Menu()
@@ -121,6 +141,11 @@ class BluetoothTray(Gtk.Application):
         menu.append(item)
 
         menu.append(Gtk.SeparatorMenuItem())
+        paired_menu = self.create_paired_submenu()
+        if paired_menu:
+            menu.append(paired_menu)
+
+        menu.append(Gtk.SeparatorMenuItem())
 
         item = Gtk.MenuItem(label=_("Quit"))
         item.connect("activate", self.terminate)
@@ -130,6 +155,11 @@ class BluetoothTray(Gtk.Application):
 
         device = Gdk.Display.get_default().get_device_manager().get_client_pointer()
         menu.popup_for_device(device, None, None, position_menu_cb, icon, button, time)
+
+    def toggle_connect_cb(self, item, data = None):
+        proxy = self.paired_devices[data]
+        connected = data in self.connected_devices
+        self.client.connect_service(proxy.get_object_path(), not connected)
 
     def send_files_cb(self, item, data = None):
         subprocess.Popen(["bluetooth-sendto"])
