@@ -22,7 +22,7 @@ class Interface:
 
         self.hard_block = False
         self.soft_block = False
-        self.rfkill_err = False
+        self.rfkill_err = None
 
         self.monitor_killer = False
 
@@ -126,10 +126,13 @@ class Interface:
         # Check for errors and continue
         _,err = self.blockproc.communicate()
         if err:
-            self.debug(err.decode('utf-8'))
-            self.rfkill_err = True
+            error = err.decode("utf-8")
+            self.debug(error)
+            self.rfkill_err = error
             # Force UI update
             self.update_ui()
+        else:
+            self.rfkill_err = None
 
         self.blockproc = None
         self.debug("set_block_thread finished")

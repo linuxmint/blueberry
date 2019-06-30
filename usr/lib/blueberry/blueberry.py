@@ -11,7 +11,7 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
 from gi.repository import Gtk, GnomeBluetooth, Gio
 
-BLUETOOTH_RFKILL_ERR      = "rfkill-err"
+BLUETOOTH_RFKILL_ERR         = "rfkill-err"
 BLUETOOTH_DISABLED_PAGE      = "disabled-page"
 BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
 BLUETOOTH_NO_DEVICES_PAGE    = "no-devices-page"
@@ -126,7 +126,7 @@ class Blueberry(Gtk.Application):
         self.status_image.show()
 
         self.stack = Gtk.Stack()
-        self.add_stack_page(_("An error has occurred."), BLUETOOTH_RFKILL_ERR);
+        self.error_label = self.add_stack_page(_("An error has occurred"), BLUETOOTH_RFKILL_ERR);
         self.add_stack_page(_("Bluetooth is disabled"), BLUETOOTH_DISABLED_PAGE);
         self.add_stack_page(_("No Bluetooth adapters found"), BLUETOOTH_NO_DEVICES_PAGE);
         self.add_stack_page(_("Bluetooth is disabled by hardware switch"), BLUETOOTH_HW_DISABLED_PAGE);
@@ -229,6 +229,7 @@ class Blueberry(Gtk.Application):
         label = Gtk.Label(label=message)
         self.stack.add_named(label, name)
         label.show()
+        return label
 
     def get_default_adapter_name(self):
         name = None
@@ -273,7 +274,8 @@ class Blueberry(Gtk.Application):
         sensitive = False
         page = ""
 
-        if self.rfkill.rfkill_err:
+        if self.rfkill.rfkill_err is not None:
+            self.error_label.set_markup("%s\n%s" % (_("An error has occurred"), self.rfkill.rfkill_err))
             page = BLUETOOTH_RFKILL_ERR
             sensitive = True
             # Set Switch back to Off position
