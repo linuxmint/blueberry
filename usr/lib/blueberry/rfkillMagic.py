@@ -22,6 +22,7 @@ class Interface:
 
         self.hard_block = False
         self.soft_block = False
+        self.rfkill_err = False
 
         self.monitor_killer = False
 
@@ -117,13 +118,18 @@ class Interface:
 
         if block:
             self.debug("set_block_thread blocking")
-            self.blockproc = subprocess.Popen(RFKILL_BLOCK)
+            self.blockproc = subprocess.Popen(RFKILL_BLOCK, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         else:
             self.debug("set_block_thread unblocking")
-            self.blockproc = subprocess.Popen(RFKILL_UNBLOCK)
+            self.blockproc = subprocess.Popen(RFKILL_UNBLOCK, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        while self.blockproc.poll() is None:
-            pass
+        # Check for errors and continue
+        _,err = self.blockproc.communicate()
+        if err:
+            self.debug(err.decode('utf-8'))
+            self.rfkill_err = True
+            # Force UI update
+            self.update_ui()
 
         self.blockproc = None
         self.debug("set_block_thread finished")
