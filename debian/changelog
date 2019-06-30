@@ -1,3 +1,29 @@
+blueberry (1.2.6) tina; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Fix generate_desktop_files
+
+  [ Sebastiaan Lokhorst ]
+  * Convert everything to use Python 3 (#66)
+
+  [ Koen ]
+  * Add paired submenu for quick connect/disconnect (#69)
+
+  [ Clement Lefebvre ]
+  * Tray: Use a tick image to represent connected device
+  * l10n: Update POT
+  * Tray: Fix paired menu when no devices are paired
+  * Use shell launchers and use setproctitle to name the python processes
+
+  [ shanmukhateja ]
+  * rfkill: Show error message on permission denied (#83)
+
+  [ Clement Lefebvre ]
+  * rfkill: Show the error message in the UI
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 30 Jun 2019 17:55:33 +0200
+
 blueberry (1.2.5) tessa; urgency=medium
 
   * l10n: Update translations
