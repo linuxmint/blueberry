@@ -7,128 +7,132 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2018-07-31 22:07+0000\n"
-"Last-Translator: Arif <mdyos@inbox.ru>\n"
+"POT-Creation-Date: 2019-06-30 17:53+0200\n"
+"PO-Revision-Date: 2019-01-26 09:46+0000\n"
+"Last-Translator: Emin Safarli <Unknown>\n"
 "Language-Team: Azerbaijani <az@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-12-11 11:58+0000\n"
-"X-Generator: Launchpad (build 18837)\n"
+"X-Launchpad-Export-Date: 2019-07-10 08:27+0000\n"
+"X-Generator: Launchpad (build 19007)\n"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:287
+#: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
 msgstr "Bilinməyən qurğu"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:309
+#: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
 msgstr "Blutuzdan gələn düzüm"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:310
+#: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
 msgstr "%(1)s'dən gələn %(0)s düzümü"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
 msgstr "Al"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
 msgstr "Geri çevir"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:314
+#: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
 msgstr "Düzümün alışı"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:315
+#: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
 msgstr "%(1)s'dən %(0)s düzümünün alışı"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:413
+#: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
-msgstr "düzüm alındı"
+msgstr "Düzüm alındı"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:414
+#: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
 msgstr "%(1)s'dən gələn %(0)s düzümü uğurla alındı"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:417
+#: usr/lib/blueberry/blueberry-obex-agent.py:411
+#: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
-#: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
 msgstr "Aç"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:419
+#: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
 msgstr "Göndəriş uğursuz oldu"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:420
+#: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
 msgstr "%(0)s düzümünün göndərişi uğursuz oldu"
 
+#: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
-#: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
 msgstr "Düzümlər alındı"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:437
+#: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
 msgstr[0] "%d düzüm arxaplanda alındı"
 msgstr[1] "%d düzüm arxaplanda alındı"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:443
+#: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
 msgstr[0] "Daha %d düzüm arxaplanda alındı"
 msgstr[1] "Daha %d düzüm arxaplanda alındı"
 
-#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
-#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
+#: usr/lib/blueberry/blueberry.py:80 usr/lib/blueberry/blueberry-tray.py:48
+#: usr/lib/blueberry/blueberry-tray.py:78 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Blutuz"
 
-#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
+#: usr/lib/blueberry/blueberry.py:129 usr/lib/blueberry/blueberry.py:278
+msgid "An error has occurred"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:130 usr/lib/blueberry/blueberry-tray.py:65
 msgid "Bluetooth is disabled"
 msgstr "Blutuz sönülüdür"
 
-#: usr/lib/blueberry/blueberry.py:127
+#: usr/lib/blueberry/blueberry.py:131
 msgid "No Bluetooth adapters found"
 msgstr "Bir Blutuz qurğusu belə tapılmadı"
 
-#: usr/lib/blueberry/blueberry.py:128
+#: usr/lib/blueberry/blueberry.py:132
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Qurğu Blutuzu söndürdü"
 
-#: usr/lib/blueberry/blueberry.py:146
+#: usr/lib/blueberry/blueberry.py:150
 msgid "Devices"
 msgstr "Qurğular"
 
-#: usr/lib/blueberry/blueberry.py:152
+#: usr/lib/blueberry/blueberry.py:156
 msgid "Bluetooth settings"
 msgstr "Blutuz qurğuları"
 
-#: usr/lib/blueberry/blueberry.py:158
+#: usr/lib/blueberry/blueberry.py:162
 msgid "Name"
 msgstr "Adı"
 
-#: usr/lib/blueberry/blueberry.py:159
+#: usr/lib/blueberry/blueberry.py:163
 msgid "This is the Bluetooth name of your computer"
 msgstr "Bu, Sizin bilgisayarınızın adıdır"
 
-#: usr/lib/blueberry/blueberry.py:166
+#: usr/lib/blueberry/blueberry.py:170
 msgid "Receive files from remote devices"
 msgstr "Düzümləri uzaq qurğulardan al"
 
-#: usr/lib/blueberry/blueberry.py:167
+#: usr/lib/blueberry/blueberry.py:171
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -136,41 +140,49 @@ msgstr ""
 "Bu seçim Sizin bilgisayarınıza Blutuz (OBEX) üzərindən göndərilən düzümləri "
 "almağa əlverəcək"
 
-#: usr/lib/blueberry/blueberry.py:174
-msgid "Show a tray icon"
-msgstr "Bir təpsi ikonu göstər"
-
 #: usr/lib/blueberry/blueberry.py:178
+msgid "Show a tray icon"
+msgstr "Təpsi ikonu göstər"
+
+#: usr/lib/blueberry/blueberry.py:182
 msgid "Settings"
 msgstr "Quruluşlar"
 
-#: usr/lib/blueberry/blueberry.py:256
+#: usr/lib/blueberry/blueberry.py:261
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr "%s kimi göstər, Blutuz düzüm göndərişi üçün əlçatan et."
 
-#: usr/lib/blueberry/blueberry.py:258
+#: usr/lib/blueberry/blueberry.py:263
 #, python-format
 msgid "Visible as %s."
 msgstr "%s kimi göstər."
 
-#: usr/lib/blueberry/blueberry-tray.py:64
+#: usr/lib/blueberry/blueberry-tray.py:75
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Blutuz: %s'ə bağlanıb"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:123
 msgid "Send files to a device"
 msgstr "Düzümləri bir qurğuya göndər"
 
-#: usr/lib/blueberry/blueberry-tray.py:111
+#: usr/lib/blueberry/blueberry-tray.py:127
 msgid "Open Bluetooth device manager"
 msgstr "Blutuz qurğu yönətməsini aç"
 
-#: usr/lib/blueberry/blueberry-tray.py:117
+#: usr/lib/blueberry/blueberry-tray.py:133
+msgid "Paired devices"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:142
+msgid "Connected"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:150
 msgid "Quit"
 msgstr "Çıx"
 
-#: generate_desktop_files:25
+#: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
 msgstr "Blutuz quruluşlarını qur"

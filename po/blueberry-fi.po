@@ -7,128 +7,132 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2017-06-27 22:57+0000\n"
-"Last-Translator: Ari Ervasti <ari.ervasti87@gmail.com>\n"
+"POT-Creation-Date: 2019-06-30 17:53+0200\n"
+"PO-Revision-Date: 2019-07-01 15:57+0000\n"
+"Last-Translator: Kimmo Kujansuu <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-12-11 11:58+0000\n"
-"X-Generator: Launchpad (build 18837)\n"
+"X-Launchpad-Export-Date: 2019-07-10 08:27+0000\n"
+"X-Generator: Launchpad (build 19007)\n"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:287
+#: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
 msgstr "Tuntematon laite"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:309
+#: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
 msgstr "Bluetoothin kautta saapuu tiedosto"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:310
+#: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
 msgstr "Saapuva tiedosto %(0)s lähteestä %(1)s"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
 msgstr "Hyväksy"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
 msgstr "Hylkää"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:314
+#: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
 msgstr "Vastaanotetaan tiedostoa"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:315
+#: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
 msgstr "Vastaanotetaan tiedostoa %(0)s kohteesta %(1)s"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:413
+#: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
 msgstr "Vastaanotettiin tiedosto"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:414
+#: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
 msgstr "Tiedosto %(0)s kohteesta %(1)s vastaanotettiin onnistuneesti"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:417
+#: usr/lib/blueberry/blueberry-obex-agent.py:411
+#: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
-#: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
 msgstr "Avaa"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:419
+#: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
 msgstr "Siirto epäonnistui"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:420
+#: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
 msgstr "Tiedoston %(0)s siirto epäonnistui"
 
+#: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
-#: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
 msgstr "Vastaanotettiin tiedostot"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:437
+#: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
 msgstr[0] "Vastaanotettiin %d tiedosto taustalla"
 msgstr[1] "Vastaanotettiin %d tiedostoa taustalla"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:443
+#: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
 msgstr[0] "Vastaanotettu %d tiedosto taustalla"
 msgstr[1] "Vastaanotettu %d tiedostoa taustalla"
 
-#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
-#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
+#: usr/lib/blueberry/blueberry.py:80 usr/lib/blueberry/blueberry-tray.py:48
+#: usr/lib/blueberry/blueberry-tray.py:78 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
+#: usr/lib/blueberry/blueberry.py:129 usr/lib/blueberry/blueberry.py:278
+msgid "An error has occurred"
+msgstr "Tapahtui virhe"
+
+#: usr/lib/blueberry/blueberry.py:130 usr/lib/blueberry/blueberry-tray.py:65
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth ei ole käytössä"
 
-#: usr/lib/blueberry/blueberry.py:127
+#: usr/lib/blueberry/blueberry.py:131
 msgid "No Bluetooth adapters found"
 msgstr "Bluetooth-sovittimia ei löytynyt"
 
-#: usr/lib/blueberry/blueberry.py:128
+#: usr/lib/blueberry/blueberry.py:132
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Bluetooth ei ole käytössä laitekytkimen asennon vuoksi"
 
-#: usr/lib/blueberry/blueberry.py:146
+#: usr/lib/blueberry/blueberry.py:150
 msgid "Devices"
 msgstr "Laitteet"
 
-#: usr/lib/blueberry/blueberry.py:152
+#: usr/lib/blueberry/blueberry.py:156
 msgid "Bluetooth settings"
 msgstr "Bluetooth-asetukset"
 
-#: usr/lib/blueberry/blueberry.py:158
+#: usr/lib/blueberry/blueberry.py:162
 msgid "Name"
 msgstr "Nimi"
 
-#: usr/lib/blueberry/blueberry.py:159
+#: usr/lib/blueberry/blueberry.py:163
 msgid "This is the Bluetooth name of your computer"
 msgstr "Tämä on tietokoneesi Bluetooth-nimi"
 
-#: usr/lib/blueberry/blueberry.py:166
+#: usr/lib/blueberry/blueberry.py:170
 msgid "Receive files from remote devices"
 msgstr "Vastaanota tiedostoja etälaitteilta"
 
-#: usr/lib/blueberry/blueberry.py:167
+#: usr/lib/blueberry/blueberry.py:171
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -136,41 +140,49 @@ msgstr ""
 "Tämä asetus sallii tietokoneesi vastaanottaa tiedostoja, jotka on siirretty "
 "Bluetoothin yli (OBEX)"
 
-#: usr/lib/blueberry/blueberry.py:174
+#: usr/lib/blueberry/blueberry.py:178
 msgid "Show a tray icon"
 msgstr "Näytä ilmoitusalueen kuvake"
 
-#: usr/lib/blueberry/blueberry.py:178
+#: usr/lib/blueberry/blueberry.py:182
 msgid "Settings"
 msgstr "Asetukset"
 
-#: usr/lib/blueberry/blueberry.py:256
+#: usr/lib/blueberry/blueberry.py:261
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr "Löydettävissä nimellä %s ja saatavilla Bluetooth-tiedostosiirroille"
 
-#: usr/lib/blueberry/blueberry.py:258
+#: usr/lib/blueberry/blueberry.py:263
 #, python-format
 msgid "Visible as %s."
 msgstr "Löydettävissä nimellä %s."
 
-#: usr/lib/blueberry/blueberry-tray.py:64
+#: usr/lib/blueberry/blueberry-tray.py:75
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Bluetooth: Yhdistetty kohteeseen %s"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:123
 msgid "Send files to a device"
 msgstr "Lähetä tiedostoja laitteelle"
 
-#: usr/lib/blueberry/blueberry-tray.py:111
+#: usr/lib/blueberry/blueberry-tray.py:127
 msgid "Open Bluetooth device manager"
 msgstr "Avaa Bluetooth-laitteiden hallinta"
 
-#: usr/lib/blueberry/blueberry-tray.py:117
+#: usr/lib/blueberry/blueberry-tray.py:133
+msgid "Paired devices"
+msgstr "Laiteparit"
+
+#: usr/lib/blueberry/blueberry-tray.py:142
+msgid "Connected"
+msgstr "Yhdistetty"
+
+#: usr/lib/blueberry/blueberry-tray.py:150
 msgid "Quit"
 msgstr "Lopeta"
 
-#: generate_desktop_files:25
+#: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
 msgstr "Säädä Bluetooth-asetuksia"

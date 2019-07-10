@@ -7,168 +7,182 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-10-27 13:45+0100\n"
-"PO-Revision-Date: 2015-03-14 11:36+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"POT-Creation-Date: 2019-06-30 17:53+0200\n"
+"PO-Revision-Date: 2019-06-30 16:03+0000\n"
+"Last-Translator: Piet Coppens <Unknown>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-12-11 11:58+0000\n"
-"X-Generator: Launchpad (build 18837)\n"
+"X-Launchpad-Export-Date: 2019-07-10 08:27+0000\n"
+"X-Generator: Launchpad (build 19007)\n"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:287
+#: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
-msgstr ""
+msgstr "Nekonata aparato"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:309
+#: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr ""
+msgstr "Envenanta dosiero per Bludento"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:310
+#: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
+msgstr "Envenanta dosiero %(0)s de %(1)s"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
-msgstr ""
+msgstr "Akcepti"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
-msgstr ""
+msgstr "Malakcepti"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:314
+#: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
-msgstr ""
+msgstr "Ricevado de dosiero"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:315
+#: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "Ricevado de dosiero %(0)s desur %(1)s"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:407
+msgid "File received"
+msgstr "Dosiero ricevita"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:408
+#, python-format
+msgid "File %(0)s from %(1)s successfully received"
+msgstr "Dosiero %(0)s de %(1)s sukcese ricevita"
+
+#: usr/lib/blueberry/blueberry-obex-agent.py:411
+#: usr/lib/blueberry/blueberry-obex-agent.py:434
+#: usr/lib/blueberry/blueberry-obex-agent.py:440
+msgid "Open"
+msgstr "Malfermi"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
-msgid "File received"
-msgstr ""
+msgid "Transfer failed"
+msgstr "Transmeto malsukcesis"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
-msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry-obex-agent.py:417
-#: usr/lib/blueberry/blueberry-obex-agent.py:440
-#: usr/lib/blueberry/blueberry-obex-agent.py:446
-msgid "Open"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry-obex-agent.py:419
-msgid "Transfer failed"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry-obex-agent.py:420
-#, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "Transmeto de dosiero %(0)s malsukcesis"
 
+#: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
-#: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
-msgstr ""
+msgstr "Dosieroj ricevitaj"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:437
+#: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ricevita %d dosiero fone"
+msgstr[1] "Ricevitaj %d dosieroj fone"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:443
+#: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ricevita %d plia dosiero fone"
+msgstr[1] "Ricevitaj %d pliaj dosieroj fone"
 
-#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
-#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
+#: usr/lib/blueberry/blueberry.py:80 usr/lib/blueberry/blueberry-tray.py:48
+#: usr/lib/blueberry/blueberry-tray.py:78 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Bludento"
 
-#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
+#: usr/lib/blueberry/blueberry.py:129 usr/lib/blueberry/blueberry.py:278
+msgid "An error has occurred"
+msgstr "Okazis eraro"
+
+#: usr/lib/blueberry/blueberry.py:130 usr/lib/blueberry/blueberry-tray.py:65
 msgid "Bluetooth is disabled"
 msgstr "Bludento estas malŝaltita"
 
-#: usr/lib/blueberry/blueberry.py:127
+#: usr/lib/blueberry/blueberry.py:131
 msgid "No Bluetooth adapters found"
 msgstr "Ne trovis Bludento-aparaton"
 
-#: usr/lib/blueberry/blueberry.py:128
+#: usr/lib/blueberry/blueberry.py:132
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Bludento estas malŝaltita per aparatara ŝaltilo"
 
-#: usr/lib/blueberry/blueberry.py:146
+#: usr/lib/blueberry/blueberry.py:150
 msgid "Devices"
-msgstr ""
+msgstr "Aparatoj"
 
-#: usr/lib/blueberry/blueberry.py:152
+#: usr/lib/blueberry/blueberry.py:156
 msgid "Bluetooth settings"
-msgstr ""
+msgstr "Bluedento-agordoj"
 
-#: usr/lib/blueberry/blueberry.py:158
+#: usr/lib/blueberry/blueberry.py:162
 msgid "Name"
-msgstr ""
+msgstr "Nomo"
 
-#: usr/lib/blueberry/blueberry.py:159
+#: usr/lib/blueberry/blueberry.py:163
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "Ĉi tio estas la Bludento-nomo de via komputilo"
 
-#: usr/lib/blueberry/blueberry.py:166
+#: usr/lib/blueberry/blueberry.py:170
 msgid "Receive files from remote devices"
-msgstr ""
+msgstr "Ricevi dosierojn de foraj aparatoj"
 
-#: usr/lib/blueberry/blueberry.py:167
+#: usr/lib/blueberry/blueberry.py:171
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-
-#: usr/lib/blueberry/blueberry.py:174
-msgid "Show a tray icon"
-msgstr ""
+"Ĉi tiu opcio ebligas al via komputilo ricevadon de dosieroj transmetitaj per "
+"Bludento (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:178
-msgid "Settings"
-msgstr ""
+msgid "Show a tray icon"
+msgstr "Montri piktogramon en taskopleto"
 
-#: usr/lib/blueberry/blueberry.py:256
+#: usr/lib/blueberry/blueberry.py:182
+msgid "Settings"
+msgstr "Agordoj"
+
+#: usr/lib/blueberry/blueberry.py:261
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "Videbla kiel %s kaj disponebla por dosiertransigoj per Bludento."
 
-#: usr/lib/blueberry/blueberry.py:258
+#: usr/lib/blueberry/blueberry.py:263
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "Videbla kiel %s."
 
-#: usr/lib/blueberry/blueberry-tray.py:64
+#: usr/lib/blueberry/blueberry-tray.py:75
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "Bludento: Konektita al %s"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:123
 msgid "Send files to a device"
-msgstr ""
+msgstr "Sendi dosierojn al aparato"
 
-#: usr/lib/blueberry/blueberry-tray.py:111
+#: usr/lib/blueberry/blueberry-tray.py:127
 msgid "Open Bluetooth device manager"
-msgstr ""
+msgstr "Malfermi Bludento-aparatoadministrilo"
 
-#: usr/lib/blueberry/blueberry-tray.py:117
+#: usr/lib/blueberry/blueberry-tray.py:133
+msgid "Paired devices"
+msgstr "Parigitaj aparatoj"
+
+#: usr/lib/blueberry/blueberry-tray.py:142
+msgid "Connected"
+msgstr "Konektita"
+
+#: usr/lib/blueberry/blueberry-tray.py:150
 msgid "Quit"
 msgstr "Eliri"
 
-#: generate_desktop_files:25
+#: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
-msgstr ""
+msgstr "Ŝanĝi Bludento-agordojn"

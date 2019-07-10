@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-10-27 13:45+0100\n"
+"POT-Creation-Date: 2019-06-30 17:53+0200\n"
 "PO-Revision-Date: 2017-09-05 09:14+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -15,118 +15,122 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2018-12-11 11:58+0000\n"
-"X-Generator: Launchpad (build 18837)\n"
+"X-Launchpad-Export-Date: 2019-07-10 08:27+0000\n"
+"X-Generator: Launchpad (build 19007)\n"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:287
+#: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
 msgstr "อุปกรณ์ที่ไม่รู้จัก"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:309
+#: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
 msgstr "แฟ้มที่เข้ามาผ่านทาง Bluetooth"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:310
+#: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
 msgstr "มีแฟ้ม %(0)s เข้ามาจาก %(1)s"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
 msgstr "ตอบรับ"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:311
+#: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
 msgstr "ปฏิเสธ"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:314
+#: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
 msgstr "กำลังรับแฟ้ม"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:315
+#: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
 msgstr "กำลังรับแฟ้ม %(0)s จาก %(1)s"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:413
+#: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
 msgstr "รับแฟ้มเรียบร้อยแล้ว"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:414
+#: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
 msgstr "รับแฟ้ม %(0)s จาก %(1)s เรียบร้อยแล้ว"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:417
+#: usr/lib/blueberry/blueberry-obex-agent.py:411
+#: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
-#: usr/lib/blueberry/blueberry-obex-agent.py:446
 msgid "Open"
 msgstr "เปิด"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:419
+#: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
 msgstr "การถ่ายโอนข้อมูลล้มเหลว"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:420
+#: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
 msgstr "การถ่ายโอนแฟ้ม %(0)s ล้มเหลว"
 
+#: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
-#: usr/lib/blueberry/blueberry-obex-agent.py:442
 msgid "Files received"
 msgstr "แฟ้มที่รับแล้ว"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:437
+#: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
 msgstr[0] "ได้รับแฟ้ม %d รายการแล้วในเบื้องหลัง"
 
-#: usr/lib/blueberry/blueberry-obex-agent.py:443
+#: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
 msgstr[0] "ได้รับแฟ้มอีก %d รายการแล้วในเบื้องหลัง"
 
-#: usr/lib/blueberry/blueberry.py:76 usr/lib/blueberry/blueberry-tray.py:37
-#: usr/lib/blueberry/blueberry-tray.py:67 generate_desktop_files:25
+#: usr/lib/blueberry/blueberry.py:80 usr/lib/blueberry/blueberry-tray.py:48
+#: usr/lib/blueberry/blueberry-tray.py:78 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "บลูทูธ"
 
-#: usr/lib/blueberry/blueberry.py:126 usr/lib/blueberry/blueberry-tray.py:54
+#: usr/lib/blueberry/blueberry.py:129 usr/lib/blueberry/blueberry.py:278
+msgid "An error has occurred"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:130 usr/lib/blueberry/blueberry-tray.py:65
 msgid "Bluetooth is disabled"
 msgstr "บลูทูธถูกปิดใช้งาน"
 
-#: usr/lib/blueberry/blueberry.py:127
+#: usr/lib/blueberry/blueberry.py:131
 msgid "No Bluetooth adapters found"
 msgstr "ไม่พบอะแดปเตอร์บลูทูธ"
 
-#: usr/lib/blueberry/blueberry.py:128
+#: usr/lib/blueberry/blueberry.py:132
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "บลูทูธถูกปิดใช้งานด้วยการเปิดหรือปิดฮาร์ดแวร์"
 
-#: usr/lib/blueberry/blueberry.py:146
+#: usr/lib/blueberry/blueberry.py:150
 msgid "Devices"
 msgstr "อุปกรณ์"
 
-#: usr/lib/blueberry/blueberry.py:152
+#: usr/lib/blueberry/blueberry.py:156
 msgid "Bluetooth settings"
 msgstr "การตั้งค่า Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:158
+#: usr/lib/blueberry/blueberry.py:162
 msgid "Name"
 msgstr "ชื่อ"
 
-#: usr/lib/blueberry/blueberry.py:159
+#: usr/lib/blueberry/blueberry.py:163
 msgid "This is the Bluetooth name of your computer"
 msgstr "นี่คือชื่อ Bluetooth ของคอมพิวเตอร์ของคุณ"
 
-#: usr/lib/blueberry/blueberry.py:166
+#: usr/lib/blueberry/blueberry.py:170
 msgid "Receive files from remote devices"
 msgstr "รับแฟ้มจากอุปกรณ์ระยะไกล"
 
-#: usr/lib/blueberry/blueberry.py:167
+#: usr/lib/blueberry/blueberry.py:171
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -134,42 +138,50 @@ msgstr ""
 "ตัวเลือกนี้อนุญาตให้คอมพิวเตอร์ของคุณสามารถรับแฟ้มที่ถ่ายโอนผ่านทาง "
 "Bluetooth (OBEX) ได้"
 
-#: usr/lib/blueberry/blueberry.py:174
+#: usr/lib/blueberry/blueberry.py:178
 msgid "Show a tray icon"
 msgstr "แสดงไอคอนบนถาด"
 
-#: usr/lib/blueberry/blueberry.py:178
+#: usr/lib/blueberry/blueberry.py:182
 msgid "Settings"
 msgstr "การตั้งค่า"
 
-#: usr/lib/blueberry/blueberry.py:256
+#: usr/lib/blueberry/blueberry.py:261
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
 "สามารถมองเห็นได้ในชื่อ %s และพร้อมใช้งานสำหรับการถ่ายโอนแฟ้มผ่าน Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:258
+#: usr/lib/blueberry/blueberry.py:263
 #, python-format
 msgid "Visible as %s."
 msgstr "สามารถมองเห็นได้ในชื่อ %s"
 
-#: usr/lib/blueberry/blueberry-tray.py:64
+#: usr/lib/blueberry/blueberry-tray.py:75
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Bluetooth: เชื่อมต่อกับ %s แล้ว"
 
-#: usr/lib/blueberry/blueberry-tray.py:107
+#: usr/lib/blueberry/blueberry-tray.py:123
 msgid "Send files to a device"
 msgstr "ส่งแฟ้มไปที่อุปกรณ์"
 
-#: usr/lib/blueberry/blueberry-tray.py:111
+#: usr/lib/blueberry/blueberry-tray.py:127
 msgid "Open Bluetooth device manager"
 msgstr "เปิดตัวจัดการอุปกรณ์บลูทูธ"
 
-#: usr/lib/blueberry/blueberry-tray.py:117
+#: usr/lib/blueberry/blueberry-tray.py:133
+msgid "Paired devices"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:142
+msgid "Connected"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:150
 msgid "Quit"
 msgstr "ออก"
 
-#: generate_desktop_files:25
+#: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
 msgstr "กำหนดค่าตั้งบลูทูธ"
