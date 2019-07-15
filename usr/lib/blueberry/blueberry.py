@@ -254,6 +254,9 @@ class Blueberry(Gtk.Application):
             scrolledwindow.set_shadow_type(Gtk.ShadowType.NONE)
             viewport = scrolledwindow.get_children()[0]
             vbox = viewport.get_children()[0]
+            spinner = vbox.get_children()[1].get_children()[0].get_children()[1]
+            if spinner.props.active:
+                spinner.stop()
             explanation_label = vbox.get_children()[0]
             name = self.get_default_adapter_name()
             if name is not None:
