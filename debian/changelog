@@ -1,3 +1,10 @@
+blueberry (1.2.8) tina; urgency=medium
+
+  [ Riccardo ]
+  * Don't spin spinner in devices tab (#85)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 20 Jul 2019 16:48:45 +0200
+
 blueberry (1.2.7) tina; urgency=medium
 
   * l10n: Update translations
