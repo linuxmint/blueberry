@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2019-06-30 17:53+0200\n"
-"PO-Revision-Date: 2019-03-16 20:40+0000\n"
+"PO-Revision-Date: 2019-07-18 10:11+0000\n"
 "Last-Translator: Dusan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2019-07-10 08:27+0000\n"
-"X-Generator: Launchpad (build 19007)\n"
+"X-Launchpad-Export-Date: 2019-07-28 09:33+0000\n"
+"X-Generator: Launchpad (build 19010)\n"
 "Language: sk\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -101,7 +101,7 @@ msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:129 usr/lib/blueberry/blueberry.py:278
 msgid "An error has occurred"
-msgstr ""
+msgstr "Vyskytla sa chyba"
 
 #: usr/lib/blueberry/blueberry.py:130 usr/lib/blueberry/blueberry-tray.py:65
 msgid "Bluetooth is disabled"
