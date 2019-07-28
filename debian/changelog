@@ -1,3 +1,9 @@
+blueberry (1.2.9) tina; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 28 Jul 2019 15:23:07 +0200
+
 blueberry (1.2.8) tina; urgency=medium
 
   [ Riccardo ]
