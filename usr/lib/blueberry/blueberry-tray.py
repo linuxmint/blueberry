@@ -5,7 +5,8 @@ import gettext
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
-from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio
+gi.require_version('XApp', '1.0')
+from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio, XApp
 import rfkillMagic
 import setproctitle
 import subprocess
@@ -44,10 +45,11 @@ class BluetoothTray(Gtk.Application):
         self.model.connect('row-deleted', self.update_icon_callback)
         self.model.connect('row-inserted', self.update_icon_callback)
 
-        self.icon = Gtk.StatusIcon()
-        self.icon.set_title(_("Bluetooth"))
-        self.icon.connect("popup-menu", self.on_popup_menu)
-        self.icon.connect("activate", self.on_activate)
+        self.icon = XApp.StatusIcon()
+        self.icon.set_name("blueberry")
+        self.icon.set_tooltip_text(_("Bluetooth"))
+        self.icon.connect("button-press-event", self.on_statusicon_pressed)
+        self.icon.connect("button-release-event", self.on_statusicon_released)
 
         self.update_icon_callback(None, None, None)
 
@@ -61,20 +63,20 @@ class BluetoothTray(Gtk.Application):
             return
 
         if self.rfkill.hard_block or self.rfkill.soft_block:
-            self.icon.set_from_icon_name("blueberry-tray-disabled")
+            self.icon.set_icon_name("blueberry-tray-disabled")
             self.icon.set_tooltip_text(_("Bluetooth is disabled"))
         else:
-            self.icon.set_from_icon_name("blueberry-tray")
+            self.icon.set_icon_name("blueberry-tray")
             self.update_connected_state()
 
     def update_connected_state(self):
         self.get_devices()
 
         if len(self.connected_devices) > 0:
-            self.icon.set_from_icon_name("blueberry-tray-active")
+            self.icon.set_icon_name("blueberry-tray-active")
             self.icon.set_tooltip_text(_("Bluetooth: Connected to %s") % (", ".join(self.connected_devices)))
         else:
-            self.icon.set_from_icon_name("blueberry-tray")
+            self.icon.set_icon_name("blueberry-tray")
             self.icon.set_tooltip_text(_("Bluetooth"))
 
     def get_devices(self):
@@ -107,54 +109,61 @@ class BluetoothTray(Gtk.Application):
 
                 iter = self.model.iter_next(iter)
 
-    def on_activate(self, icon, data=None):
-        subprocess.Popen(["blueberry"])
+    def on_statusicon_pressed(self, widget, x, y, button, time, position):
+        if button == 1:
+            subprocess.Popen(["blueberry"])
 
-    def on_popup_menu(self, icon, button, time, data = None):
-        menu = Gtk.Menu()
+    def on_statusicon_released(self, icon, x, y, button, time, position):
+        if button == 3:
+            menu = Gtk.Menu()
+            if not(self.rfkill.hard_block or self.rfkill.soft_block):
+                item = Gtk.MenuItem(label=_("Send files to a device"))
+                item.connect("activate", self.send_files_cb)
+                menu.append(item)
 
-        def position_menu_cb(m, x, y=None, i=None):
-            try:
-                return Gtk.StatusIcon.position_menu(menu, x, y, icon)
-            except (AttributeError, TypeError):
-                return Gtk.StatusIcon.position_menu(menu, icon)
-
-        if not(self.rfkill.hard_block or self.rfkill.soft_block):
-            item = Gtk.MenuItem(label=_("Send files to a device"))
-            item.connect("activate", self.send_files_cb)
+            item = Gtk.MenuItem(label=_("Open Bluetooth device manager"))
+            item.connect("activate", self.open_manager_cb)
             menu.append(item)
 
-        item = Gtk.MenuItem(label=_("Open Bluetooth device manager"))
-        item.connect("activate", self.open_manager_cb)
-        menu.append(item)
+            if len(self.paired_devices) > 0:
+                menu.append(Gtk.SeparatorMenuItem())
+                m_item = Gtk.MenuItem(_("Paired devices"))
+                menu.append(m_item)
+                paired_menu = Gtk.Menu()
+                m_item.set_submenu(paired_menu)
+                for device in self.paired_devices:
+                    label = device
+                    item = Gtk.ImageMenuItem(label=label)
+                    if device in self.connected_devices:
+                        image = Gtk.Image.new_from_icon_name("emblem-ok-symbolic", Gtk.IconSize.MENU)
+                        image.set_tooltip_text(_("Connected"))
+                        item.set_always_show_image(True)
+                        item.set_image(image)
+                    item.connect("activate",self.toggle_connect_cb, device)
+                    paired_menu.append(item)
 
-        if len(self.paired_devices) > 0:
             menu.append(Gtk.SeparatorMenuItem())
-            m_item = Gtk.MenuItem(_("Paired devices"))
-            menu.append(m_item)
-            paired_menu = Gtk.Menu()
-            m_item.set_submenu(paired_menu)
-            for device in self.paired_devices:
-                label = device
-                item = Gtk.ImageMenuItem(label=label)
-                if device in self.connected_devices:
-                    image = Gtk.Image.new_from_icon_name("emblem-ok-symbolic", Gtk.IconSize.MENU)
-                    image.set_tooltip_text(_("Connected"))
-                    item.set_always_show_image(True)
-                    item.set_image(image)
-                item.connect("activate",self.toggle_connect_cb, device)
-                paired_menu.append(item)
 
-        menu.append(Gtk.SeparatorMenuItem())
+            item = Gtk.MenuItem(label=_("Quit"))
+            item.connect("activate", self.terminate)
+            menu.append(item)
 
-        item = Gtk.MenuItem(label=_("Quit"))
-        item.connect("activate", self.terminate)
-        menu.append(item)
+            menu.show_all()
 
-        menu.show_all()
-
-        device = Gdk.Display.get_default().get_device_manager().get_client_pointer()
-        menu.popup_for_device(device, None, None, position_menu_cb, icon, button, time)
+            if position == -1:
+                # The position and coordinates are unknown. This is the
+                # case when the XAppStatusIcon fallbacks as a Gtk.StatusIcon
+                menu.popup(None, None, None, None, button, time)
+            else:
+                def position_menu_cb(menu, pointer_x, pointer_y, user_data):
+                    [x, y, position] = user_data;
+                    if (position == Gtk.PositionType.BOTTOM):
+                        y = y - menu.get_allocation().height;
+                    if (position == Gtk.PositionType.RIGHT):
+                        x = x - menu.get_allocation().width;
+                    return (x, y, False)
+                device = Gdk.Display.get_default().get_device_manager().get_client_pointer()
+                menu.popup_for_device(device, None, None, position_menu_cb, [x, y, position], button, time)
 
     def toggle_connect_cb(self, item, data = None):
         proxy = self.paired_devices[data]
