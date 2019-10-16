@@ -8,56 +8,38 @@ def list_header_func(row, before, user_data):
     if before and not row.get_header():
         row.set_header(Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
-class SettingsPage(Gtk.Box):
-
-    def __init__(self):
-        Gtk.Box.__init__(self)
-        self.set_orientation(Gtk.Orientation.VERTICAL)
-        self.set_spacing(15)
-        self.set_margin_left(80)
-        self.set_margin_right(80)
-        self.set_margin_top(15)
-        self.set_margin_bottom(15)
-
-    def add_section(self, title):
-        section = SettingsBox(title)
-        self.pack_start(section, False, False, 0)
-
-        return section
-
 class SettingsBox(Gtk.Frame):
 
-    def __init__(self, title):
+    def __init__(self, title=""):
         Gtk.Frame.__init__(self)
         self.set_shadow_type(Gtk.ShadowType.IN)
         frame_style = self.get_style_context()
         frame_style.add_class("view")
-        self.size_group = Gtk.SizeGroup()
-        self.size_group.set_mode(Gtk.SizeGroupMode.VERTICAL)
 
         self.box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.add(self.box)
 
-        toolbar = Gtk.Toolbar.new()
-        toolbar_context = toolbar.get_style_context()
-        Gtk.StyleContext.add_class(Gtk.Widget.get_style_context(toolbar), "cs-header")
+        if title != "":
+            toolbar = Gtk.Toolbar.new()
+            toolbar_context = toolbar.get_style_context()
+            Gtk.StyleContext.add_class(Gtk.Widget.get_style_context(toolbar), "cs-header")
 
-        label = Gtk.Label.new()
-        label.set_markup("<b>%s</b>" % title)
-        title_holder = Gtk.ToolItem()
-        title_holder.add(label)
-        toolbar.add(title_holder)
-        self.box.add(toolbar)
+            label = Gtk.Label.new()
+            label.set_markup("<b>%s</b>" % title)
+            title_holder = Gtk.ToolItem()
+            title_holder.add(label)
+            toolbar.add(title_holder)
+            self.box.add(toolbar)
 
-        toolbar_separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
-        self.box.add(toolbar_separator)
-        separator_context = toolbar_separator.get_style_context()
-        frame_color = frame_style.get_border_color(Gtk.StateFlags.NORMAL).to_string()
-        css_provider = Gtk.CssProvider()
-        css_provider.load_from_data(".separator {{ -GtkWidget-wide-separators: 0; \
-                                                   color: {};                    \
-                                                }}".format(frame_color).encode())
-        separator_context.add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+            toolbar_separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
+            self.box.add(toolbar_separator)
+            separator_context = toolbar_separator.get_style_context()
+            frame_color = frame_style.get_border_color(Gtk.StateFlags.NORMAL).to_string()
+            css_provider = Gtk.CssProvider()
+            css_provider.load_from_data(".separator {{ -GtkWidget-wide-separators: 0; \
+                                                    color: {};                    \
+                                                    }}".format(frame_color).encode())
+            separator_context.add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
         self.list_box = Gtk.ListBox()
         self.list_box.set_selection_mode(Gtk.SelectionMode.NONE)
