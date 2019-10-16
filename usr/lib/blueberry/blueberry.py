@@ -5,19 +5,14 @@ import gettext
 import rfkillMagic
 import setproctitle
 import subprocess
-from BlueberrySettingsWidgets import SettingsPage, SettingsRow
+from BlueberrySettingsWidgets import SettingsBox, SettingsRow
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
 from gi.repository import Gtk, GnomeBluetooth, Gio, GLib
 
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 APPLICATION_ID = 'com.linuxmint.blueberry'
-
-BLUETOOTH_RFKILL_ERR         = "rfkill-err"
-BLUETOOTH_DISABLED_PAGE      = "disabled-page"
-BLUETOOTH_HW_DISABLED_PAGE   = "hw-disabled-page"
-BLUETOOTH_NO_DEVICES_PAGE    = "no-devices-page"
-BLUETOOTH_WORKING_PAGE       = "working-page"
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
@@ -94,25 +89,12 @@ def apply_widget_override(widget, adapter_name, obex_enabled):
 
 
 class Blueberry(Gtk.Application):
-    ''' Create the UI '''
-    def __init__(self):
-        Gtk.Application.__init__(self, application_id=APPLICATION_ID, flags=Gio.ApplicationFlags.FLAGS_NONE)
-        self.window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
-        self.detect_desktop_environment()
-        self.connect("activate", self.on_activate)
+    def do_startup(self):
+        Gtk.Application.do_startup(self)
 
-    def on_activate(self, data=None):
-        list = self.get_windows()
-        if len(list) > 0:
-            # Blueberry is already running, focus the window
-            self.get_active_window().present()
-        else:
-            self.create_window()
-        # In either case, show tray icon if enabled in Settings
-        if self.settings.get_boolean("tray-enabled"):
-            subprocess.Popen(['blueberry-tray'])
+        self.settings = Gio.Settings(schema="org.blueberry")
 
-    def detect_desktop_environment(self):
+        #detect current DE
         wm_info = subprocess.getoutput("wmctrl -m")
         if "XDG_CURRENT_DESKTOP" in os.environ:
             xdg_current_desktop = os.environ["XDG_CURRENT_DESKTOP"]
@@ -148,85 +130,47 @@ class Blueberry(Gtk.Application):
             if os.path.exists("/usr/bin/pavucontrol"):
                 self.configuration_tools["sound"] = "pavucontrol"
 
-    def create_window(self):
+    def do_activate(self):
+        if self.settings.get_boolean("tray-enabled"):
+            subprocess.Popen(['blueberry-tray'])
 
-        self.window.set_title(_("Bluetooth"))
-        self.window.set_icon_name("bluetooth")
-        self.window.set_default_size(640, 400)
+        if len(self.get_windows()) > 0:
+            # Blueberry is already running, focus the window
+            self.get_active_window().present()
+            return
 
-        self.main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        builder = Gtk.Builder.new_from_file(os.path.join(SCRIPT_DIR, "blueberry.ui"))
 
-        # Toolbar
-        toolbar = Gtk.Toolbar()
-        toolbar.get_style_context().add_class("primary-toolbar")
-        self.main_box.pack_start(toolbar, False, False, 0)
+        window = builder.get_object("window")
+        window.set_title(_("Bluetooth"))
 
-        self.main_stack = Gtk.Stack()
-        self.main_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
-        self.main_stack.set_transition_duration(150)
-        self.main_box.pack_start(self.main_stack, True, True, 0)
+        builder.get_object("settings-button").set_tooltip_text(_("Settings"))
 
-        stack_switcher = Gtk.StackSwitcher()
-        stack_switcher.set_stack(self.main_stack)
-
-        tool_item = Gtk.ToolItem()
-        tool_item.set_expand(True)
-        tool_item.get_style_context().add_class("raised")
-        toolbar.insert(tool_item, 0)
-        switch_holder = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        switch_holder.set_border_width(1)
-        tool_item.add(switch_holder)
-        switch_holder.pack_start(stack_switcher, True, True, 0)
-        stack_switcher.set_halign(Gtk.Align.CENTER)
-        toolbar.show_all()
-
-        self.settings = Gio.Settings(schema="org.blueberry")
+        self.stack = builder.get_object("stack")
 
         debug = False
         if len(sys.argv) > 1 and sys.argv[1] == "debug":
             debug = True
 
-        # Devices
-        self.devices_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        self.devices_box.set_border_width(12)
+        self.header_icon = builder.get_object("header-icon")
+        self.status_icon = builder.get_object("status-icon")
+        self.status_label = builder.get_object("status-label")
 
-        self.rf_switch = Gtk.Switch()
+        # Devices
+        self.rf_switch = builder.get_object("bluetooth-switch")
         self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
         self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
 
-        self.status_image = Gtk.Image()
-        self.status_image.set_from_icon_name("blueberry", Gtk.IconSize.DIALOG)
-        self.status_image.show()
-
-        self.stack = Gtk.Stack()
-        self.error_label = self.add_stack_page(_("An error has occurred"), BLUETOOTH_RFKILL_ERR);
-        self.add_stack_page(_("Bluetooth is disabled"), BLUETOOTH_DISABLED_PAGE);
-        self.add_stack_page(_("No Bluetooth adapters found"), BLUETOOTH_NO_DEVICES_PAGE);
-        self.add_stack_page(_("Bluetooth is disabled by hardware switch"), BLUETOOTH_HW_DISABLED_PAGE);
-
-        self.lib_widget = GnomeBluetooth.SettingsWidget.new();
-        self.lib_widget.connect("panel-changed", self.panel_changed);
-        self.stack.add_named(self.lib_widget, BLUETOOTH_WORKING_PAGE)
+        self.lib_widget = GnomeBluetooth.SettingsWidget.new()
+        self.lib_widget.connect("panel-changed", self.panel_changed)
+        builder.get_object("bluetooth-widget-box").pack_start(self.lib_widget, True, True, 0)
         self.lib_widget.show()
-        self.stack.show();
-
-        switchbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        hbox.pack_end(self.rf_switch, False, False, 10)
-        switchbox.pack_start(hbox, False, False, 0)
-        switchbox.pack_start(self.status_image, False, False, 0)
-        switchbox.show_all()
-
-        self.devices_box.pack_start(switchbox, False, False, 0)
-        self.devices_box.pack_start(self.stack, True, True, 0)
-
-        self.main_stack.add_titled(self.devices_box, "devices", _("Devices"))
 
         # Settings
+        settings_box = SettingsBox()
+        settings_container = builder.get_object("settings-container")
+        settings_container.pack_start(settings_box, True, True, 0)
 
-        page = SettingsPage()
-
-        section = page.add_section(_("Bluetooth settings"))
         self.adapter_name_entry = Gtk.Entry()
         adapter_name = self.get_default_adapter_name()
         if adapter_name is not None:
@@ -234,7 +178,7 @@ class Blueberry(Gtk.Application):
         self.adapter_name_entry.connect("changed", self.on_adapter_name_changed)
         row = SettingsRow(Gtk.Label(label=_("Name")), self.adapter_name_entry)
         row.set_tooltip_text(_("This is the Bluetooth name of your computer"))
-        section.add_row(row)
+        settings_box.add_row(row)
 
         self.obex_switch = Gtk.Switch()
         self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
@@ -242,24 +186,20 @@ class Blueberry(Gtk.Application):
         self.settings.connect("changed", self.on_settings_changed)
         row = SettingsRow(Gtk.Label(label=_("Receive files from remote devices")), self.obex_switch)
         row.set_tooltip_text(_("This option allows your computer to receive files transferred over Bluetooth (OBEX)"))
-        section.add_row(row)
+        settings_box.add_row(row)
 
         self.tray_switch = Gtk.Switch()
         self.tray_switch.set_active(self.settings.get_boolean("tray-enabled"))
         self.tray_switch.connect("notify::active", self.on_tray_switch_toggled)
         self.settings.connect("changed", self.on_settings_changed)
-        section.add_row(SettingsRow(Gtk.Label(label=_("Show a tray icon")), self.tray_switch))
+        settings_box.add_row(SettingsRow(Gtk.Label(label=_("Show a tray icon")), self.tray_switch))
 
-        self.window.add(self.main_box)
-
-        self.main_stack.add_titled(page, "settings", _("Settings"))
-
-        self.devices_box.show_all()
+        settings_container.show_all()
 
         self.update_ui_callback()
 
-        self.add_window(self.window)
-        self.window.show_all()
+        self.add_window(window)
+        window.show_all()
 
         # attempt to apply overrides and if we fail don't setup update hooks
         name = self.get_default_adapter_name()
@@ -302,12 +242,6 @@ class Blueberry(Gtk.Application):
         self.tray_switch.set_active(self.settings.get_boolean("tray-enabled"))
         self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
 
-    def add_stack_page(self, message, name):
-        label = Gtk.Label(label=message)
-        self.stack.add_named(label, name)
-        label.show()
-        return label
-
     def get_default_adapter_name(self):
         name = None
         try:
@@ -332,30 +266,30 @@ class Blueberry(Gtk.Application):
     def update_ui_callback(self):
         powered = False
         sensitive = False
-        page = ""
+        header_icon_name = status_icon_name = "blueberry-disabled"
+        status_msg = ""
 
         if self.rfkill.rfkill_err is not None:
-            self.error_label.set_markup("%s\n%s" % (_("An error has occurred"), self.rfkill.rfkill_err))
-            page = BLUETOOTH_RFKILL_ERR
+            status_msg = ("%s\n%s" % (_("An error has occurred"), self.rfkill.rfkill_err))
+            status_icon_name = "dialog-error"
             sensitive = True
-            # Set Switch back to Off position
-            self.rf_switch.set_active(False)
-            self.status_image.set_from_icon_name("blueberry-disabled", Gtk.IconSize.DIALOG)
         elif not self.rfkill.have_adapter:
-            page = BLUETOOTH_NO_DEVICES_PAGE
-            self.status_image.set_from_icon_name("blueberry-disabled", Gtk.IconSize.DIALOG)
+            status_msg = _("No Bluetooth adapters found")
+            status_icon_name = "dialog-info"
         elif self.rfkill.hard_block:
-            page = BLUETOOTH_HW_DISABLED_PAGE
-            self.status_image.set_from_icon_name("blueberry-disabled", Gtk.IconSize.DIALOG)
+            status_msg = _("Bluetooth is disabled by hardware switch")
         elif self.rfkill.soft_block:
-            page = BLUETOOTH_DISABLED_PAGE
+            status_msg = _("Bluetooth is disabled")
             sensitive = True
-            self.status_image.set_from_icon_name("blueberry-disabled", Gtk.IconSize.DIALOG)
         else:
-            page = BLUETOOTH_WORKING_PAGE
+            header_icon_name = status_icon_name = "blueberry"
             sensitive = True
             powered = True
-            self.status_image.set_from_icon_name("blueberry", Gtk.IconSize.DIALOG)
+
+        self.status_label.set_markup(status_msg)
+
+        self.header_icon.set_from_icon_name(header_icon_name, Gtk.IconSize.LARGE_TOOLBAR)
+        self.status_icon.set_from_icon_name(status_icon_name, Gtk.IconSize.DIALOG)
 
         self.rf_switch.set_sensitive(sensitive)
 
@@ -363,12 +297,12 @@ class Blueberry(Gtk.Application):
         self.rf_switch.set_state(powered)
         self.rf_switch.handler_unblock(self.rf_handler_id)
 
-        self.stack.set_visible_child_name (page);
+        self.stack.set_visible_child_name("main-page" if powered else "status-page");
 
     def on_switch_changed(self, widget, state):
         self.rfkill.try_set_blocked(not state)
         return True
 
 if __name__ == "__main__":
-    app = Blueberry()
+    app = Blueberry(application_id=APPLICATION_ID, flags=Gio.ApplicationFlags.FLAGS_NONE)
     app.run(None)
