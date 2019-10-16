@@ -32,7 +32,7 @@ from gi.repository import GObject, GLib, Gtk, Gio, Notify
 BOLD = lambda x: "\033[1m" + x + "\033[0m"
 
 SHARED_PATH = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOWNLOAD)
-if not os.path.exists(SHARED_PATH):
+if SHARED_PATH is None or not os.path.exists(SHARED_PATH):
     SHARED_PATH = os.path.expanduser("~")
 
 # i18n
