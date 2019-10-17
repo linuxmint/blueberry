@@ -48,7 +48,7 @@ class BluetoothTray(Gtk.Application):
         self.icon = XApp.StatusIcon()
         self.icon.set_name("blueberry")
         self.icon.set_tooltip_text(_("Bluetooth"))
-        self.icon.connect("button-press-event", self.on_statusicon_pressed)
+        self.icon.connect("activate", self.on_statusicon_activated)
         self.icon.connect("button-release-event", self.on_statusicon_released)
 
         self.update_icon_callback(None, None, None)
@@ -109,8 +109,8 @@ class BluetoothTray(Gtk.Application):
 
                 iter = self.model.iter_next(iter)
 
-    def on_statusicon_pressed(self, widget, x, y, button, time, position):
-        if button == 1:
+    def on_statusicon_activated(self, icon, button, time):
+        if button == Gdk.BUTTON_PRIMARY:
             subprocess.Popen(["blueberry"])
 
     def on_statusicon_released(self, icon, x, y, button, time, position):
