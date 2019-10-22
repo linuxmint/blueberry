@@ -9,7 +9,9 @@ from BlueberrySettingsWidgets import SettingsPage, SettingsRow
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
-from gi.repository import Gtk, GnomeBluetooth, Gio
+from gi.repository import Gtk, GnomeBluetooth, Gio, GLib
+
+APPLICATION_ID = 'com.linuxmint.blueberry'
 
 BLUETOOTH_RFKILL_ERR         = "rfkill-err"
 BLUETOOTH_DISABLED_PAGE      = "disabled-page"
@@ -22,11 +24,79 @@ gettext.install("blueberry", "/usr/share/locale")
 
 setproctitle.setproctitle("blueberry")
 
+# similar to g_warning by default, can specify any log level though
+def log(text, log_level=GLib.LogLevelFlags.LEVEL_WARNING):
+    variant = GLib.Variant("a{sv}", { "MESSAGE": GLib.Variant("s", text) })
+    GLib.log_variant(APPLICATION_ID, log_level, variant)
+
+# searches a widget and its children for a specific buildable id or widget type
+# note: stops at first match
+def find_widget(parent, name="", widgetClass=None):
+    p_name = Gtk.Buildable.get_name(parent)
+    if p_name and name and p_name.strip() == name.strip():
+        return parent
+
+    if widgetClass and isinstance(parent, widgetClass):
+        return parent
+
+    if hasattr(parent, "get_children"):
+        children = parent.get_children()
+        for child in children:
+            res = find_widget(child, name, widgetClass)
+            if res is not None:
+                return res
+
+    return None
+
+# We attempt to override the widget style to replace
+# the explanation label text and stop the spinner.
+# gnome_bluetooth_settings_widget doesn't give explicit access
+# to its label via gi so we recurse its child widgets to try
+# to find the parts we want to modify.
+
+# if the override fails for any reason it is disabled. update
+# signals in the main class are only connected if a test call
+# to this succeeds the first time
+override_failed = False
+
+def apply_widget_override(widget, adapter_name, obex_enabled):
+    global override_failed
+    if override_failed:
+        return False
+
+    try:
+        # not finding the label is fatal as it's our main purpose here
+        label = find_widget(widget, "explanation-label")
+        if label is None:
+            raise LookupError("unable to find label to override")
+
+        # not finding the spinner is non-fatal
+        spinner = find_widget(widget, widgetClass=Gtk.Spinner)
+        if spinner and spinner.props.active:
+            spinner.stop()
+
+        if adapter_name is not None:
+            if obex_enabled:
+                text = _("Visible as %s and available for Bluetooth file transfers.")
+            else:
+                text = _("Visible as %s.")
+            text = "%s\n" % text
+            label.set_markup(text % "\"%s\"" % adapter_name)
+        else:
+            label.set_label("")
+
+    except Exception as e:
+        log("apply_widget_override failed: {}".format(e))
+        override_failed = True
+        return False
+
+    return True
+
+
 class Blueberry(Gtk.Application):
     ''' Create the UI '''
     def __init__(self):
-
-        Gtk.Application.__init__(self, application_id='com.linuxmint.blueberry', flags=Gio.ApplicationFlags.FLAGS_NONE)
+        Gtk.Application.__init__(self, application_id=APPLICATION_ID, flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
         self.detect_desktop_environment()
         self.connect("activate", self.on_activate)
@@ -70,7 +140,7 @@ class Blueberry(Gtk.Application):
             self.configuration_tools = {"sound": "pavucontrol", "keyboard": "lxinput", "mouse": "lxinput"}
         else:
             self.de = "Unknown"
-            print("Warning: DE could not be detected!")
+            log("DE could not be detected!")
             self.configuration_tools = {}
             if os.path.exists("/usr/bin/pavucontrol"):
                 self.configuration_tools["sound"] = "pavucontrol"
@@ -188,16 +258,20 @@ class Blueberry(Gtk.Application):
         self.add_window(self.window)
         self.window.show_all()
 
-        self.client = GnomeBluetooth.Client()
-        self.model = self.client.get_model()
-        self.model.connect('row-changed', self.update_status)
-        self.model.connect('row-deleted', self.update_status)
-        self.model.connect('row-inserted', self.update_status)
-        self.update_status()
+        # attempt to apply overrides and if we fail don't setup update hooks
+        name = self.get_default_adapter_name()
+        obex_enabled = self.settings.get_boolean("obex-enabled")
+        if apply_widget_override(self.lib_widget, name, obex_enabled):
+            self.client = GnomeBluetooth.Client()
+            self.model = self.client.get_model()
+            self.model.connect('row-changed', self.update_status)
+            self.model.connect('row-deleted', self.update_status)
+            self.model.connect('row-inserted', self.update_status)
+            self.update_status()
 
     def panel_changed(self, widget, panel):
         if not panel in self.configuration_tools:
-            print("Warning, no configuration tool known for panel '%s'" % panel)
+            log("No configuration tool known for panel '{}'".format(panel))
         else:
             os.system("%s &" % self.configuration_tools[panel])
 
@@ -241,36 +315,16 @@ class Blueberry(Gtk.Application):
                     name = line.replace("Alias: ", "").replace(" [rw]", "").replace(" [ro]", "")
                     break
         except Exception as cause:
-            print ("Could not retrieve the BT adapter name with 'bt-adapter -i': %s" % cause)
+            log("Could not retrieve the BT adapter name with 'bt-adapter -i': {}".format(cause))
         return name
 
     def update_status(self, path=None, iter=None, data=None):
-        try:
-            # In version 3.18, gnome_bluetooth_settings_widget
-            # doesn't give explicit access to its label via gi
-            # but it's a composite widget and its hierarchy is:
-            # scrolledwindow -> viewport -> vbox -> explanation-label
-            scrolledwindow = self.lib_widget.get_children()[0]
-            scrolledwindow.set_shadow_type(Gtk.ShadowType.NONE)
-            viewport = scrolledwindow.get_children()[0]
-            vbox = viewport.get_children()[0]
-            spinner = vbox.get_children()[1].get_children()[0].get_children()[1]
-            if spinner.props.active:
-                spinner.stop()
-            explanation_label = vbox.get_children()[0]
-            name = self.get_default_adapter_name()
-            if name is not None:
-                if self.settings.get_boolean('obex-enabled'):
-                    text = _("Visible as %s and available for Bluetooth file transfers.")
-                else:
-                    text = _("Visible as %s.")
-                text = "%s\n" % text
-                explanation_label.set_markup(text % "\"%s\"" % name)
-            else:
-                explanation_label.set_label("")
-        except Exception as e:
-            print(e)
-            return None
+        if override_failed:
+            return
+
+        name = self.get_default_adapter_name()
+        obex_enabled = self.settings.get_boolean("obex-enabled")
+        apply_widget_override(self.lib_widget, name, obex_enabled)
 
     def update_ui_callback(self):
         powered = False
