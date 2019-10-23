@@ -108,6 +108,9 @@ class Blueberry(Gtk.Application):
             self.get_active_window().present()
         else:
             self.create_window()
+        # In either case, show tray icon if enabled in Settings
+        if self.settings.get_boolean("tray-enabled"):
+            subprocess.Popen(['blueberry-tray'])
 
     def detect_desktop_environment(self):
         wm_info = subprocess.getoutput("wmctrl -m")
