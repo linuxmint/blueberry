@@ -243,7 +243,11 @@ class Blueberry(Gtk.Application):
         self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
 
     def get_default_adapter_name(self):
+        if not self.rfkill.have_adapter:
+            return None
+
         name = None
+
         try:
             output = subprocess.check_output(["timeout", "2s", "bt-adapter", "-i"]).decode("utf-8").strip()
             for line in output.split("\n"):
@@ -253,6 +257,7 @@ class Blueberry(Gtk.Application):
                     break
         except Exception as cause:
             log("Could not retrieve the BT adapter name with 'bt-adapter -i': {}".format(cause))
+
         return name
 
     def update_status(self, path=None, iter=None, data=None):

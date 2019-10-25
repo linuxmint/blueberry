@@ -26,13 +26,12 @@ class Interface:
 
         self.monitor_killer = False
 
-        self.have_adapter = self.adapter_check()
-
-        if self.have_adapter:
-            self.start_event_monitor()
+        self.adapter_check()
+        self.start_event_monitor()
 
     def adapter_check(self):
         res = subprocess.check_output(RFKILL_CHK).decode('utf-8')
+        have_adapter = False
 
         '''
         Assume the output of:
@@ -46,21 +45,20 @@ class Interface:
             Hard blocked: no
         '''
 
-        self.debug("adapter_check full output:\n%s" % res)
-
-        if not res:
+        if res:
+            self.debug("adapter_check full output:\n%s" % res)
+            reslines = res.split('\n')
+            for line in reslines:
+                if "Bluetooth" in line:
+                    self.adapter_index = int(line[0])
+                    self.debug("adapter_check found adapter at %d" % self.adapter_index)
+                    have_adapter = True
+                    break
+        else:
             self.debug("adapter_check no output (no adapter)")
-            self.have_adapter = False
-            return False
 
-        reslines = res.split('\n')
-        for line in reslines:
-            if "Bluetooth" in line:
-                self.adapter_index = int(line[0])
-                self.debug("adapter_check found adapter at %d" % self.adapter_index)
-                return True
-
-        return False
+        self.have_adapter = have_adapter
+        return have_adapter
 
     def start_event_monitor(self):
         if not self.tproc and not self.monitor_killer:
@@ -71,9 +69,6 @@ class Interface:
         while self.tproc.poll() is None and not self.monitor_killer:
             l = self.tproc.stdout.readline().decode('utf-8') # This blocks until it receives a newline.
             self.update_state(l)
-
-        self.tproc = None
-        thread.exit()
 
     def update_state(self, line):
         self.debug("update_state line: %s" % line)
@@ -95,15 +90,17 @@ class Interface:
         2017-12-08 11:54:16,972431-0800: idx 1 type 1 op 0 soft 0 hard 0
         2017-12-08 11:54:16,972474-0800: idx 4 type 2 op 0 soft 0 hard 0
         '''
+        if not self.have_adapter:
+            self.adapter_check()
 
-        match = re.search(r'idx (?P<idx>\d+) type (?P<type>\d+) op (?P<op>\d+) soft (?P<soft>\d+) hard (?P<hard>\d+)', line)
-
-        if not match:
-            return
-
-        if int(match.group('idx')) == self.adapter_index:
-            self.soft_block = int(match.group('soft')) == 1
-            self.hard_block = int(match.group('hard')) == 1
+        if self.have_adapter:
+            match = re.search(r'idx (?P<idx>\d+) type (?P<type>\d+) op (?P<op>\d+) soft (?P<soft>\d+) hard (?P<hard>\d+)', line)
+            if match:
+                if int(match.group('idx')) == self.adapter_index:
+                    if int(match.group('op')) == 1:
+                        self.adapter_check()
+                    self.soft_block = int(match.group('soft')) == 1
+                    self.hard_block = int(match.group('hard')) == 1
 
         self.update_ui()
 
