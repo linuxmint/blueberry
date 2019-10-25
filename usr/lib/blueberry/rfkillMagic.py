@@ -31,6 +31,7 @@ class Interface:
 
     def adapter_check(self):
         res = subprocess.check_output(RFKILL_CHK).decode('utf-8')
+        match = None
         have_adapter = False
 
         '''
@@ -44,16 +45,14 @@ class Interface:
             Soft blocked: yes
             Hard blocked: no
         '''
-
         if res:
+            match = re.search(r'^(?P<idx>\d+): .+: Bluetooth\n', res)
+
+        if match:
             self.debug("adapter_check full output:\n%s" % res)
-            reslines = res.split('\n')
-            for line in reslines:
-                if "Bluetooth" in line:
-                    self.adapter_index = int(line[0])
-                    self.debug("adapter_check found adapter at %d" % self.adapter_index)
-                    have_adapter = True
-                    break
+            self.adapter_index = int(match.group('idx'))
+            self.debug("adapter_check found adapter at %d" % self.adapter_index)
+            have_adapter = True
         else:
             self.debug("adapter_check no output (no adapter)")
 
