@@ -161,6 +161,8 @@ class Blueberry(Gtk.Application):
         self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
         self.rf_handler_id = self.rf_switch.connect("state-set", self.on_switch_changed)
 
+        self.rfkill_error_image = builder.get_object("rfkill-error-image")
+
         self.lib_widget = GnomeBluetooth.SettingsWidget.new()
         self.lib_widget.connect("panel-changed", self.panel_changed)
         builder.get_object("bluetooth-widget-box").pack_start(self.lib_widget, True, True, 0)
@@ -196,10 +198,10 @@ class Blueberry(Gtk.Application):
 
         settings_container.show_all()
 
-        self.update_ui_callback()
-
         self.add_window(window)
         window.show_all()
+
+        self.update_ui_callback()
 
         # attempt to apply overrides and if we fail don't setup update hooks
         name = self.get_default_adapter_name()
@@ -274,11 +276,7 @@ class Blueberry(Gtk.Application):
         header_icon_name = status_icon_name = "blueberry-disabled"
         status_msg = ""
 
-        if self.rfkill.rfkill_err is not None:
-            status_msg = ("%s\n%s" % (_("An error has occurred"), self.rfkill.rfkill_err))
-            status_icon_name = "dialog-error"
-            sensitive = True
-        elif not self.rfkill.have_adapter:
+        if not self.rfkill.have_adapter:
             status_msg = _("No Bluetooth adapters found")
             status_icon_name = "dialog-info"
         elif self.rfkill.hard_block:
@@ -290,6 +288,20 @@ class Blueberry(Gtk.Application):
             header_icon_name = status_icon_name = "blueberry"
             sensitive = True
             powered = True
+
+        # rfkill errors don't change powered state. If we forced the status page then the
+        # most likely scenario would be a mixed state of powered-on bluetooth with UI
+        # hiding that fact. Instead we show an error icon next to the switch and disable
+        # the switch itself without changing any other state.
+        if self.rfkill.rfkill_err is not None:
+            strings = (_("An error has occurred"),
+                       self.rfkill.rfkill_err.strip(),
+                       _("Permission issues can be solved with a udev rule for rfkill or membership in the 'rfkill' group."))
+            self.rfkill_error_image.set_tooltip_text("%s\n%s\n\n%s" % strings)
+            self.rfkill_error_image.show()
+            sensitive = False
+        else:
+            self.rfkill_error_image.hide()
 
         self.status_label.set_markup(status_msg)
 
