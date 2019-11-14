@@ -166,7 +166,6 @@ class Blueberry(Gtk.Application):
         self.lib_widget = GnomeBluetooth.SettingsWidget.new()
         self.lib_widget.connect("panel-changed", self.panel_changed)
         builder.get_object("bluetooth-widget-box").pack_start(self.lib_widget, True, True, 0)
-        self.lib_widget.show()
 
         # Settings
         settings_box = SettingsBox()
@@ -196,11 +195,8 @@ class Blueberry(Gtk.Application):
         self.settings.connect("changed", self.on_settings_changed)
         settings_box.add_row(SettingsRow(Gtk.Label(label=_("Show a tray icon")), self.tray_switch))
 
-        settings_container.show_all()
-
         self.add_window(window)
         window.show_all()
-
         self.update_ui_callback()
 
         # attempt to apply overrides and if we fail don't setup update hooks
@@ -212,7 +208,6 @@ class Blueberry(Gtk.Application):
             self.model.connect('row-changed', self.update_status)
             self.model.connect('row-deleted', self.update_status)
             self.model.connect('row-inserted', self.update_status)
-            self.update_status()
 
     def panel_changed(self, widget, panel):
         if not panel in self.configuration_tools:

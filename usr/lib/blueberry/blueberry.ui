@@ -31,7 +31,7 @@
       <object class="GtkHeaderBar">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="title" translatable="yes">Blueberry</property>
+        <property name="title">Blueberry</property>
         <property name="show_close_button">True</property>
         <child>
           <object class="GtkImage" id="header-icon">
@@ -52,6 +52,7 @@
         </child>
         <child>
           <object class="GtkImage" id="rfkill-error-image">
+            <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="icon_name">dialog-error</property>
             <property name="icon_size">3</property>
@@ -134,7 +135,7 @@
                   <object class="GtkLabel" id="status-label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">"No Bluetooth adapters found" in some language that has an extremely verbose way of saying it might look something like this</property>
+                    <property name="label">status label</property>
                     <property name="justify">center</property>
                     <property name="wrap">True</property>
                   </object>

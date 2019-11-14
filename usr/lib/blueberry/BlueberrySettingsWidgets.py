@@ -21,7 +21,6 @@ class SettingsBox(Gtk.Frame):
 
         if title != "":
             toolbar = Gtk.Toolbar.new()
-            toolbar_context = toolbar.get_style_context()
             Gtk.StyleContext.add_class(Gtk.Widget.get_style_context(toolbar), "cs-header")
 
             label = Gtk.Label.new()
