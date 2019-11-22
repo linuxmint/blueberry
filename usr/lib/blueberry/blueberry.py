@@ -195,6 +195,8 @@ class Blueberry(Gtk.Application):
         self.settings.connect("changed", self.on_settings_changed)
         settings_box.add_row(SettingsRow(Gtk.Label(label=_("Show a tray icon")), self.tray_switch))
 
+        settings_box.show_all()
+
         self.add_window(window)
         window.show_all()
         self.update_ui_callback()
