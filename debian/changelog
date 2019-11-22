@@ -1,3 +1,30 @@
+blueberry (1.3.0) tricia; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Add support for XAppStatusIcon
+  * StatusIcon: Switch to activate signal
+
+  [ James Ross ]
+  * obex: check for None when setting shared path
+  * rework override to be compatible with any version
+
+  [ shanmukhateja ]
+  * Fix tray icon not shown with window (#89)
+
+  [ James Ross ]
+  * blueberry: UI redesign
+  * rfkillMagic: support hotpluggable bt devices
+  * rfkillMagic: support device indexes above 9
+  * blueberry: rework rfkill error to be switch-specific
+  * cleanup some unneded code
+
+  [ Clement Lefebvre ]
+  * UI: Ensure burger menu is visible
+  * l10n: Generate files
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 22 Nov 2019 14:16:18 +0000
+
 blueberry (1.2.9) tina; urgency=medium
 
   * l10n: Update translations
