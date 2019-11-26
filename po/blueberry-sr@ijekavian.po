@@ -1,155 +1,154 @@
-# Zulu translation for linuxmint
-# Copyright (c) 2017 Rosetta Contributors and Canonical Ltd 2017
+# Serbian Ijekavian translation for linuxmint
+# Copyright (c) 2019 Rosetta Contributors and Canonical Ltd 2019
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2017-07-02 23:55+0000\n"
-"Last-Translator: Thamsanca Mnune <Unknown>\n"
-"Language-Team: Zulu <zu@li.org>\n"
+"PO-Revision-Date: 2019-10-17 11:47+0000\n"
+"Last-Translator: Lj B <Unknown>\n"
+"Language-Team: Serbian Ijekavian <sr@ijekavian@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2019-11-26 15:59+0000\n"
 "X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
-msgstr "Idivayisi engaziwa"
+msgstr "Непознат уређај"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr "Ifayela elingenayo nge-Bluetooth"
+msgstr "Долазна датотека преко Блутута"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr "Ifayela elingenayo %(0)s kusuka ku- %(1)s"
+msgstr "Пристигла је датотека %(0)s са %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
-msgstr "Yamukela"
+msgstr "Прихвати"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
-msgstr "Yeka"
+msgstr "Одбиј"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
-msgstr "Ithola ifayela"
+msgstr "Примање датотеке"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Ithola ifayela %(0)s kusuka ku- %(1)s"
+msgstr "Примам датотеку %(0)s са %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
-msgstr "Ifayela elitholiwe"
+msgstr "Датотека је примљења"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr "Amafayela %(0)s ukusuka ku- %(1)s atholiwe ngempumelelo"
+msgstr "Датотека %(0)s је успешно примљена са %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:411
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 msgid "Open"
-msgstr "Vula"
+msgstr "Отвори"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr "Ukudluliswa kwehlulekile"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "Ukudluliswa kwefayela %(0)s kuhlulekile"
+msgstr "Пренос датотеке %(0)s није успео"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 msgid "Files received"
-msgstr "Amafayela atholakele"
+msgstr "Датотеке су примљене"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] "Amafayela %d atholakele ngemuva"
-msgstr[1] "Amafayela angu-%d atholakele ngemuva"
+msgstr[0] "Примљена је %d датотека у позадини"
+msgstr[1] "Примљене су %d датотеке у позадини"
+msgstr[2] "Примљено је %d датотека у позадини"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "Amafayela  amanaye angu-%d atholakele ngemuva"
-msgstr[1] "Amafayela  amanaye angu-%d atholakele ngemuva"
+msgstr[0] ""
+msgstr[1] "Примљене су још %d датотеке у позадини"
 
 #: usr/lib/blueberry/blueberry.py:75
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
-"Kubonakala njenge-%s futhi iyatholakala ekudlulisweni kwefayela le-Bluetooth."
 
 #: usr/lib/blueberry/blueberry.py:77
 #, python-format
 msgid "Visible as %s."
-msgstr "Kubonakala njenge %s."
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:145 usr/lib/blueberry/blueberry-tray.py:50
 #: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
 msgid "Bluetooth"
-msgstr "I-Bluetooth"
+msgstr "Блутут"
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Settings"
-msgstr "Izilungiselelo"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:180
 msgid "Name"
-msgstr "Igama"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:181
 msgid "This is the Bluetooth name of your computer"
-msgstr "Leli igama le-Bluetooth lekhompyutha yakho"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:188
 msgid "Receive files from remote devices"
-msgstr "Thola amafayela kusuka kumadivayisi akude"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:189
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"Le ndlela ivumela ikhompyutha yakho ukuthola amafayela adluliselwe nge-"
-"Bluetooth (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:196
 msgid "Show a tray icon"
-msgstr "Bonisa isithonjana se-tray"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:277
 msgid "No Bluetooth adapters found"
-msgstr "Awekho ama-adapter e-Bluetooth atholakele"
+msgstr "Нису пронађени Блутут адаптери"
 
 #: usr/lib/blueberry/blueberry.py:280
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "I-Bluetooth ivaliwe yi-hardware switch"
+msgstr "Блутут је онемогућен хардверским прекидачем"
 
 #: usr/lib/blueberry/blueberry.py:282 usr/lib/blueberry/blueberry-tray.py:67
 msgid "Bluetooth is disabled"
-msgstr "I-Bluetooth ivaliwe"
+msgstr "Блутут је онемогућен"
 
 #: usr/lib/blueberry/blueberry.py:294
 msgid "An error has occurred"
-msgstr ""
+msgstr "Дошло је до грешке"
 
 #: usr/lib/blueberry/blueberry.py:296
 msgid ""
@@ -160,15 +159,15 @@ msgstr ""
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "I-Bluetooth: Ixhunywe ku-%s"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:120
 msgid "Send files to a device"
-msgstr "Thumela amafayela kudivayisi"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:124
 msgid "Open Bluetooth device manager"
-msgstr "Vula imenenja yedivayisi ye-Bluetooth"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Paired devices"
@@ -180,8 +179,8 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:147
 msgid "Quit"
-msgstr "Yeka"
+msgstr ""
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
-msgstr "Lungiselela izilungiselelo ze-Bluetooth"
+msgstr ""

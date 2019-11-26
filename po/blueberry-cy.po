@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2019-06-30 17:53+0200\n"
-"PO-Revision-Date: 2019-03-14 09:24+0000\n"
+"POT-Creation-Date: 2019-11-22 14:15+0000\n"
+"PO-Revision-Date: 2019-07-29 16:04+0000\n"
 "Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
 "Language-Team: Welsh <cy@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : (n != 8 && n != 11) ? "
 "2 : 3;\n"
-"X-Launchpad-Export-Date: 2019-07-28 09:33+0000\n"
-"X-Generator: Launchpad (build 19010)\n"
+"X-Launchpad-Export-Date: 2019-11-26 15:58+0000\n"
+"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -96,48 +96,39 @@ msgstr[1] "Derbyniwyd %d ffeil arall yn y cefndir"
 msgstr[2] "Derbyniwyd %d o ffeiliau eraill yn y cefndir"
 msgstr[3] "Derbyniwyd %d o ffeiliau eraill yn y cefndir"
 
-#: usr/lib/blueberry/blueberry.py:80 usr/lib/blueberry/blueberry-tray.py:48
-#: usr/lib/blueberry/blueberry-tray.py:78 generate_desktop_files:23
+#: usr/lib/blueberry/blueberry.py:75
+#, python-format
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr ""
+"Yn weladwy fel %s ac ar gael ar gyfer trosglwyddo ffeiliau drwy Bluetooth"
+
+#: usr/lib/blueberry/blueberry.py:77
+#, python-format
+msgid "Visible as %s."
+msgstr "Yn weladwy fel %s"
+
+#: usr/lib/blueberry/blueberry.py:145 usr/lib/blueberry/blueberry-tray.py:50
+#: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:129 usr/lib/blueberry/blueberry.py:278
-msgid "An error has occurred"
-msgstr ""
+#: usr/lib/blueberry/blueberry.py:147
+msgid "Settings"
+msgstr "Gosodiadau"
 
-#: usr/lib/blueberry/blueberry.py:130 usr/lib/blueberry/blueberry-tray.py:65
-msgid "Bluetooth is disabled"
-msgstr "Mae bluetooth wedi ei analluogi"
-
-#: usr/lib/blueberry/blueberry.py:131
-msgid "No Bluetooth adapters found"
-msgstr "Heb ganfod addaswyr Bluetooth"
-
-#: usr/lib/blueberry/blueberry.py:132
-msgid "Bluetooth is disabled by hardware switch"
-msgstr "Mae Bluetooth wedi ei analluogi drwy switch caledwedd"
-
-#: usr/lib/blueberry/blueberry.py:150
-msgid "Devices"
-msgstr "Dyfeisiau"
-
-#: usr/lib/blueberry/blueberry.py:156
-msgid "Bluetooth settings"
-msgstr "Gosodiau Bluetooth"
-
-#: usr/lib/blueberry/blueberry.py:162
+#: usr/lib/blueberry/blueberry.py:180
 msgid "Name"
 msgstr "Enw"
 
-#: usr/lib/blueberry/blueberry.py:163
+#: usr/lib/blueberry/blueberry.py:181
 msgid "This is the Bluetooth name of your computer"
 msgstr "Hwn yw enw Bluetooth eich cyfrifiadur"
 
-#: usr/lib/blueberry/blueberry.py:170
+#: usr/lib/blueberry/blueberry.py:188
 msgid "Receive files from remote devices"
 msgstr "Derbyn ffeiliau gan ddyfais bell"
 
-#: usr/lib/blueberry/blueberry.py:171
+#: usr/lib/blueberry/blueberry.py:189
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -145,47 +136,54 @@ msgstr ""
 "Mae'r dewis yma'n caniatáu i'ch cyfrifiadur dderbyn ffeiliau wedi eu "
 "trosglwyddo dros Bluetooth (OBEX)"
 
-#: usr/lib/blueberry/blueberry.py:178
+#: usr/lib/blueberry/blueberry.py:196
 msgid "Show a tray icon"
 msgstr "Dangos eicon cilfach"
 
-#: usr/lib/blueberry/blueberry.py:182
-msgid "Settings"
-msgstr "Gosodiadau"
+#: usr/lib/blueberry/blueberry.py:277
+msgid "No Bluetooth adapters found"
+msgstr "Heb ganfod addaswyr Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:261
-#, python-format
-msgid "Visible as %s and available for Bluetooth file transfers."
+#: usr/lib/blueberry/blueberry.py:280
+msgid "Bluetooth is disabled by hardware switch"
+msgstr "Mae Bluetooth wedi ei analluogi drwy switch caledwedd"
+
+#: usr/lib/blueberry/blueberry.py:282 usr/lib/blueberry/blueberry-tray.py:67
+msgid "Bluetooth is disabled"
+msgstr "Mae bluetooth wedi ei analluogi"
+
+#: usr/lib/blueberry/blueberry.py:294
+msgid "An error has occurred"
+msgstr "Digwyddodd gwall"
+
+#: usr/lib/blueberry/blueberry.py:296
+msgid ""
+"Permission issues can be solved with a udev rule for rfkill or membership in "
+"the 'rfkill' group."
 msgstr ""
-"Yn weladwy fel %s ac ar gael ar gyfer trosglwyddo ffeiliau drwy Bluetooth"
 
-#: usr/lib/blueberry/blueberry.py:263
-#, python-format
-msgid "Visible as %s."
-msgstr "Yn weladwy fel %s"
-
-#: usr/lib/blueberry/blueberry-tray.py:75
+#: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Bluetooth: Wedi ei gysylltu i %s"
 
-#: usr/lib/blueberry/blueberry-tray.py:123
+#: usr/lib/blueberry/blueberry-tray.py:120
 msgid "Send files to a device"
 msgstr "Anfon ffeiliau i'r ddyfais"
 
-#: usr/lib/blueberry/blueberry-tray.py:127
+#: usr/lib/blueberry/blueberry-tray.py:124
 msgid "Open Bluetooth device manager"
 msgstr "Agor rheolwr dyfais Bluetooth"
 
-#: usr/lib/blueberry/blueberry-tray.py:133
+#: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Paired devices"
 msgstr "Dyfeisiau wedi'u paru"
 
-#: usr/lib/blueberry/blueberry-tray.py:142
+#: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Connected"
 msgstr "Wedi cysylltu"
 
-#: usr/lib/blueberry/blueberry-tray.py:150
+#: usr/lib/blueberry/blueberry-tray.py:147
 msgid "Quit"
 msgstr "Gadael"
 

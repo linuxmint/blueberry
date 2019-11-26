@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2019-06-30 17:53+0200\n"
+"POT-Creation-Date: 2019-11-22 14:15+0000\n"
 "PO-Revision-Date: 2015-07-21 14:08+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Shan <shn@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n == 1) ? 0 : 1;\n"
-"X-Launchpad-Export-Date: 2019-07-28 09:33+0000\n"
-"X-Generator: Launchpad (build 19010)\n"
+"X-Launchpad-Export-Date: 2019-11-26 15:59+0000\n"
+"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -91,93 +91,91 @@ msgid_plural "Received %d more files in the background"
 msgstr[0] ""
 msgstr[1] ""
 
-#: usr/lib/blueberry/blueberry.py:80 usr/lib/blueberry/blueberry-tray.py:48
-#: usr/lib/blueberry/blueberry-tray.py:78 generate_desktop_files:23
+#: usr/lib/blueberry/blueberry.py:75
+#, python-format
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:77
+#, python-format
+msgid "Visible as %s."
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:145 usr/lib/blueberry/blueberry-tray.py:50
+#: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "ၸၢတ်ႇၸိတ်ႇ"
 
-#: usr/lib/blueberry/blueberry.py:129 usr/lib/blueberry/blueberry.py:278
-msgid "An error has occurred"
+#: usr/lib/blueberry/blueberry.py:147
+msgid "Settings"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:130 usr/lib/blueberry/blueberry-tray.py:65
-msgid "Bluetooth is disabled"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry.py:131
-msgid "No Bluetooth adapters found"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry.py:132
-msgid "Bluetooth is disabled by hardware switch"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry.py:150
-msgid "Devices"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry.py:156
-msgid "Bluetooth settings"
-msgstr ""
-
-#: usr/lib/blueberry/blueberry.py:162
+#: usr/lib/blueberry/blueberry.py:180
 msgid "Name"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:163
+#: usr/lib/blueberry/blueberry.py:181
 msgid "This is the Bluetooth name of your computer"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:170
+#: usr/lib/blueberry/blueberry.py:188
 msgid "Receive files from remote devices"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:171
+#: usr/lib/blueberry/blueberry.py:189
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:178
+#: usr/lib/blueberry/blueberry.py:196
 msgid "Show a tray icon"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:182
-msgid "Settings"
+#: usr/lib/blueberry/blueberry.py:277
+msgid "No Bluetooth adapters found"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:261
-#, python-format
-msgid "Visible as %s and available for Bluetooth file transfers."
+#: usr/lib/blueberry/blueberry.py:280
+msgid "Bluetooth is disabled by hardware switch"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:263
-#, python-format
-msgid "Visible as %s."
+#: usr/lib/blueberry/blueberry.py:282 usr/lib/blueberry/blueberry-tray.py:67
+msgid "Bluetooth is disabled"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:75
+#: usr/lib/blueberry/blueberry.py:294
+msgid "An error has occurred"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:296
+msgid ""
+"Permission issues can be solved with a udev rule for rfkill or membership in "
+"the 'rfkill' group."
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:123
+#: usr/lib/blueberry/blueberry-tray.py:120
 msgid "Send files to a device"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:127
+#: usr/lib/blueberry/blueberry-tray.py:124
 msgid "Open Bluetooth device manager"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:133
+#: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Paired devices"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:142
+#: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Connected"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:150
+#: usr/lib/blueberry/blueberry-tray.py:147
 msgid "Quit"
 msgstr "ဢိုတ်း"
 
