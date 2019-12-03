@@ -30,7 +30,13 @@ class Interface:
         self.start_event_monitor()
 
     def adapter_check(self):
-        res = subprocess.check_output(RFKILL_CHK).decode('utf-8')
+        proc = subprocess.run(RFKILL_CHK, stdout=subprocess.PIPE)
+        if proc.returncode != 0:
+            self.debug("Error running command: %s." % RFKILL_CHK)
+            res = ""
+        else:
+            res = proc.stdout.decode('utf-8')
+
         match = None
         have_adapter = False
 
