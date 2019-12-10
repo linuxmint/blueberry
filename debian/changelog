@@ -1,3 +1,10 @@
+blueberry (1.3.2) tricia; urgency=medium
+
+  [ samtygier ]
+  * Handle error from rfkill (#94)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 10 Dec 2019 10:12:12 +0000
+
 blueberry (1.3.1) tricia; urgency=medium
 
   * l10n: Update translations
