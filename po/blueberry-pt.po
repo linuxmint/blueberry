@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2019-07-02 21:56+0000\n"
-"Last-Translator: Pereira <Unknown>\n"
+"PO-Revision-Date: 2019-12-01 01:33+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2019-11-26 15:58+0000\n"
+"X-Launchpad-Export-Date: 2019-12-11 11:55+0000\n"
 "X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -156,6 +156,8 @@ msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"Os problemas de permissão podem ser resolvidos com uma regra udev para o "
+"rfkill ou adesão ao grupo 'rfkill'."
 
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format

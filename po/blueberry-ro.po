@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2019-11-14 20:02+0000\n"
-"Last-Translator: Flaviu <flaviu@gmx.com>\n"
+"PO-Revision-Date: 2019-11-29 08:28+0000\n"
+"Last-Translator: Daniel Slavu <Unknown>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2019-11-26 15:59+0000\n"
+"X-Launchpad-Export-Date: 2019-12-11 11:55+0000\n"
 "X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -130,7 +130,7 @@ msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"Această opțiune permite computerului tău să recepșioneze fișiere prin "
+"Această opțiune permite computerului tău să recepționeze fișiere prin "
 "Bluetooth (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:196
@@ -147,11 +147,11 @@ msgstr "Bluetooth-ul este dezactivat dintr-un comutator hardware"
 
 #: usr/lib/blueberry/blueberry.py:282 usr/lib/blueberry/blueberry-tray.py:67
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth-ul este dezactivat"
+msgstr "Bluetooth este dezactivat"
 
 #: usr/lib/blueberry/blueberry.py:294
 msgid "An error has occurred"
-msgstr "A apărut o eroare"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:296
 msgid ""
@@ -174,7 +174,7 @@ msgstr "Deschide administratorul de dispozitive Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Paired devices"
-msgstr "Dispozitive înperecheate"
+msgstr "Dispozitive pereche"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Connected"
@@ -182,7 +182,7 @@ msgstr "Conectat"
 
 #: usr/lib/blueberry/blueberry-tray.py:147
 msgid "Quit"
-msgstr "Ieșire"
+msgstr "Închide"
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
