@@ -8,99 +8,101 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2015-12-25 17:18+0000\n"
-"Last-Translator: meequz <meequz@gmail.com>\n"
+"PO-Revision-Date: 2019-12-29 17:07+0000\n"
+"Last-Translator: Alexis Borovik <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Launchpad-Export-Date: 2019-12-11 11:55+0000\n"
-"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
+"X-Launchpad-Export-Date: 2020-01-06 10:03+0000\n"
+"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
-msgstr ""
+msgstr "Невядомая прылада"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr ""
+msgstr "Уваходны файл праз Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr ""
+msgstr "Уваходны файл %(0)s ад %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
-msgstr ""
+msgstr "Прыняць"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
-msgstr ""
+msgstr "Адмовіць"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
-msgstr ""
+msgstr "Атрыманне файла"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "Атрыманне файла %(0)s ад %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
-msgstr ""
+msgstr "Файл атрыманы"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
+msgstr "Файл %(0)s ад %(1)s паспяхова атрыманы"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:411
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 msgid "Open"
-msgstr ""
+msgstr "Адчыніць"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr ""
+msgstr "Збой перадачы"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "Схіб перадачы файла %(0)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 msgid "Files received"
-msgstr ""
+msgstr "Файлы атрыманы"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Атрыманы %d файл у фоне"
+msgstr[1] "Атрыманы %d файлы ў фоне"
+msgstr[2] "Атрымана %d файлаў ў фоне"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Атрыманы яшчэ %d файл у фоне"
+msgstr[1] "Атрыманы яшчэ %d файлы ў фоне"
+msgstr[2] "Атрымана яшчэ %d файлаў у фоне"
 
 #: usr/lib/blueberry/blueberry.py:75
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "Бачны як %s – і даступны для Bluetooth-авых файлавых перапраў."
 
 #: usr/lib/blueberry/blueberry.py:77
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "Бачны як %s."
 
 #: usr/lib/blueberry/blueberry.py:145 usr/lib/blueberry/blueberry-tray.py:50
 #: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
@@ -109,29 +111,31 @@ msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Settings"
-msgstr ""
+msgstr "Налады"
 
 #: usr/lib/blueberry/blueberry.py:180
 msgid "Name"
-msgstr ""
+msgstr "Імя"
 
 #: usr/lib/blueberry/blueberry.py:181
 msgid "This is the Bluetooth name of your computer"
-msgstr ""
+msgstr "Гэта Bluetooth-імя вашага камп'ютара"
 
 #: usr/lib/blueberry/blueberry.py:188
 msgid "Receive files from remote devices"
-msgstr ""
+msgstr "Атрымліваць файлы з аддаленага прыстасавання"
 
 #: usr/lib/blueberry/blueberry.py:189
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
+"Гэтая опцыя дазваляе Вашаму камп'ютару атрымліваць файлы праз „Bluetooth‟ "
+"(OBEX)."
 
 #: usr/lib/blueberry/blueberry.py:196
 msgid "Show a tray icon"
-msgstr ""
+msgstr "Адлюстроўваць трэй-іконку"
 
 #: usr/lib/blueberry/blueberry.py:277
 msgid "No Bluetooth adapters found"
@@ -147,18 +151,20 @@ msgstr "Bluetooth адключаны"
 
 #: usr/lib/blueberry/blueberry.py:294
 msgid "An error has occurred"
-msgstr ""
+msgstr "Адбылася памылка"
 
 #: usr/lib/blueberry/blueberry.py:296
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"Праблемы з дазволам можна вырашыць з дапамогай правіла udev для rfkill або "
+"ўваходжаннем ў групу 'rfkill'."
 
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "Bluetooth: Злучаны з %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:120
 msgid "Send files to a device"
@@ -170,11 +176,11 @@ msgstr "Адкрыць кіраўнік прылад Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Paired devices"
-msgstr ""
+msgstr "Спалучаныя прылады"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Connected"
-msgstr ""
+msgstr "Злучэнне ўсталявана"
 
 #: usr/lib/blueberry/blueberry-tray.py:147
 msgid "Quit"
@@ -182,4 +188,4 @@ msgstr "Выйсці"
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
-msgstr ""
+msgstr "Наладка настаўленьняў Bluetooth"

@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2019-09-06 10:16+0000\n"
-"Last-Translator: Abdul Munif Hanafi <amunifhanafi@gmail.com>\n"
+"PO-Revision-Date: 2019-12-22 06:56+0000\n"
+"Last-Translator: Arief Setiadi Wibowo <q_thrynx@yahoo.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2019-12-11 11:55+0000\n"
-"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
+"X-Launchpad-Export-Date: 2020-01-06 10:02+0000\n"
+"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -70,7 +70,7 @@ msgstr "Pengiriman gagal"
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr ""
+msgstr "Pengiriman berkas %(0)s gagal"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
@@ -81,20 +81,18 @@ msgstr "Berkas diterima"
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Menerima %d berkas di latar belakang"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Menerima %d berkas lagi di latar belakang"
 
 #: usr/lib/blueberry/blueberry.py:75
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
+msgstr "Terlihat sebagai %s dan tersedia untuk pengiriman berkas Bluetooth."
 
 #: usr/lib/blueberry/blueberry.py:77
 #, python-format
@@ -127,6 +125,8 @@ msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
+"Opsi ini memungkinkan komputer Anda menerima berkas yang dikirim melalui "
+"Bluetooth (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:196
 msgid "Show a tray icon"
@@ -153,6 +153,8 @@ msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"Permasalahan izin dapat diselesaikan dengan aturan udev untuk rfkill atau "
+"keanggotaan di grup 'rfkill'."
 
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format

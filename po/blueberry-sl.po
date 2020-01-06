@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2019-03-07 12:53+0000\n"
-"Last-Translator: MountainLynx <Unknown>\n"
+"PO-Revision-Date: 2020-01-02 20:31+0000\n"
+"Last-Translator: Andrej Čop <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
-"X-Launchpad-Export-Date: 2019-12-11 11:55+0000\n"
-"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
+"X-Launchpad-Export-Date: 2020-01-06 10:02+0000\n"
+"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -153,13 +153,15 @@ msgstr "Bluetooth je onemogočen"
 
 #: usr/lib/blueberry/blueberry.py:294
 msgid "An error has occurred"
-msgstr ""
+msgstr "Prišlo je do napake"
 
 #: usr/lib/blueberry/blueberry.py:296
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"Težave z dovoljenji so lahko rešene z udev pravilom za rfkill ali z "
+"članstvom v 'rfkill'  skupini."
 
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format
