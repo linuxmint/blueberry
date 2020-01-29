@@ -43,51 +43,6 @@ def find_widget(parent, name="", widgetClass=None):
 
     return None
 
-# We attempt to override the widget style to replace
-# the explanation label text and stop the spinner.
-# gnome_bluetooth_settings_widget doesn't give explicit access
-# to its label via gi so we recurse its child widgets to try
-# to find the parts we want to modify.
-
-# if the override fails for any reason it is disabled. update
-# signals in the main class are only connected if a test call
-# to this succeeds the first time
-override_failed = False
-
-def apply_widget_override(widget, adapter_name, obex_enabled):
-    global override_failed
-    if override_failed:
-        return False
-
-    try:
-        # not finding the label is fatal as it's our main purpose here
-        label = find_widget(widget, "explanation-label")
-        if label is None:
-            raise LookupError("unable to find label to override")
-
-        # not finding the spinner is non-fatal
-        spinner = find_widget(widget, widgetClass=Gtk.Spinner)
-        if spinner and spinner.props.active:
-            spinner.stop()
-
-        if adapter_name is not None:
-            if obex_enabled:
-                text = _("Visible as %s and available for Bluetooth file transfers.")
-            else:
-                text = _("Visible as %s.")
-            text = "%s\n" % text
-            label.set_markup(text % "\"%s\"" % adapter_name)
-        else:
-            label.set_label("")
-
-    except Exception as e:
-        log("apply_widget_override failed: {}".format(e))
-        override_failed = True
-        return False
-
-    return True
-
-
 class Blueberry(Gtk.Application):
     def do_startup(self):
         Gtk.Application.do_startup(self)
@@ -163,20 +118,16 @@ class Blueberry(Gtk.Application):
 
         self.rfkill_error_image = builder.get_object("rfkill-error-image")
 
-        self.lib_widget = GnomeBluetooth.SettingsWidget.new()
-        self.lib_widget.connect("panel-changed", self.panel_changed)
-        builder.get_object("bluetooth-widget-box").pack_start(self.lib_widget, True, True, 0)
-
         # Settings
         settings_box = SettingsBox()
         settings_container = builder.get_object("settings-container")
         settings_container.pack_start(settings_box, True, True, 0)
 
-        self.adapter_name_entry = Gtk.Entry()
-        adapter_name = self.get_default_adapter_name()
-        if adapter_name is not None:
-            self.adapter_name_entry.set_text(adapter_name)
-        self.adapter_name_entry.connect("changed", self.on_adapter_name_changed)
+        self.adapter_name_entry = Gtk.Entry(width_chars=30)
+        self.adapter_name_entry.connect("focus-out-event", self.update_name_from_entry)
+        self.adapter_name_entry.connect("activate", self.update_name_from_entry)
+        self.adapter_name_entry.set_sensitive(False)
+        self.adapter_name_entry.set_placeholder_text(_("Enable Bluetooth to edit"))
         row = SettingsRow(Gtk.Label(label=_("Name")), self.adapter_name_entry)
         row.set_tooltip_text(_("This is the Bluetooth name of your computer"))
         settings_box.add_row(row)
@@ -197,21 +148,66 @@ class Blueberry(Gtk.Application):
 
         settings_box.show_all()
 
+        self.lib_widget = GnomeBluetooth.SettingsWidget.new()
+        self.lib_widget.connect("panel-changed", self.panel_changed)
+        builder.get_object("bluetooth-widget-box").pack_start(self.lib_widget, True, True, 0)
+
         self.add_window(window)
         window.show_all()
         self.update_ui_callback()
 
         # attempt to apply overrides and if we fail don't setup update hooks
-        name = self.get_default_adapter_name()
-        obex_enabled = self.settings.get_boolean("obex-enabled")
-        if apply_widget_override(self.lib_widget, name, obex_enabled):
+        if self.get_label_widget_and_spinner(self.lib_widget):
+            self.label_widget.set_text("")
             self.client = GnomeBluetooth.Client()
             self.model = self.client.get_model()
-            self.model.connect('row-changed', self.update_status)
-            self.model.connect('row-deleted', self.update_status)
-            self.model.connect('row-inserted', self.update_status)
+            self.model.connect('row-changed', self.on_adapter_status_changed)
+            self.model.connect('row-deleted', self.on_adapter_status_changed)
+            self.model.connect('row-inserted', self.on_adapter_status_changed)
+            self.on_adapter_status_changed(self.lib_widget)
 
-    def panel_changed(self, widget, panel):
+    def bluetooth_on(self):
+        return not self.rfkill.soft_block and not self.rfkill.hard_block
+
+    def get_label_widget_and_spinner(self, widget):
+        # We attempt to override the widget style to replace
+        # the explanation label text and destroy the spinner.
+        # gnome_bluetooth_settings_widget doesn't give explicit access
+        # to its label via gi so we recurse its child widgets to try
+        # to find the parts we want to modify.
+
+        # if the override fails for any reason it is disabled. update
+        # signals in the main class are only connected if a test call
+        # to this succeeds the first time
+
+        self.label_widget = None
+        self.spinner = None
+
+        try:
+            # not finding the label is fatal as it's our main purpose here
+            self.label_widget = find_widget(widget, "explanation-label")
+
+            if self.label_widget is None:
+                raise LookupError("unable to find label to override")
+
+            spinner = find_widget(widget, widgetClass=Gtk.Spinner)
+            if spinner != None:
+                spinner.destroy()
+
+        except Exception as e:
+            log("could not fetch label widget: {}".format(e))
+            return False
+
+        return True
+
+    def on_adapter_status_changed(self, settings, foo=None, data=None):
+        if self.bluetooth_on():
+            self.adapter_name_entry.set_text(self.get_adapter_name())
+        else:
+            self.adapter_name_entry.set_text("")
+        self.update_status(self.adapter_name_entry)
+
+    def panel_changed(self, widget, panel=None):
         if not panel in self.configuration_tools:
             log("No configuration tool known for panel '{}'".format(panel))
         else:
@@ -230,20 +226,26 @@ class Blueberry(Gtk.Application):
             os.system("/usr/lib/blueberry/blueberry-obex-agent.py &")
         else:
             self.settings.set_boolean("obex-enabled", False)
-            os.system("killall -9 blueberry-obex-agent");
+            os.system("pkill -9 blueberry-obex");
         self.update_status()
 
-    def on_adapter_name_changed(self, entry):
-        subprocess.call(["bt-adapter", "--set", "Alias", entry.get_text()])
+    def update_name_from_entry(self, entry, arg1=None, data=None):
+        name = entry.get_text()
+        if name == "":
+            adapter_name = self.client.props.default_adapter_name
+            name = adapter_name if adapter_name else ""
+            entry.set_text(name)
+
+        subprocess.call(["bt-adapter", "--set", "Alias", name])
         self.update_status()
 
     def on_settings_changed(self, settings, key):
         self.tray_switch.set_active(self.settings.get_boolean("tray-enabled"))
         self.obex_switch.set_active(self.settings.get_boolean("obex-enabled"))
 
-    def get_default_adapter_name(self):
-        if not self.rfkill.have_adapter:
-            return None
+    def get_adapter_name(self):
+        if not self.bluetooth_on():
+            return ""
 
         name = None
 
@@ -257,15 +259,35 @@ class Blueberry(Gtk.Application):
         except Exception as cause:
             log("Could not retrieve the BT adapter name with 'bt-adapter -i': {}".format(cause))
 
+        if name == None:
+            default_name = self.client.props.default_adapter_name
+            name = default_name if (default_name != None) else ""
+
         return name
 
     def update_status(self, path=None, iter=None, data=None):
-        if override_failed:
+        if not self.label_widget:
             return
 
-        name = self.get_default_adapter_name()
         obex_enabled = self.settings.get_boolean("obex-enabled")
-        apply_widget_override(self.lib_widget, name, obex_enabled)
+
+        if self.bluetooth_on():
+            adapter_name = self.get_adapter_name()
+            if adapter_name != "":
+                self.adapter_name_entry.set_sensitive(True)
+
+                if obex_enabled:
+                    text = _("Visible as %s and available for Bluetooth file transfers.")
+                else:
+                    text = _("Visible as %s.")
+
+                text = "%s\n" % text
+                self.label_widget.set_markup(text % "\"%s\"" % adapter_name)
+            else:
+                self.adapter_name_entry.set_sensitive(False)
+                self.label_widget.set_label("")
+        else:
+            self.adapter_name_entry.set_sensitive(False)
 
     def update_ui_callback(self):
         powered = False
