@@ -1,3 +1,10 @@
+blueberry (1.3.5) debbie; urgency=medium
+
+  [ Michael Webster ]
+  * blueberry.py: Fix handling of the device name/alias.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 04 Feb 2020 15:10:44 +0000
+
 blueberry (1.3.4) tricia; urgency=medium
 
   * l10n: Update translations
