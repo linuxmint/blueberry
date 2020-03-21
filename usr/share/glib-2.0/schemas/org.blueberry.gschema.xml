@@ -5,7 +5,7 @@
             <summary>Show a tray icon when bluetooth is enabled or connected</summary>
         </key>
         <key name="use-symbolic-icons" type="b">
-            <default>false</default>
+            <default>true</default>
             <summary>Whether the tray should use symbolic icons</summary>
         </key>
         <key name="obex-enabled" type="b">
