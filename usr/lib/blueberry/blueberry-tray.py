@@ -38,9 +38,9 @@ class BluetoothTray(Gtk.Application):
         self.tray_active_icon = "blueberry-tray-active"
         self.tray_disabled_icon = "blueberry-tray-disabled"
         if self.settings.get_boolean("use-symbolic-icons"):
-            self.tray_icon = "bluetooth-active-symbolic"
-            self.tray_active_icon = "bluetooth-paired-symbolic"
-            self.tray_disabled_icon = "bluetooth-disabled-symbolic"
+            self.tray_icon = "blueberry-tray-symbolic"
+            self.tray_active_icon = "blueberry-tray-active-symbolic"
+            self.tray_disabled_icon = "blueberry-tray-disabled-symbolic"
 
         # If we have no adapter, or disabled tray, end early
         if (not self.rfkill.have_adapter) or (not self.settings.get_boolean("tray-enabled")):
