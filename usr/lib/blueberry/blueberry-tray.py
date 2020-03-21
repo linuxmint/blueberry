@@ -34,6 +34,14 @@ class BluetoothTray(Gtk.Application):
         self.settings = Gio.Settings(schema="org.blueberry")
         self.settings.connect("changed::tray-enabled", self.on_settings_changed_cb)
 
+        self.tray_icon = "blueberry-tray"
+        self.tray_active_icon = "blueberry-tray-active"
+        self.tray_disabled_icon = "blueberry-tray-disabled"
+        if self.settings.get_boolean("use-symbolic-icons"):
+            self.tray_icon = "blueberry-tray-symbolic"
+            self.tray_active_icon = "blueberry-tray-active-symbolic"
+            self.tray_disabled_icon = "blueberry-tray-disabled-symbolic"
+
         # If we have no adapter, or disabled tray, end early
         if (not self.rfkill.have_adapter) or (not self.settings.get_boolean("tray-enabled")):
             self.rfkill.terminate()
@@ -63,20 +71,20 @@ class BluetoothTray(Gtk.Application):
             return
 
         if self.rfkill.hard_block or self.rfkill.soft_block:
-            self.icon.set_icon_name("blueberry-tray-disabled")
+            self.icon.set_icon_name(self.tray_disabled_icon)
             self.icon.set_tooltip_text(_("Bluetooth is disabled"))
         else:
-            self.icon.set_icon_name("blueberry-tray")
+            self.icon.set_icon_name(self.tray_icon)
             self.update_connected_state()
 
     def update_connected_state(self):
         self.get_devices()
 
         if len(self.connected_devices) > 0:
-            self.icon.set_icon_name("blueberry-tray-active")
+            self.icon.set_icon_name(self.tray_active_icon)
             self.icon.set_tooltip_text(_("Bluetooth: Connected to %s") % (", ".join(self.connected_devices)))
         else:
-            self.icon.set_icon_name("blueberry-tray")
+            self.icon.set_icon_name(self.tray_icon)
             self.icon.set_tooltip_text(_("Bluetooth"))
 
     def get_devices(self):
