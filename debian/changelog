@@ -1,3 +1,17 @@
+blueberry (1.3.6) ulyana; urgency=medium
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+  [ Michael Webster ]
+  * blueberry.ui: Lower version requirement (current releases are still on gtk 3.22.
+  * Fix debian/control to refer to python3.
+
+  [ Clement Lefebvre ]
+  * tray: Switch to symbolic icons (#100)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 21 Mar 2020 10:08:52 +0000
+
 blueberry (1.3.5) debbie; urgency=medium
 
   [ Michael Webster ]
