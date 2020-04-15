@@ -287,7 +287,7 @@ class _Agent:
             address = session.address
             filename = transfer.name
             size = transfer.size
-            name = subprocess.check_output(["hcitool", "name", session.address]).decode("utf-8").strip()
+            name = get_device_name_by_address(session.address)
 
         self._pending_transfer = {'transfer_path': transfer_path, 'address': address, 'root': root,
                                   'filename': filename, 'size': size, 'name': name}
@@ -715,6 +715,18 @@ class AgentManager(Base):
             dprint(agent_path, error)
 
         self._interface.UnregisterAgent(agent_path, reply_handler=on_unregistered, error_handler=on_unregister_failed)
+
+
+def get_device_name_by_address(address):
+    text = subprocess.check_output(["bt-device", "--info=" + address]).decode("utf-8").strip()
+
+    for line in text.splitlines():
+        line = line.strip()
+        if line.startswith("Name:"):
+            return line[5:].strip()
+
+    raise ValueError
+
 
 if __name__ == '__main__':
     settings = Gio.Settings(schema="org.blueberry")
