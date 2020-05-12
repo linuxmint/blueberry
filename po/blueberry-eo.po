@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2019-11-23 11:40+0000\n"
+"POT-Creation-Date: 2020-02-04 15:14+0000\n"
+"PO-Revision-Date: 2020-04-17 10:54+0000\n"
 "Last-Translator: Piet Coppens <Unknown>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-01-06 10:02+0000\n"
-"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
+"X-Launchpad-Export-Date: 2020-05-11 10:59+0000\n"
+"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -46,7 +46,7 @@ msgstr "Ricevado de dosiero"
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Ricevado de dosiero %(0)s desur %(1)s"
+msgstr "Ricevado de dosiero %(0)s de %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
@@ -91,66 +91,70 @@ msgid_plural "Received %d more files in the background"
 msgstr[0] "Ricevita %d plia dosiero fone"
 msgstr[1] "Ricevitaj %d pliaj dosieroj fone"
 
-#: usr/lib/blueberry/blueberry.py:75
-#, python-format
-msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr "Videbla kiel %s kaj disponebla por dosiertransigoj per Bludento."
-
-#: usr/lib/blueberry/blueberry.py:77
-#, python-format
-msgid "Visible as %s."
-msgstr "Videbla kiel %s."
-
-#: usr/lib/blueberry/blueberry.py:145 usr/lib/blueberry/blueberry-tray.py:50
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
 #: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Bludento"
 
-#: usr/lib/blueberry/blueberry.py:147
+#: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
 msgstr "Agordoj"
 
-#: usr/lib/blueberry/blueberry.py:180
+#: usr/lib/blueberry/blueberry.py:130
+msgid "Enable Bluetooth to edit"
+msgstr "Ŝalti bludenton por redakti"
+
+#: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
 msgstr "Nomo"
 
-#: usr/lib/blueberry/blueberry.py:181
+#: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
 msgstr "Ĉi tio estas la Bludento-nomo de via komputilo"
 
-#: usr/lib/blueberry/blueberry.py:188
+#: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
 msgstr "Ricevi dosierojn de foraj aparatoj"
 
-#: usr/lib/blueberry/blueberry.py:189
+#: usr/lib/blueberry/blueberry.py:140
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"Ĉi tiu opcio ebligas al via komputilo ricevadon de dosieroj transmetitaj per "
+"Ĉi tiu opcio permesas al via komputilo ricevi dosierojn transmetitajn per "
 "Bludento (OBEX)"
 
-#: usr/lib/blueberry/blueberry.py:196
+#: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
 msgstr "Montri piktogramon en taskopleto"
 
-#: usr/lib/blueberry/blueberry.py:277
+#: usr/lib/blueberry/blueberry.py:280
+#, python-format
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr "Videbla kiel %s kaj disponebla por dosiertransigoj per Bludento."
+
+#: usr/lib/blueberry/blueberry.py:282
+#, python-format
+msgid "Visible as %s."
+msgstr "Videbla kiel %s."
+
+#: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
 msgstr "Ne trovis Bludento-aparaton"
 
-#: usr/lib/blueberry/blueberry.py:280
+#: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Bludento estas malŝaltita per aparatara ŝaltilo"
 
-#: usr/lib/blueberry/blueberry.py:282 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
 msgid "Bluetooth is disabled"
 msgstr "Bludento estas malŝaltita"
 
-#: usr/lib/blueberry/blueberry.py:294
+#: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
 msgstr "Okazis eraro"
 
-#: usr/lib/blueberry/blueberry.py:296
+#: usr/lib/blueberry/blueberry.py:318
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
@@ -169,7 +173,7 @@ msgstr "Sendi dosierojn al aparato"
 
 #: usr/lib/blueberry/blueberry-tray.py:124
 msgid "Open Bluetooth device manager"
-msgstr "Malfermi Bludento-aparatoadministrilo"
+msgstr "Malfermi Bludento-aparatmastrumilon"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Paired devices"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2019-11-22 14:15+0000\n"
+"POT-Creation-Date: 2020-02-04 15:14+0000\n"
 "PO-Revision-Date: 2019-05-11 11:49+0000\n"
 "Last-Translator: Soham Sen <Unknown>\n"
 "Language-Team: Bengali <bn@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-01-06 10:03+0000\n"
-"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
+"X-Launchpad-Export-Date: 2020-05-11 10:59+0000\n"
+"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -91,38 +91,32 @@ msgid_plural "Received %d more files in the background"
 msgstr[0] "আরও %d টি ফাইল ব্যাকগ্রাউন্ডে গ্রহন হয়েছে"
 msgstr[1] "আরও %d টি ফাইল ব্যাকগ্রাউন্ডে গ্রহন হয়েছে"
 
-#: usr/lib/blueberry/blueberry.py:75
-#, python-format
-msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr "%s এই নামে দেখানো হচ্ছে এবং ব্লুটুথের মাধ্যমে ফাইল গ্রহণে তৈরি আছে"
-
-#: usr/lib/blueberry/blueberry.py:77
-#, python-format
-msgid "Visible as %s."
-msgstr "%s এই নামে দেখানো হচ্ছে"
-
-#: usr/lib/blueberry/blueberry.py:145 usr/lib/blueberry/blueberry-tray.py:50
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
 #: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "ব্লুটুথ"
 
-#: usr/lib/blueberry/blueberry.py:147
+#: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
 msgstr "সেটিংস"
 
-#: usr/lib/blueberry/blueberry.py:180
+#: usr/lib/blueberry/blueberry.py:130
+msgid "Enable Bluetooth to edit"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
 msgstr "নাম"
 
-#: usr/lib/blueberry/blueberry.py:181
+#: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
 msgstr "এটা আপনার কম্পিউটারের ব্লুটুথ এর নাম"
 
-#: usr/lib/blueberry/blueberry.py:188
+#: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
 msgstr "রিমোট ডিভাইস থেকে ফাইল গুলো গ্রহন করুন"
 
-#: usr/lib/blueberry/blueberry.py:189
+#: usr/lib/blueberry/blueberry.py:140
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -130,27 +124,37 @@ msgstr ""
 "এই অপশন আপনার কম্পিউটারকে ব্লুটুথের মাধ্যমে (OBEX) ফাইল গ্রহণ করতে সাহায্য "
 "করে"
 
-#: usr/lib/blueberry/blueberry.py:196
+#: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
 msgstr "একটি ট্রে আইকন দেখান"
 
-#: usr/lib/blueberry/blueberry.py:277
+#: usr/lib/blueberry/blueberry.py:280
+#, python-format
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr "%s এই নামে দেখানো হচ্ছে এবং ব্লুটুথের মাধ্যমে ফাইল গ্রহণে তৈরি আছে"
+
+#: usr/lib/blueberry/blueberry.py:282
+#, python-format
+msgid "Visible as %s."
+msgstr "%s এই নামে দেখানো হচ্ছে"
+
+#: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
 msgstr "কোন ব্লুটুথ অ্যাডাপ্টার পাওয়া যায় নি"
 
-#: usr/lib/blueberry/blueberry.py:280
+#: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "হার্ডওয়্যার সুইচ দ্বারা ব্লু-টুথ নিষ্ক্রিয় করা আছে"
 
-#: usr/lib/blueberry/blueberry.py:282 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
 msgid "Bluetooth is disabled"
 msgstr "ব্লু-টুথ নিষ্ক্রিয় করা আছে"
 
-#: usr/lib/blueberry/blueberry.py:294
+#: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry.py:296
+#: usr/lib/blueberry/blueberry.py:318
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."

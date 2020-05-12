@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2019-11-22 14:15+0000\n"
-"PO-Revision-Date: 2019-11-24 15:34+0000\n"
+"POT-Creation-Date: 2020-02-04 15:14+0000\n"
+"PO-Revision-Date: 2020-02-08 19:01+0000\n"
 "Last-Translator: Knez <Unknown>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2020-01-06 10:03+0000\n"
-"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
+"X-Launchpad-Export-Date: 2020-05-11 10:59+0000\n"
+"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -94,38 +94,32 @@ msgstr[0] "Примљена је још %d датотека у позадини"
 msgstr[1] "Примљене су још %d датотеке у позадини"
 msgstr[2] "Примљено је још %d датотека у позадини"
 
-#: usr/lib/blueberry/blueberry.py:75
-#, python-format
-msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr "Видљив као „%s“ и доступан за пренос датотека Блутутом."
-
-#: usr/lib/blueberry/blueberry.py:77
-#, python-format
-msgid "Visible as %s."
-msgstr "Видљив као „%s“."
-
-#: usr/lib/blueberry/blueberry.py:145 usr/lib/blueberry/blueberry-tray.py:50
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
 #: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Блутут"
 
-#: usr/lib/blueberry/blueberry.py:147
+#: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
 msgstr "Подешавања"
 
-#: usr/lib/blueberry/blueberry.py:180
+#: usr/lib/blueberry/blueberry.py:130
+msgid "Enable Bluetooth to edit"
+msgstr "Омогућите Блутут за уређивање"
+
+#: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
 msgstr "Назив"
 
-#: usr/lib/blueberry/blueberry.py:181
+#: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
 msgstr "Ово је Блутут назив вашег рачунара"
 
-#: usr/lib/blueberry/blueberry.py:188
+#: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
 msgstr "Прими датотеке са удаљених уређаја"
 
-#: usr/lib/blueberry/blueberry.py:189
+#: usr/lib/blueberry/blueberry.py:140
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
@@ -133,27 +127,37 @@ msgstr ""
 "Ова опција омогућава вашем рачунару да прима датотеке пренешене Блутутом "
 "(ОБЕКС)"
 
-#: usr/lib/blueberry/blueberry.py:196
+#: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
 msgstr "Прикажи иконицу фиоке"
 
-#: usr/lib/blueberry/blueberry.py:277
+#: usr/lib/blueberry/blueberry.py:280
+#, python-format
+msgid "Visible as %s and available for Bluetooth file transfers."
+msgstr "Видљив као „%s“ и доступан за пренос датотека Блутутом."
+
+#: usr/lib/blueberry/blueberry.py:282
+#, python-format
+msgid "Visible as %s."
+msgstr "Видљив као „%s“."
+
+#: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
 msgstr "Нису пронађени примопредајници Блутута"
 
-#: usr/lib/blueberry/blueberry.py:280
+#: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Блутут је искључен физичким прекидачем"
 
-#: usr/lib/blueberry/blueberry.py:282 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
 msgid "Bluetooth is disabled"
 msgstr "Блутут је искључен"
 
-#: usr/lib/blueberry/blueberry.py:294
+#: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
 msgstr "Дошло је до грешке"
 
-#: usr/lib/blueberry/blueberry.py:296
+#: usr/lib/blueberry/blueberry.py:318
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
