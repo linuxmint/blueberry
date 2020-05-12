@@ -1,3 +1,14 @@
+blueberry (1.3.7) ulyana; urgency=medium
+
+  [ cptpcrd ]
+  * obex: Remove hard requirement on deprecated hcitool
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+  * l10n: Generate desktop files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 12 May 2020 10:08:32 +0100
+
 blueberry (1.3.6) ulyana; urgency=medium
 
   [ Clement Lefebvre ]
