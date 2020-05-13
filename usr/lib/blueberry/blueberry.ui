@@ -44,6 +44,7 @@
           <object class="GtkSwitch" id="bluetooth-switch">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="valign">center</property>
           </object>
           <packing>
             <property name="position">1</property>
