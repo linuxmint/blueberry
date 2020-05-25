@@ -1,3 +1,14 @@
+blueberry (1.3.8) ulyana; urgency=medium
+
+  [ Michael Webster ]
+  * blueberry.ui: Change the valign of the headerbar switch to center, otherwise it wants to expand to fill the entire headerbar height.
+
+  [ Clement Lefebvre ]
+  * Remove Cinnamon applet
+  * Make active tray icon more recognizable
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 25 May 2020 17:48:43 +0100
+
 blueberry (1.3.7) ulyana; urgency=medium
 
   [ cptpcrd ]
