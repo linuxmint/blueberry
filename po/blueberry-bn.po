@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2020-02-04 15:14+0000\n"
-"PO-Revision-Date: 2019-05-11 11:49+0000\n"
+"PO-Revision-Date: 2020-05-12 05:42+0000\n"
 "Last-Translator: Soham Sen <Unknown>\n"
 "Language-Team: Bengali <bn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-05-11 10:59+0000\n"
-"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
+"X-Launchpad-Export-Date: 2020-06-24 10:08+0000\n"
+"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -102,7 +102,7 @@ msgstr "সেটিংস"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr ""
+msgstr "সম্পাদনা করতে ব্লুটুথ সক্ষম করুন"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -152,13 +152,15 @@ msgstr "ব্লু-টুথ নিষ্ক্রিয় করা আছে"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
-msgstr ""
+msgstr "একটি ত্রুটি উৎপন্ন হয়েছে"
 
 #: usr/lib/blueberry/blueberry.py:318
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"rfkill বা 'rfkill' গ্রুপে সদস্যতার জন্য udev নিয়মের মাধ্যমে অনুমতি "
+"সংক্রান্ত সমস্যাগুলি সমাধান করা যেতে পারে।"
 
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format
