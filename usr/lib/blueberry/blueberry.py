@@ -5,6 +5,7 @@ import gettext
 import rfkillMagic
 import setproctitle
 import subprocess
+from btadapter import BtAdapter
 from BlueberrySettingsWidgets import SettingsBox, SettingsRow
 import gi
 gi.require_version('Gtk', '3.0')
@@ -44,10 +45,23 @@ def find_widget(parent, name="", widgetClass=None):
     return None
 
 class Blueberry(Gtk.Application):
+    def __del__(self):
+        self.make_discoverable(visible=False)
+
     def do_startup(self):
         Gtk.Application.do_startup(self)
 
         self.settings = Gio.Settings(schema="org.blueberry")
+        self.btadapter = BtAdapter()
+
+        #need to subscribe the PrepareForSleep signal, cause discoverable/discoverabletimeout
+        #seems to get reset after suspend (GnomeBluetooth.SettingsWidget?)
+        #we need to set timeout and visibility in this case
+        self.dbus_connection = Gio.bus_get_sync(Gio.BusType.SYSTEM, None)
+        # sender, interface, member, path, arg, flags, callback, data
+        sub = self.dbus_subscription = self.dbus_connection.signal_subscribe(None, "org.freedesktop.login1.Manager",
+                                                             "PrepareForSleep", None, None, Gio.DBusSignalFlags.NONE,
+                                                             self.wokeup, None)
 
         #detect current DE
         wm_info = subprocess.getoutput("wmctrl -m")
@@ -111,6 +125,10 @@ class Blueberry(Gtk.Application):
         self.status_icon = builder.get_object("status-icon")
         self.status_label = builder.get_object("status-label")
 
+        self.header_icon.set_tooltip_text(_("Click to make adapter visible"))
+        self.header_icon_box = builder.get_object("header-icon-box")
+        self.header_icon_box.connect("button_press_event", self.make_discoverable)
+
         # Devices
         self.rf_switch = builder.get_object("bluetooth-switch")
         self.rfkill = rfkillMagic.Interface(self.update_ui_callback, debug)
@@ -150,6 +168,7 @@ class Blueberry(Gtk.Application):
 
         self.lib_widget = GnomeBluetooth.SettingsWidget.new()
         self.lib_widget.connect("panel-changed", self.panel_changed)
+        self.lib_widget.connect("adapter-status-changed", self.update_status)
         builder.get_object("bluetooth-widget-box").pack_start(self.lib_widget, True, True, 0)
 
         self.add_window(window)
@@ -165,6 +184,8 @@ class Blueberry(Gtk.Application):
             self.model.connect('row-deleted', self.on_adapter_status_changed)
             self.model.connect('row-inserted', self.on_adapter_status_changed)
             self.on_adapter_status_changed(self.lib_widget)
+
+        self.make_discoverable()
 
     def bluetooth_on(self):
         return not self.rfkill.soft_block and not self.rfkill.hard_block
@@ -229,6 +250,17 @@ class Blueberry(Gtk.Application):
             os.system("pkill -9 blueberry-obex");
         self.update_status()
 
+    def make_discoverable(self, widget=None, data=None, visible=True):
+        if self.btadapter.get_powered():
+            self.btadapter.set_discoverabletimeout()
+            self.btadapter.make_discoverable(visible)
+
+    def wokeup(self, connection=None, id=None, path=None, sender=None, signal=None, data=None, d1=None, d2=None):
+        #PrepareForSuspend = False -> Woke from sleep
+        if not data.unpack()[0]:
+            self.btadapter.poweron()
+            self.make_discoverable()
+
     def update_name_from_entry(self, entry, arg1=None, data=None):
         name = entry.get_text()
         if name == "":
@@ -270,16 +302,20 @@ class Blueberry(Gtk.Application):
             return
 
         obex_enabled = self.settings.get_boolean("obex-enabled")
+        visibility_enabled = self.btadapter.get_discoverable()
 
         if self.bluetooth_on():
             adapter_name = self.get_adapter_name()
             if adapter_name != "":
                 self.adapter_name_entry.set_sensitive(True)
 
+                text="%s"
+                if visibility_enabled:
+                    text += "<b> "+_("is visible")+"</b>"
                 if obex_enabled:
-                    text = _("Visible as %s and available for Bluetooth file transfers.")
-                else:
-                    text = _("Visible as %s.")
+                    if visibility_enabled:
+                        text += " and"
+                    text += _(" is available for Bluetooth file transfers.")
 
                 text = "%s\n" % text
                 self.label_widget.set_markup(text % "\"%s\"" % adapter_name)
@@ -337,8 +373,11 @@ class Blueberry(Gtk.Application):
 
     def on_switch_changed(self, widget, state):
         self.rfkill.try_set_blocked(not state)
+        if state:
+            self.make_discoverable()
         return True
 
 if __name__ == "__main__":
     app = Blueberry(application_id=APPLICATION_ID, flags=Gio.ApplicationFlags.FLAGS_NONE)
     app.run(None)
+    app.make_discoverable(visible=False)

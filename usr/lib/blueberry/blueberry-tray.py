@@ -10,6 +10,7 @@ from gi.repository import Gtk, Gdk, GnomeBluetooth, Gio, XApp
 import rfkillMagic
 import setproctitle
 import subprocess
+from btadapter import BtAdapter
 
 # i18n
 gettext.install("blueberry", "/usr/share/locale")
@@ -122,12 +123,17 @@ class BluetoothTray(Gtk.Application):
             subprocess.Popen(["blueberry"])
 
     def on_statusicon_released(self, icon, x, y, button, time, position):
-        if button == 3:
+        if button == Gdk.BUTTON_SECONDARY:
             menu = Gtk.Menu()
             if not(self.rfkill.hard_block or self.rfkill.soft_block):
                 item = Gtk.MenuItem(label=_("Send files to a device"))
                 item.connect("activate", self.send_files_cb)
                 menu.append(item)
+
+                visible_item = Gtk.MenuItem(label=_("Make visible"))
+                visible_item.connect("activate", self.make_discoverable)
+                menu.append(visible_item)
+
 
             item = Gtk.MenuItem(label=_("Open Bluetooth device manager"))
             item.connect("activate", self.open_manager_cb)
@@ -180,6 +186,10 @@ class BluetoothTray(Gtk.Application):
 
     def send_files_cb(self, item, data = None):
         subprocess.Popen(["bluetooth-sendto"])
+
+    def make_discoverable(self, widget=None):
+        BtAdapter.set_discoverabletimeout(self)
+        BtAdapter.make_discoverable(self)
 
     def open_manager_cb(self, item, data = None):
         subprocess.Popen(["blueberry"])
