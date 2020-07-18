@@ -26,7 +26,7 @@ class BtAdapter:
 
     def set_discoverabletimeout(self):
         try:
-            output = subprocess.run(["bt-adapter", "--set", "DiscoverableTimeout", "300"], timeout=2, check=True,
+            output = subprocess.run(["bt-adapter", "--set", "DiscoverableTimeout", "60"], timeout=2, check=True,
                                     capture_output=True)
         except Exception:
             pass
