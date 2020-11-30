@@ -1,3 +1,10 @@
+blueberry (1.4.0) ulyssa; urgency=medium
+
+  [ okaestne ]
+  * Don't use /usr/bin/env to call python3
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 30 Nov 2020 11:39:47 +0000
+
 blueberry (1.3.9) ulyana; urgency=medium
 
   * l10n: Update translations
