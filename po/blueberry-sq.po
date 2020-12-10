@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2020-02-04 15:14+0000\n"
-"PO-Revision-Date: 2019-12-21 19:24+0000\n"
-"Last-Translator: Florind Murtezi <Unknown>\n"
+"PO-Revision-Date: 2020-12-09 09:03+0000\n"
+"Last-Translator: Algent Albrahimi <algent@protonmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-06-24 10:08+0000\n"
-"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
+"X-Launchpad-Export-Date: 2020-12-10 10:27+0000\n"
+"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
 "Language: sq\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -103,7 +103,7 @@ msgstr "Rregullimet"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr ""
+msgstr "Aktivizo Bluetooth për të redaktuar"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -160,6 +160,8 @@ msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"Çështjet e lejeve mund të zgjidhen me një rregull udev për rfkill ose me "
+"anëtarësimin në grupin 'rfkill'."
 
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format

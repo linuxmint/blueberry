@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2020-02-04 15:14+0000\n"
-"PO-Revision-Date: 2019-03-16 22:51+0000\n"
-"Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
+"PO-Revision-Date: 2020-11-25 18:43+0000\n"
+"Last-Translator: radwan emad <Unknown>\n"
 "Language-Team: anwar AL_iskandrany <anwareleskndrany13@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2020-06-24 10:08+0000\n"
-"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
+"X-Launchpad-Export-Date: 2020-12-10 10:27+0000\n"
+"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
 "Language: ar_EG\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -112,7 +112,7 @@ msgstr "إعدادات"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr ""
+msgstr "شغل البلوتوث حتى يمكنك التعديل"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -160,13 +160,15 @@ msgstr "تم تعطيل البلوتوث"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
-msgstr ""
+msgstr "لقد حدث خطأ"
 
 #: usr/lib/blueberry/blueberry.py:318
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"مشاكل الصلاحية يمكن حلها عن طريق قاعدة udev لـ rfkill أو عن طريق عضوية في "
+"مجموعة rfkill"
 
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format

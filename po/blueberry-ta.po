@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2020-02-04 15:14+0000\n"
-"PO-Revision-Date: 2018-08-22 01:59+0000\n"
-"Last-Translator: Guna <Unknown>\n"
+"PO-Revision-Date: 2020-12-10 10:02+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-06-24 10:08+0000\n"
-"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
+"X-Launchpad-Export-Date: 2020-12-10 10:27+0000\n"
+"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -33,7 +33,7 @@ msgstr "உள்வரும் கோப்பு %(0)s இருந்த�
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
-msgstr "ஒப்பு"
+msgstr "ஏற்றுக்கொள்"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
@@ -46,26 +46,26 @@ msgstr "கோப்புப் பெறப்படுகிறது"
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr ""
+msgstr "%(1)s இலிருந்து %(0)s கோப்பைப் பெறுதல்"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
-msgstr ""
+msgstr "கோப்பு பெறப்பட்டது"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr ""
+msgstr "கோப்பு %(0)s இருந்து %(1)s வெற்றிகரமாக பெறப்பட்டது"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:411
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 msgid "Open"
-msgstr ""
+msgstr "திற"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr ""
+msgstr "இடமாற்றுதல் தோல்வியுற்றது"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
@@ -75,30 +75,30 @@ msgstr ""
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 msgid "Files received"
-msgstr ""
+msgstr "கோப்புகள் பெறப்பட்டன"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "பின்புலத்தில் %d கோப்பு பெறப்பட்டது"
+msgstr[1] "பின்புலத்தில் %d கோப்புகள் பெறப்பட்டன"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "பின்புலத்தில் மேலும் %d கோப்பு பெறப்பட்டது"
+msgstr[1] "பின்புலத்தில் மேலும் %d கோப்புகள் பெறப்பட்டன"
 
 #: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
 #: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
 msgid "Bluetooth"
-msgstr "ப்ளூடூத்"
+msgstr "புளூடூத்"
 
 #: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
-msgstr ""
+msgstr "அமைப்புகள்"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 #: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
@@ -121,6 +121,8 @@ msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
+"இந்த தெரிவு  உங்கள் கணினியை புளூடூத் வழியாக இடமாற்றப்பட்ட  கோப்புகளைப் பெற "
+"அனுமதிக்கிறது"
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
@@ -134,7 +136,7 @@ msgstr ""
 #: usr/lib/blueberry/blueberry.py:282
 #, python-format
 msgid "Visible as %s."
-msgstr ""
+msgstr "%s என புலப்படும்"
 
 #: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
@@ -150,7 +152,7 @@ msgstr "ப்ளூடூத் முடக்கப்பட்டுள்�
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
-msgstr ""
+msgstr "ஒரு பிழை நிகழ்ந்துவிட்டது"
 
 #: usr/lib/blueberry/blueberry.py:318
 msgid ""
@@ -161,7 +163,7 @@ msgstr ""
 #: usr/lib/blueberry/blueberry-tray.py:77
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr ""
+msgstr "புளூடூத்: %s உடன் இணைக்கப்பட்டுள்ளது"
 
 #: usr/lib/blueberry/blueberry-tray.py:120
 msgid "Send files to a device"
@@ -177,7 +179,7 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Connected"
-msgstr ""
+msgstr "இணைக்கப்பட்டது"
 
 #: usr/lib/blueberry/blueberry-tray.py:147
 msgid "Quit"
