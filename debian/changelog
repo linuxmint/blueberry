@@ -1,3 +1,10 @@
+blueberry (1.4.3) uma; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Generate files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 10 Jun 2021 11:46:32 +0100
+
 blueberry (1.4.2) ulyssa; urgency=medium
 
   * l10n: Update translations
