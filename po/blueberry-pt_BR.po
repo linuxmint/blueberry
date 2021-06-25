@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2020-02-04 15:14+0000\n"
-"PO-Revision-Date: 2020-02-18 18:20+0000\n"
-"Last-Translator: Gilberto vagner <vagner.unix@gmail.com>\n"
+"PO-Revision-Date: 2021-06-23 18:22+0000\n"
+"Last-Translator: Wellington Oliveira dos Santos <welblade@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2021-06-09 14:18+0000\n"
-"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
+"X-Launchpad-Export-Date: 2021-06-25 10:38+0000\n"
+"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -24,7 +24,7 @@ msgstr "Dispositivo desconhecido"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr "Recebendo arquivo por Bluetooth"
+msgstr "Recebendo arquivo via Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
@@ -121,7 +121,7 @@ msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"Esta opção permite que seu computador receba arquivos transferidos pelo "
+"Esta opção permite que seu computador receba arquivos transferidos via "
 "bluetooth (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:147
@@ -132,7 +132,7 @@ msgstr "Mostrar ícone na bandeja"
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
 msgstr ""
-"Visível como %s e disponível para transferência de arquivos pelo Bluetooth."
+"Visível como %s e disponível para transferência de arquivos via Bluetooth."
 
 #: usr/lib/blueberry/blueberry.py:282
 #, python-format
@@ -153,7 +153,7 @@ msgstr "Bluetooth está desativado"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
-msgstr "Um erro foi encontrado"
+msgstr "Ocorreu um erro"
 
 #: usr/lib/blueberry/blueberry.py:318
 msgid ""
@@ -178,7 +178,7 @@ msgstr "Abrir gerenciador de dispositivos Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Paired devices"
-msgstr "Dispositivos pareado"
+msgstr "Dispositivos pareados"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Connected"
