@@ -124,6 +124,17 @@ class BluetoothTray(Gtk.Application):
     def on_statusicon_released(self, icon, x, y, button, time, position):
         if button == 3:
             menu = Gtk.Menu()
+
+            if not self.rfkill.hard_block:
+                if self.rfkill.soft_block:
+                    item = Gtk.MenuItem(label=_("Turn on Bluetooth"))
+                    item.connect("activate", self.turn_on_bluetooth)
+                    menu.append(item)
+                else:
+                    item = Gtk.MenuItem(label=_("Turn off Bluetooth"))
+                    item.connect("activate", self.turn_off_bluetooth)
+                    menu.append(item)
+                
             if not(self.rfkill.hard_block or self.rfkill.soft_block):
                 item = Gtk.MenuItem(label=_("Send files to a device"))
                 item.connect("activate", self.send_files_cb)
@@ -183,6 +194,14 @@ class BluetoothTray(Gtk.Application):
 
     def open_manager_cb(self, item, data = None):
         subprocess.Popen(["blueberry"])
+
+    def turn_on_bluetooth(self, item):
+        self.rfkill.try_set_blocked(False)
+        return True
+
+    def turn_off_bluetooth(self,item):
+        self.rfkill.try_set_blocked(True)
+        return True        
 
     def terminate(self, window = None, data = None):
         self.quit()
