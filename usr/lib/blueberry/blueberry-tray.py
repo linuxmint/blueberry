@@ -134,7 +134,7 @@ class BluetoothTray(Gtk.Application):
                     item = Gtk.MenuItem(label=_("Turn off Bluetooth"))
                     item.connect("activate", self.turn_off_bluetooth)
                     menu.append(item)
-                
+
             if not(self.rfkill.hard_block or self.rfkill.soft_block):
                 item = Gtk.MenuItem(label=_("Send files to a device"))
                 item.connect("activate", self.send_files_cb)
@@ -201,7 +201,7 @@ class BluetoothTray(Gtk.Application):
 
     def turn_off_bluetooth(self,item):
         self.rfkill.try_set_blocked(True)
-        return True        
+        return True
 
     def terminate(self, window = None, data = None):
         self.quit()
