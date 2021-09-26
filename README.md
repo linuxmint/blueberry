@@ -3,9 +3,9 @@
 A Bluetooth configuration tool.
 Depends on gnome-bluetooth 3.14.
 
-## How to build and install
-
 ---
+
+## How to build and install
 
 #### Download the source code and enter the source directory
 
