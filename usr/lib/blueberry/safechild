@@ -1,8 +1,6 @@
-#!/usr/bin/python3
+#!/bin/sh
 
-import subprocess
-import sys
-
+: \
 """
 Wrapper for rfkill binary.
 
@@ -20,16 +18,12 @@ and its child.)
 
 """
 
-proc = None
+trap exit CHLD
 
-try:
-    proc = subprocess.Popen(sys.argv[1:])
+"$@" &
+childPID=$!
 
-    while True:
-        line = sys.stdin.readline()
-        if line == "":
-            proc.kill()
-            proc.wait()
-            break
-except Exception as e:
-    print("safechild exception: ", e)
+while read -r anything; do : nothing; done
+
+kill $childPID
+wait
