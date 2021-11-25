@@ -168,21 +168,7 @@ class BluetoothTray(Gtk.Application):
             menu.append(item)
 
             menu.show_all()
-
-            if position == -1:
-                # The position and coordinates are unknown. This is the
-                # case when the XAppStatusIcon fallbacks as a Gtk.StatusIcon
-                menu.popup(None, None, None, None, button, time)
-            else:
-                def position_menu_cb(menu, pointer_x, pointer_y, user_data):
-                    [x, y, position] = user_data;
-                    if (position == Gtk.PositionType.BOTTOM):
-                        y = y - menu.get_allocation().height;
-                    if (position == Gtk.PositionType.RIGHT):
-                        x = x - menu.get_allocation().width;
-                    return (x, y, False)
-                device = Gdk.Display.get_default().get_device_manager().get_client_pointer()
-                menu.popup_for_device(device, None, None, position_menu_cb, [x, y, position], button, time)
+            icon.popup_menu(menu, x, y, button, time, position)
 
     def toggle_connect_cb(self, item, data = None):
         proxy = self.paired_devices[data]
