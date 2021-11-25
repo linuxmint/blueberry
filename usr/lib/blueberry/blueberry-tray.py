@@ -146,7 +146,7 @@ class BluetoothTray(Gtk.Application):
 
             if len(self.paired_devices) > 0:
                 menu.append(Gtk.SeparatorMenuItem())
-                m_item = Gtk.MenuItem(_("Paired devices"))
+                m_item = Gtk.MenuItem(label=_("Paired devices"))
                 menu.append(m_item)
                 paired_menu = Gtk.Menu()
                 m_item.set_submenu(paired_menu)
