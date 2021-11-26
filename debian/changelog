@@ -1,3 +1,23 @@
+blueberry (1.4.5) una; urgency=medium
+
+  [ P. Radha Krishna ]
+  * Added Turn bluetooth on/off option in tray menu #112 (#117)
+
+  [ Michael Webster ]
+  * blueberry-tray.py: Remove menu positioning code.
+  * blueberry-tray.py: Silence a runtime warning.
+
+  [ Mickey Rose ]
+  * rfkillMagic: rewrite safechild in shell script to reduce memory usage (#115)
+
+  [ P. Radha Krishna ]
+  * Added build & install steps to readme file (#118)
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 26 Nov 2021 10:14:48 +0000
+
 blueberry (1.4.4) uma; urgency=medium
 
   * l10n: Update translations
