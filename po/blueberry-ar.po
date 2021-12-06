@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2020-02-04 15:14+0000\n"
+"POT-Creation-Date: 2021-11-26 10:14+0000\n"
 "PO-Revision-Date: 2020-11-25 18:43+0000\n"
 "Last-Translator: radwan emad <Unknown>\n"
 "Language-Team: anwar AL_iskandrany <anwareleskndrany13@gmail.com>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:38+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:02+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: ar_EG\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -101,8 +101,8 @@ msgstr[3] "تم استقبال %d ملفات إضافية في الخلفية"
 msgstr[4] "تم استقبال %d ملفات إضافية في الخلفية"
 msgstr[5] "تم استقبال %d ملفات إضافية في الخلفية"
 
-#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
-#: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
+#: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "البلوتوث"
 
@@ -154,7 +154,7 @@ msgstr "لا توجد محولات بلوتوث"
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "تم تعطيل البلوتوث عن طريق تبديل الأجهزة"
 
-#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
 msgstr "تم تعطيل البلوتوث"
 
@@ -170,28 +170,36 @@ msgstr ""
 "مشاكل الصلاحية يمكن حلها عن طريق قاعدة udev لـ rfkill أو عن طريق عضوية في "
 "مجموعة rfkill"
 
-#: usr/lib/blueberry/blueberry-tray.py:77
+#: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "%s البلوتوث: متصل إلى"
 
-#: usr/lib/blueberry/blueberry-tray.py:120
+#: usr/lib/blueberry/blueberry-tray.py:130
+msgid "Turn on Bluetooth"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:134
+msgid "Turn off Bluetooth"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
 msgstr "إرسال ملفات إلى جهاز"
 
-#: usr/lib/blueberry/blueberry-tray.py:124
+#: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
 msgstr "فتح مدير جهاز البلوتوث"
 
-#: usr/lib/blueberry/blueberry-tray.py:130
+#: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
 msgstr "الأجهزة المقترنة"
 
-#: usr/lib/blueberry/blueberry-tray.py:139
+#: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
 msgstr "مُتصل"
 
-#: usr/lib/blueberry/blueberry-tray.py:147
+#: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
 msgstr "إنهاء"
 

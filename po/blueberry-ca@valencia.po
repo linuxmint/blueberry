@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2020-02-04 15:14+0000\n"
-"PO-Revision-Date: 2021-04-13 16:28+0000\n"
-"Last-Translator: Mario Ureña Gisbert <Unknown>\n"
+"POT-Creation-Date: 2021-11-26 10:14+0000\n"
+"PO-Revision-Date: 2021-11-28 12:07+0000\n"
+"Last-Translator: Marius Urenya <Unknown>\n"
 "Language-Team: Catalan (Valencian) <ca@valencia@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:38+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:02+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -91,8 +91,8 @@ msgid_plural "Received %d more files in the background"
 msgstr[0] "S'ha rebut %d fitxer més en segon pla"
 msgstr[1] "S'han rebut %d fitxers més en segon pla"
 
-#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
-#: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
+#: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
@@ -148,7 +148,7 @@ msgstr "No s'ha trobat cap adaptador Bluetooth"
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "El Bluetooth està físicament inhabilitat"
 
-#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth està desactivat"
 
@@ -164,28 +164,36 @@ msgstr ""
 "Els problemes de permisos es poden resoldre amb una regla udev per rfkill o "
 "fent-se membre del grup 'rfkill'."
 
-#: usr/lib/blueberry/blueberry-tray.py:77
+#: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Bluetooth: Connectat a %s"
 
-#: usr/lib/blueberry/blueberry-tray.py:120
+#: usr/lib/blueberry/blueberry-tray.py:130
+msgid "Turn on Bluetooth"
+msgstr "Activa el Bluetooth"
+
+#: usr/lib/blueberry/blueberry-tray.py:134
+msgid "Turn off Bluetooth"
+msgstr "Desactiva el Bluetooth"
+
+#: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
 msgstr "Enviar ficheros a un dispositivo"
 
-#: usr/lib/blueberry/blueberry-tray.py:124
+#: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
 msgstr "Obre l'administrador de dispositius Bluetooth"
 
-#: usr/lib/blueberry/blueberry-tray.py:130
+#: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
 msgstr "Dispositius vinculats"
 
-#: usr/lib/blueberry/blueberry-tray.py:139
+#: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
 msgstr "Connectat"
 
-#: usr/lib/blueberry/blueberry-tray.py:147
+#: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
 msgstr "Ix"
 

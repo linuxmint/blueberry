@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2020-02-04 15:14+0000\n"
+"POT-Creation-Date: 2021-11-26 10:14+0000\n"
 "PO-Revision-Date: 2020-02-08 19:01+0000\n"
 "Last-Translator: Knez <Unknown>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:38+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:02+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -94,8 +94,8 @@ msgstr[0] "Примљена је још %d датотека у позадини"
 msgstr[1] "Примљене су још %d датотеке у позадини"
 msgstr[2] "Примљено је још %d датотека у позадини"
 
-#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
-#: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
+#: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Блутут"
 
@@ -149,7 +149,7 @@ msgstr "Нису пронађени примопредајници Блутут�
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Блутут је искључен физичким прекидачем"
 
-#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
 msgstr "Блутут је искључен"
 
@@ -165,28 +165,36 @@ msgstr ""
 "Проблем са дозволом може се решити додавањем udev правила за rfkill или "
 "чланство у 'rfkill' групи"
 
-#: usr/lib/blueberry/blueberry-tray.py:77
+#: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Блутут: Повезан на „%s“"
 
-#: usr/lib/blueberry/blueberry-tray.py:120
+#: usr/lib/blueberry/blueberry-tray.py:130
+msgid "Turn on Bluetooth"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:134
+msgid "Turn off Bluetooth"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
 msgstr "Пошаљи датотеке на уређај"
 
-#: usr/lib/blueberry/blueberry-tray.py:124
+#: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
 msgstr "Отвори управника Блутут уређаја"
 
-#: usr/lib/blueberry/blueberry-tray.py:130
+#: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
 msgstr "Упарени уређаји"
 
-#: usr/lib/blueberry/blueberry-tray.py:139
+#: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
 msgstr "Повезан"
 
-#: usr/lib/blueberry/blueberry-tray.py:147
+#: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
 msgstr "Напусти"
 

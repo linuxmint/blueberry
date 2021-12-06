@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2020-02-04 15:14+0000\n"
+"POT-Creation-Date: 2021-11-26 10:14+0000\n"
 "PO-Revision-Date: 2018-06-11 17:12+0000\n"
 "Last-Translator: iAbaS <sosabazyan@yandex.ru>\n"
 "Language-Team: Armenian <hy@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:38+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:02+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -89,8 +89,8 @@ msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
 msgstr[0] "Ստացվել է %d ավելի շատ ֆայլ"
 
-#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
-#: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
+#: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
@@ -144,7 +144,7 @@ msgstr "Bluetooth ադապտեր չգտնվեց"
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Bluetooth անջատված է սարքից"
 
-#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth անջատած է"
 
@@ -158,28 +158,36 @@ msgid ""
 "the 'rfkill' group."
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:77
+#: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Bluetooth. Կապված %s սարքին"
 
-#: usr/lib/blueberry/blueberry-tray.py:120
-msgid "Send files to a device"
-msgstr "Ուղարկել ֆայլեր"
-
-#: usr/lib/blueberry/blueberry-tray.py:124
-msgid "Open Bluetooth device manager"
-msgstr "Բացել Bluetooth Սարքերի Մենեջերը"
-
 #: usr/lib/blueberry/blueberry-tray.py:130
-msgid "Paired devices"
+msgid "Turn on Bluetooth"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:134
+msgid "Turn off Bluetooth"
 msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:139
+msgid "Send files to a device"
+msgstr "Ուղարկել ֆայլեր"
+
+#: usr/lib/blueberry/blueberry-tray.py:143
+msgid "Open Bluetooth device manager"
+msgstr "Բացել Bluetooth Սարքերի Մենեջերը"
+
+#: usr/lib/blueberry/blueberry-tray.py:149
+msgid "Paired devices"
+msgstr ""
+
+#: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
 msgstr ""
 
-#: usr/lib/blueberry/blueberry-tray.py:147
+#: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
 msgstr "Փակել"
 

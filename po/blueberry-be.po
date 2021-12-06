@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2020-02-04 15:14+0000\n"
-"PO-Revision-Date: 2021-01-08 00:19+0000\n"
-"Last-Translator: Alexis Borovik <Unknown>\n"
+"POT-Creation-Date: 2021-11-26 10:14+0000\n"
+"PO-Revision-Date: 2021-11-26 17:08+0000\n"
+"Last-Translator: Anton Hryb <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:38+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:02+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -62,7 +62,7 @@ msgstr "Файл %(0)s ад %(1)s паспяхова атрыманы"
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 msgid "Open"
-msgstr "Адчыніць"
+msgstr "Адкрыць"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
@@ -71,7 +71,7 @@ msgstr "Збой перадачы"
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "Схіб перадачы файла %(0)s"
+msgstr "Збой перадачы файла %(0)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
@@ -94,8 +94,8 @@ msgstr[0] "Атрыманы яшчэ %d файл у фоне"
 msgstr[1] "Атрыманы яшчэ %d файлы ў фоне"
 msgstr[2] "Атрымана яшчэ %d файлаў у фоне"
 
-#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:50
-#: usr/lib/blueberry/blueberry-tray.py:80 generate_desktop_files:23
+#: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
+#: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
@@ -105,7 +105,7 @@ msgstr "Налады"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr "Ўключыць Bluetooth для рэдагавання"
+msgstr "Уключыць Bluetooth для рэдагавання"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -117,7 +117,7 @@ msgstr "Гэта Bluetooth-імя вашага камп'ютара"
 
 #: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
-msgstr "Атрымліваць файлы з аддаленага прыстасавання"
+msgstr "Атрымліваць файлы ад іншых прылад"
 
 #: usr/lib/blueberry/blueberry.py:140
 msgid ""
@@ -129,12 +129,12 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
-msgstr "Адлюстроўваць трэй-іконку"
+msgstr "Адлюстроўваць значок у трэі"
 
 #: usr/lib/blueberry/blueberry.py:280
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr "Бачны як %s – і даступны для Bluetooth-авых файлавых перапраў."
+msgstr "Бачны як %s і даступны для перадачы файлаў праз Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:282
 #, python-format
@@ -149,7 +149,7 @@ msgstr "Bluetooth-адаптары не знойдзены"
 msgid "Bluetooth is disabled by hardware switch"
 msgstr "Bluetooth апаратна адключаны"
 
-#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:67
+#: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth адключаны"
 
@@ -163,33 +163,41 @@ msgid ""
 "the 'rfkill' group."
 msgstr ""
 "Праблемы з дазволам можна вырашыць з дапамогай правіла udev для rfkill або "
-"ўваходжаннем ў групу 'rfkill'."
+"ўваходжаннем у групу 'rfkill'."
 
-#: usr/lib/blueberry/blueberry-tray.py:77
+#: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
 msgstr "Bluetooth: Злучаны з %s"
 
-#: usr/lib/blueberry/blueberry-tray.py:120
+#: usr/lib/blueberry/blueberry-tray.py:130
+msgid "Turn on Bluetooth"
+msgstr "Уключыць Bluetooth"
+
+#: usr/lib/blueberry/blueberry-tray.py:134
+msgid "Turn off Bluetooth"
+msgstr "Выключыць Bluetooth"
+
+#: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
 msgstr "Даслаць файлы на прыладу"
 
-#: usr/lib/blueberry/blueberry-tray.py:124
+#: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
 msgstr "Адкрыць кіраўнік прылад Bluetooth"
 
-#: usr/lib/blueberry/blueberry-tray.py:130
+#: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
 msgstr "Спалучаныя прылады"
 
-#: usr/lib/blueberry/blueberry-tray.py:139
+#: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
-msgstr "Злучэнне ўсталявана"
+msgstr "Падлучана"
 
-#: usr/lib/blueberry/blueberry-tray.py:147
+#: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
 msgstr "Выйсці"
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
-msgstr "Наладка настаўленьняў Bluetooth"
+msgstr "Наладка Bluetooth"
