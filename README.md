@@ -1,7 +1,8 @@
 ## Introduction
 
-A Bluetooth configuration tool.
-Depends on gnome-bluetooth 3.14.
+A wrapper application to use gnome-bluetooth outside of GNOME.
+
+Depends on gnome-bluetooth >= 3.14 and <= 41.
 
 ---
 
