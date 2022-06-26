@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2019-04-18 10:59+0000\n"
-"Last-Translator: Will Peix <Unknown>\n"
+"PO-Revision-Date: 2022-01-16 17:33+0000\n"
+"Last-Translator: ryantsui <Unknown>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2021-12-31 12:22+0000\n"
-"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
+"X-Launchpad-Export-Date: 2022-06-26 11:25+0000\n"
+"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -46,7 +46,7 @@ msgstr "接收檔案"
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "接收 %(0)s 檔案來自 %(1)s"
+msgstr "從 %(1)s 接收檔案 %(0)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
@@ -100,7 +100,7 @@ msgstr "設定值"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr ""
+msgstr "啟動藍牙後可編輯"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -148,7 +148,7 @@ msgstr "藍牙已停用"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
-msgstr ""
+msgstr "發生了一個錯誤"
 
 #: usr/lib/blueberry/blueberry.py:318
 msgid ""
@@ -163,11 +163,11 @@ msgstr "藍牙：已連接至 %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
-msgstr ""
+msgstr "開啟藍牙"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr ""
+msgstr "關閉藍牙"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"

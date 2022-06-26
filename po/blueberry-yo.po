@@ -1,16 +1,16 @@
-# Filipino translation for linuxmint
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Yoruba translation for linuxmint
+# Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2015-03-18 19:30+0000\n"
-"Last-Translator: Ueliton <Unknown>\n"
-"Language-Team: Filipino <fil@li.org>\n"
+"PO-Revision-Date: 2022-03-11 10:34+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Yoruba <yo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -94,7 +94,7 @@ msgstr[1] ""
 #: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
 #: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
@@ -138,15 +138,15 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
-msgstr "Adapter Bluetooth ay hindi nahanap"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth ay naka-off sa pamamagitan ng hardware nakakaistorbo"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth ay pinigilan"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
@@ -173,11 +173,11 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
-msgstr "Magpadala ng mga file sa isang aparato"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
-msgstr "Buksan ang tagapamahala para sa mga Bluetooth aparato"
+msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
@@ -189,7 +189,7 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
-msgstr "Ikulong"
+msgstr ""
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"

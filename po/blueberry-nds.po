@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2021-10-07 16:30+0000\n"
-"Last-Translator: Linus Sturm <Unknown>\n"
+"PO-Revision-Date: 2022-06-17 22:00+0000\n"
+"Last-Translator: A Wilming <Unknown>\n"
 "Language-Team: Low German <nds@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-12-31 12:22+0000\n"
-"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
+"X-Launchpad-Export-Date: 2022-06-26 11:25+0000\n"
+"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
 "Language: de_DE\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -25,7 +25,7 @@ msgstr "Unbekanntes Gerät"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr "Einkommende Datei über Bluetooth"
+msgstr "Ankommende Datei über Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
@@ -66,12 +66,12 @@ msgstr "Öffnen"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr "Transfer abgebrochen"
+msgstr "Transfer fehlgeschlagen"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "Transfer der Datei %(0)s wurde abgebrochen"
+msgstr "Transfer der Datei %(0)s fehlgeschlagen"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
@@ -103,7 +103,7 @@ msgstr "Einstellungen"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr ""
+msgstr "Bluetooth aktivieren, um zu bearbeiten"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -115,7 +115,7 @@ msgstr "Dies ist der Bluetoothname ihres Computers"
 
 #: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
-msgstr "Empfange Dateien von entfernten Geräten"
+msgstr "Empfangen Sie Dateien von Remote-Geräten"
 
 #: usr/lib/blueberry/blueberry.py:140
 msgid ""
@@ -149,7 +149,7 @@ msgstr "Bluetooth durch Hardware-Schalter deaktiviert"
 
 #: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
-msgstr ""
+msgstr "Bluetooth ist deaktiviert"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
@@ -160,6 +160,8 @@ msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
+"Berechtigungsprobleme können mit einer udev-Regel für rfkill oder der "
+"Mitgliedschaft in der 'rfkill'-Gruppe gelöst werden."
 
 #: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
@@ -168,11 +170,11 @@ msgstr "Bluetooth: Verbunden zu %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
-msgstr ""
+msgstr "Schalten Sie Bluetooth ein"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr ""
+msgstr "Schalten Sie Bluetooth aus"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"

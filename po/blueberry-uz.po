@@ -8,19 +8,20 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2021-12-26 13:35+0000\n"
-"Last-Translator: Saidazim Nazirov <Unknown>\n"
+"PO-Revision-Date: 2022-04-13 11:27+0000\n"
+"Last-Translator: Umidjon Almasov <umidjon@almasov.uz>\n"
 "Language-Team: Uzbek <uz@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2021-12-31 12:22+0000\n"
-"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
+"X-Launchpad-Export-Date: 2022-06-26 11:25+0000\n"
+"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
+"Language: uz\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
-msgstr "Noma’lum qurilma"
+msgstr "Noma'lum qurilma"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
@@ -41,12 +42,12 @@ msgstr "Rad etish"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
-msgstr "Fayl qabul qilinyapti"
+msgstr "Fayl qabul qilinmoqda"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "%(1)s dan %(0)s fayl qabul qilinyapti"
+msgstr "%(1)s dan %(0)s fayl qabul qilinmoqda"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
@@ -65,12 +66,12 @@ msgstr "Ochish"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr "O‘tkazish imkoni bo‘lmadi"
+msgstr "Uzatish amalga oshmadi"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "%(0)s faylni o‘tkazib bo‘lmadi"
+msgstr "%(0)s faylni uzatib bo‘lmadi"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
@@ -124,12 +125,12 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
-msgstr "Расмчани лотокда кўрсатиш"
+msgstr "Belgini treyda ko‘rsatish"
 
 #: usr/lib/blueberry/blueberry.py:280
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr "%s kabi ko‘rinadi va Bluetooth orqali fayl o‘tkazish uchun tayyor"
+msgstr "%s kabi ko‘rinadi va Bluetooth orqali fayl uzatishlari uchun mavjud."
 
 #: usr/lib/blueberry/blueberry.py:282
 #, python-format
@@ -138,15 +139,15 @@ msgstr "%s kabi ko‘rinadi."
 
 #: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
-msgstr "Birorta ham Bluetooth qurulmasi topilmadi"
+msgstr "Birorta ham Bluetooth qurilmasi topilmadi"
 
 #: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth qurilmalarni o‘chirib-yoqqich tomonidan o‘chirilgan"
+msgstr "Bluetooth apparat o‘chirib-yoqqich orqali o‘chirilgan"
 
 #: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth o'chirilgan"
+msgstr "Bluetooth o‘chirilgan"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
@@ -157,7 +158,7 @@ msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
-"Ruxsat berish masalalari rfkill uchun udev qoidasi yoki \"rfkill\" guruhiga "
+"Ruxsat berish masalalari rfkill uchun udev qoidasi yoki 'rfkill' guruhiga "
 "a'zolik bilan hal qilinishi mumkin."
 
 #: usr/lib/blueberry/blueberry-tray.py:85
@@ -171,7 +172,7 @@ msgstr "Bluetooth ni yoqish"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr "Bluetooth ni o'chirish"
+msgstr "Bluetooth ni o‘chirish"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
