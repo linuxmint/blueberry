@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2021-11-26 22:34+0000\n"
+"PO-Revision-Date: 2022-07-18 07:58+0000\n"
 "Last-Translator: Kimmo Kujansuu <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2022-06-26 11:25+0000\n"
-"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
+"X-Launchpad-Export-Date: 2022-07-24 09:38+0000\n"
+"X-Generator: Launchpad (build 025a39fd866a641b6ae33074cda0d02a2c712d38)\n"
 "Language: fi\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -25,12 +25,12 @@ msgstr "Tuntematon laite"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr "Saapuva tiedosto Bluetoothin kautta"
+msgstr "Bluetooth saapuva tiedosto"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr "Saapuva tiedosto %(0)s lähteestä %(1)s"
+msgstr "Saapuvat tiedostot %(0)s lähteestä %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
@@ -47,16 +47,16 @@ msgstr "Vastaanotetaan tiedostoa"
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Vastaanotetaan tiedostoa %(0)s kohteesta %(1)s"
+msgstr "Vastaanotetaan tiedostoja %(0)s kohteesta %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
-msgstr "Vastaanotettiin tiedosto"
+msgstr "Tiedosto vastaanotettu"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr "Tiedosto %(0)s kohteesta %(1)s vastaanotettiin onnistuneesti"
+msgstr "Tiedostot %(0)s kohteesta %(1)s vastaanotettiin onnistuneesti"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:411
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
@@ -76,7 +76,7 @@ msgstr "Tiedoston %(0)s siirto epäonnistui"
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 msgid "Files received"
-msgstr "Vastaanotettiin tiedostot"
+msgstr "Tiedostot vastaanotettu"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
@@ -103,7 +103,7 @@ msgstr "Asetukset"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr "Ota Bluetooth muokattavaksi"
+msgstr "Käytä Bluetooth muokattavaksi"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -115,15 +115,15 @@ msgstr "Tämä on tietokoneesi Bluetooth-nimi"
 
 #: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
-msgstr "Vastaanota tiedostoja etälaitteilta"
+msgstr "Vastaanota tiedostoja muilta laitteilta"
 
 #: usr/lib/blueberry/blueberry.py:140
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"Tämä asetus sallii tietokoneesi vastaanottaa tiedostoja, jotka on siirretty "
-"Bluetoothin yli (OBEX)"
+"Tämän avulla tietokoneesi voi vastaanottaa Bluetoothin (OBEX) kautta "
+"siirrettyjä tiedostoja."
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
@@ -132,7 +132,8 @@ msgstr "Näytä ilmoitusalueen kuvake"
 #: usr/lib/blueberry/blueberry.py:280
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr "Löydettävissä nimellä %s ja saatavilla Bluetooth-tiedostosiirroille."
+msgstr ""
+"Löydettävissä nimellä %s ja saatavilla Bluetooth-tiedostojen siirtoon."
 
 #: usr/lib/blueberry/blueberry.py:282
 #, python-format
@@ -166,7 +167,7 @@ msgstr ""
 #: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "Bluetooth: Yhdistetty kohteeseen %s"
+msgstr "Bluetooth: Yhdistetty %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
@@ -182,7 +183,7 @@ msgstr "Lähetä tiedostoja laitteelle"
 
 #: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
-msgstr "Avaa Bluetooth-laitteiden hallinta"
+msgstr "Avaa Bluetooth-laitehallinta"
 
 #: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
