@@ -1,4 +1,4 @@
-# Limburgian translation for linuxmint
+# Rusyn translation for linuxmint
 # Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
@@ -8,88 +8,91 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2022-06-17 22:32+0000\n"
-"Last-Translator: A Wilming <Unknown>\n"
-"Language-Team: Limburgian <li@li.org>\n"
+"PO-Revision-Date: 2022-11-10 14:41+0000\n"
+"Last-Translator: Vondrosh Tenkač <Unknown>\n"
+"Language-Team: Rusyn <rue@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2023-06-08 10:20+0000\n"
 "X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
-msgstr "Onbekend apparaat"
+msgstr "Незнамый девайс"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr "Kopieer tekst Inkomend bestand via Bluetooth"
+msgstr "Приходячый файл через Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr "Kopieer tekst Inkomend bestand %(0)s van %(1)s"
+msgstr "Приходячый файл %(0)s уд %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
-msgstr "Aanvaarden"
+msgstr "Прияти"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
-msgstr "Afwijzen"
+msgstr "Одмінити"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
-msgstr "Bestand ontvangen"
+msgstr "Достаня файла"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Bestand %(0)s ontvangen van %(1)s"
+msgstr "Достаня файла %(0)s уд %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
-msgstr "Bestand ontvangen"
+msgstr "Файл достаный"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr "Kopieer tekst Bestand %(0)s van %(1)s succesvol ontvangen"
+msgstr "Файл %(0)s уд %(1)s успішно доставленый"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:411
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 msgid "Open"
-msgstr "Open"
+msgstr "Одкрыти"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr "Overdracht mislukt"
+msgstr "Хыба передачи"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "Overdracht van bestand %(0)s mislukt"
+msgstr "Не уйшло передати файл %(0)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
 msgid "Files received"
-msgstr "Bestanden ontvangen"
+msgstr "Файлы достані"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:431
 #, python-format
 msgid "Received %d file in the background"
 msgid_plural "Received %d files in the background"
-msgstr[0] "%d bestanden op de achtergrond ontvangen"
-msgstr[1] "%d bestanden op de achtergrond ontvangen"
+msgstr[0] "Достаный %d файл у фоновум режімі"
+msgstr[1] "Достано %d файла у фоновум режімі"
+msgstr[2] "Достано %d файлув у фоновум режімі"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:437
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "Nog %d bestand op de achtergrond ontvangen"
-msgstr[1] "Nog %d bestanden op de achtergrond ontvangen"
+msgstr[0] "Достано щи %d файл у фоновум режімі"
+msgstr[1] "Достано щи %d файла у фоновум режімі"
+msgstr[2] "Достано щи %d файлув у фоновум режімі"
 
 #: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
 #: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
@@ -98,104 +101,102 @@ msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
-msgstr "Instellingen"
+msgstr "Штімованя"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr "Bluetooth inschakelen om te bewerken"
+msgstr "Уключіт Bluetooth для редактованя"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
-msgstr "Naam"
+msgstr "Имня"
 
 #: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
-msgstr "Dit is de Bluetooth-naam van uw computer"
+msgstr "Исе Bluetooth-имня вашого компютора."
 
 #: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
-msgstr "Bestanden ontvangen van externe apparaten"
+msgstr "Доставати файлы из далекых девайсув"
 
 #: usr/lib/blueberry/blueberry.py:140
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"This option allows your computer to receive files transferred over Bluetooth "
-"(OBEX)"
+"Сись штім поволит вашому компюторови доставати файлы через Bluetooth (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
-msgstr "Toon een pictogram in het systeemvak"
+msgstr "Указовати знак у трейови"
 
 #: usr/lib/blueberry/blueberry.py:280
 #, python-format
 msgid "Visible as %s and available for Bluetooth file transfers."
-msgstr ""
-"Zichtbaar als %s en beschikbaar voor bestandsoverdracht via Bluetooth."
+msgstr "Указано, ож %s є приступным для передачи файла по Bluetooth."
 
 #: usr/lib/blueberry/blueberry.py:282
 #, python-format
 msgid "Visible as %s."
-msgstr "Zichtbaar als %s."
+msgstr "Указує ся ги %s."
 
 #: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
-msgstr "Geen Bluetooth-adapters gevonden"
+msgstr "Адаптеры Bluetooth не найдені"
 
 #: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth is uitgeschakeld door hardwareschakelaar"
+msgstr "Bluetooth апаратно вуключеный"
 
 #: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth is uitgeschakeld"
+msgstr "Bluetooth апаратно уключеный"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
-msgstr "er is een fout opgetreden"
+msgstr "Стала ся хыба"
 
 #: usr/lib/blueberry/blueberry.py:318
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
-"Toestemmingsproblemen kunnen worden opgelost met een udev-regel voor rfkill "
-"of lidmaatschap van de 'rfkill'-groep."
+"Проблем из дозвулом мож рішити хоснувучи правило udev для rfkill вадь "
+"членства у \"rfkill\" ґрупі."
 
 #: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "Bluetooth: Verbonden met %s"
+msgstr "Bluetooth: прикапчаный од %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
-msgstr "Bluetooth inschakelen"
+msgstr "Уключіт Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr "Bluetooth uitschakelen"
+msgstr "Вуключіт Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
-msgstr "Bestanden naar een apparaat verzenden"
+msgstr "Загнати файлы на девайс"
 
 #: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
-msgstr "Bluetooth-apparaatbeheer openen"
+msgstr "Одкрыти Bluetooth девайс"
 
 #: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
-msgstr "Gekoppelde apparaten"
+msgstr "Споєні девайсы"
 
 #: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
-msgstr "Verbongen"
+msgstr "Прикапчано"
 
 #: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
-msgstr "Ontslag nemen"
+msgstr "Уйти"
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
-msgstr "Bluetooth-instellingen configureren"
+msgstr "Наштімовати Bluetooth штім"

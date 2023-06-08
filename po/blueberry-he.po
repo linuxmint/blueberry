@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2022-03-21 07:37+0000\n"
+"PO-Revision-Date: 2023-04-02 09:04+0000\n"
 "Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2022-07-24 09:38+0000\n"
-"X-Generator: Launchpad (build 025a39fd866a641b6ae33074cda0d02a2c712d38)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:20+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -24,7 +24,7 @@ msgstr "התקן לא ידוע"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr "קובץ נכנס דרך Bluetooth"
+msgstr "קובץ נכנס דרך בלוטות׳"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
@@ -70,7 +70,7 @@ msgstr "העברה כשלה"
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "העברת הקובץ %(0)s כשלה"
+msgstr "העברת קובץ %(0)s כשלה"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
@@ -94,7 +94,7 @@ msgstr[1] "התקבלו עוד %d קבצים ברקע"
 #: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
 #: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr "בלוטות׳"
 
 #: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
@@ -102,7 +102,7 @@ msgstr "הגדרות"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr "לאפשר לבלוטות' עריכה"
+msgstr "לאפשר לבלוטות' לערוך"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -110,7 +110,7 @@ msgstr "שם"
 
 #: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
-msgstr "זהו שם הבלוטות׳ של המחשב"
+msgstr "זהו שם הבלוטות׳ במחשב זה"
 
 #: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
@@ -120,7 +120,7 @@ msgstr "קבלת קבצים מהתקנים מרוחקים"
 msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
-msgstr "אפשור קבלת קבצים למחשב על גבי בלוטות׳ (OBEX)"
+msgstr "אפשור קבלת קבצים למחשב דרך בלוטות׳ (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
@@ -138,15 +138,15 @@ msgstr "גלוי כ־%s."
 
 #: usr/lib/blueberry/blueberry.py:299
 msgid "No Bluetooth adapters found"
-msgstr "לא נמצאו מתאמי Bluetooth"
+msgstr "לא נמצאו מתאמי בלוטות'"
 
 #: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "ה־Bluetooth נוטרל על ידי מתג החומרה"
+msgstr "בלוטות' מושבת באמצעות מתג חומרה"
 
 #: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
-msgstr "ה־Bluetooth כבוי."
+msgstr "בלוטות' מושבת"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
@@ -157,20 +157,21 @@ msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
-"ניתן לפתור בעיות הרשאה בעזרת כלל udev ל-rfkill או חברות בקבוצת ה-'rfkill'."
+"ניתן לפתור בעיות הרשאה בעזרת כלל udev ו־rfkill או על ידי הוספת חשבון המשתמש "
+"לבקבוצת ההרשאות 'rfkill'."
 
 #: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "‏Bluetooth: מחובר אל %s"
+msgstr "‏בלוטות': מחובר אל %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
-msgstr "הפעלת Bluetooth"
+msgstr "הפעלת בלוטות'"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr "כיבוי Bluetooth"
+msgstr "כיבוי בלוטות'"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
@@ -178,7 +179,7 @@ msgstr "שליחת קבצים להתקן"
 
 #: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
-msgstr "פתיחת מנהל התקני ה־Bluetooth"
+msgstr "פתיחת מנהל הנעי התקן בלוטות'"
 
 #: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
@@ -194,4 +195,4 @@ msgstr "יציאה"
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
-msgstr "הגדרת תצורת ה־Bluetooth"
+msgstr "הגדרת תצורת בלוטות'"
