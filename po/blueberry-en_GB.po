@@ -20,48 +20,48 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
-msgstr "Dispositivo sconosciuto"
+msgstr "Unknown device"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:303
 msgid "Incoming file over Bluetooth"
-msgstr "File in arrivo tramite Bluetooth"
+msgstr "Incoming file over Bluetooth"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr "File in arrivo %(0)s da %(1)s"
+msgstr "Incoming file %(0)s from %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
-msgstr "Accetta"
+msgstr "Accept"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Reject"
-msgstr "Rifiuta"
+msgstr "Reject"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
-msgstr "File in ricezione"
+msgstr "Receiving file"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Ricezione file %(0)s da %(1)s"
+msgstr "Receiving file %(0)s from %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
-msgstr "File ricevuto"
+msgstr "File received"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr "File %(0)s da %(1)s ricevuto correttamente"
+msgstr "File %(0)s from %(1)s successfully received"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:411
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
 #: usr/lib/blueberry/blueberry-obex-agent.py:440
 msgid "Open"
-msgstr "Apri"
+msgstr "Open"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
@@ -88,7 +88,7 @@ msgstr[1] "Received %d files in the background"
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "Pià di un %d file ricevuto in background"
+msgstr[0] "Received %d more file in the background"
 msgstr[1] "Received %d more files in the background"
 
 #: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
@@ -98,19 +98,19 @@ msgstr "Bluetooth"
 
 #: usr/lib/blueberry/blueberry.py:102
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr "Settings"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr "Abilita l'editing del Bluetooth"
+msgstr "Enable Bluetooth to edit"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
-msgstr "Nome"
+msgstr "Name"
 
 #: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
-msgstr "Questo è il nome del Bluetooth del tuo computer"
+msgstr "This is the Bluetooth name of your computer"
 
 #: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
@@ -165,19 +165,19 @@ msgstr ""
 #: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "Bluetooth: Connesso a %s"
+msgstr "Bluetooth: Connected to %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
-msgstr "Accendere il Bluetooth"
+msgstr "Turn on Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr "Spegnere il Bluetooth"
+msgstr "Turn off Bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
-msgstr "Inviare file ad un dispositivo"
+msgstr "Send files to a device"
 
 #: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
@@ -185,7 +185,7 @@ msgstr "Open Bluetooth device manager"
 
 #: usr/lib/blueberry/blueberry-tray.py:149
 msgid "Paired devices"
-msgstr "Accoppiare dispositivi"
+msgstr "Paired devices"
 
 #: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
