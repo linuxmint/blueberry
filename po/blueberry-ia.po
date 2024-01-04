@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2022-09-05 06:45+0000\n"
-"Last-Translator: karm <melo@carmu.com>\n"
+"PO-Revision-Date: 2023-12-31 07:39+0000\n"
+"Last-Translator: famese <Unknown>\n"
 "Language-Team: Interlingua <ia@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:56+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2024-01-04 14:56+0000\n"
+"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
-msgstr "Monstrar un icone de systema"
+msgstr "Monstrar un icone en le area de notification"
 
 #: usr/lib/blueberry/blueberry.py:280
 #, python-format
@@ -145,7 +145,7 @@ msgstr "Necun adaptator Bluetooth trovate"
 
 #: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bluetooth is disabled by hardware switch"
+msgstr "Le Bluetooth es disactivate per le interruptor de hardware"
 
 #: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
@@ -153,20 +153,20 @@ msgstr "Le Bluetooth es disactivate"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
-msgstr "Un error eveniva"
+msgstr "Un error occurreva"
 
 #: usr/lib/blueberry/blueberry.py:318
 msgid ""
 "Permission issues can be solved with a udev rule for rfkill or membership in "
 "the 'rfkill' group."
 msgstr ""
-"Le problemas de permissos pote esser solvite per un regula udev pro rfkill o "
-"per devenir membro in le gruppo 'rfkill'"
+"Le problemas de permission pote esser solvite per un regula udev pro rfkill "
+"o per devenir membro in le gruppo 'rfkill'"
 
 #: usr/lib/blueberry/blueberry-tray.py:85
 #, python-format
 msgid "Bluetooth: Connected to %s"
-msgstr "Bluetooth: connexe a %s"
+msgstr "Bluetooth: Connectite a %s"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
@@ -178,7 +178,7 @@ msgstr "Extinguer bluetooth"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
-msgstr "Mitter files a un dispositivo"
+msgstr "Inviar files a un dispositivo"
 
 #: usr/lib/blueberry/blueberry-tray.py:143
 msgid "Open Bluetooth device manager"
@@ -190,7 +190,7 @@ msgstr "Apparatos accopulate"
 
 #: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
-msgstr "Connexe"
+msgstr "Connectite"
 
 #: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"
@@ -198,4 +198,4 @@ msgstr "Quitar"
 
 #: generate_desktop_files:23
 msgid "Configure Bluetooth settings"
-msgstr "Configurar le preparationes del Bluetooth"
+msgstr "Configurar le parametros del Bluetooth"

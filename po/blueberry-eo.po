@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2022-03-04 19:07+0000\n"
+"PO-Revision-Date: 2023-12-20 20:48+0000\n"
 "Last-Translator: Piet Coppens <Unknown>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:56+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2024-01-04 14:56+0000\n"
+"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
 msgid "Unknown device"
@@ -29,7 +29,7 @@ msgstr "Envena dosiero per Bludento"
 #: usr/lib/blueberry/blueberry-obex-agent.py:304
 #, python-format
 msgid "Incoming file %(0)s from %(1)s"
-msgstr "Envena dosiero %(0)s de %(1)s"
+msgstr "Envena dosiero %(0)s el %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:305
 msgid "Accept"
@@ -46,7 +46,7 @@ msgstr "Ricevado de dosiero"
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
 msgid "Receiving file %(0)s from %(1)s"
-msgstr "Ricevado de dosiero %(0)s de %(1)s"
+msgstr "Ricevado de dosiero %(0)s el %(1)s"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:407
 msgid "File received"
@@ -55,7 +55,7 @@ msgstr "Dosiero ricevita"
 #: usr/lib/blueberry/blueberry-obex-agent.py:408
 #, python-format
 msgid "File %(0)s from %(1)s successfully received"
-msgstr "Dosiero %(0)s de %(1)s sukcese ricevita"
+msgstr "Dosiero %(0)s el %(1)s sukcese ricevita"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:411
 #: usr/lib/blueberry/blueberry-obex-agent.py:434
@@ -65,12 +65,12 @@ msgstr "Malfermi"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr "Transmeto malsukcesis"
+msgstr "Transigo malsukcesis"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
 msgid "Transfer of file %(0)s failed"
-msgstr "Transmeto de dosiero %(0)s malsukcesis"
+msgstr "Transigo de dosiero %(0)s malsukcesis"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:430
 #: usr/lib/blueberry/blueberry-obex-agent.py:436
@@ -102,7 +102,7 @@ msgstr "Agordoj"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr "Ŝalti bludenton por redakti"
+msgstr "Ebligi bludenton por redakti"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -121,7 +121,7 @@ msgid ""
 "This option allows your computer to receive files transferred over Bluetooth "
 "(OBEX)"
 msgstr ""
-"Ĉi tiu opcio permesas al via komputilo ricevi dosierojn transmetitajn per "
+"Ĉi tiu opcio permesas al via komputilo ricevi dosierojn transigitajn per "
 "Bludento (OBEX)"
 
 #: usr/lib/blueberry/blueberry.py:147
@@ -144,11 +144,11 @@ msgstr "Neniuj Bludentaj adaptiloj trovitaj"
 
 #: usr/lib/blueberry/blueberry.py:302
 msgid "Bluetooth is disabled by hardware switch"
-msgstr "Bludento estas malŝaltita per aparatara ŝaltilo"
+msgstr "Bludento estas malebligita per aparatara ŝaltilo"
 
 #: usr/lib/blueberry/blueberry.py:304 usr/lib/blueberry/blueberry-tray.py:75
 msgid "Bluetooth is disabled"
-msgstr "Bludento estas malŝaltita"
+msgstr "Bludento estas malebligita"
 
 #: usr/lib/blueberry/blueberry.py:316
 msgid "An error has occurred"
@@ -189,7 +189,7 @@ msgstr "Parigitaj aparatoj"
 
 #: usr/lib/blueberry/blueberry-tray.py:158
 msgid "Connected"
-msgstr "Konektita"
+msgstr "Konektite"
 
 #: usr/lib/blueberry/blueberry-tray.py:166
 msgid "Quit"

@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2022-04-13 11:27+0000\n"
+"PO-Revision-Date: 2023-11-06 12:44+0000\n"
 "Last-Translator: Umidjon Almasov <Unknown>\n"
 "Language-Team: Uzbek <uz@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:56+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2024-01-04 14:56+0000\n"
+"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
 "Language: uz\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -66,7 +66,7 @@ msgstr "Ochish"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:413
 msgid "Transfer failed"
-msgstr "Uzatish amalga oshmadi"
+msgstr "Uzatib bo‘lmadi"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:414
 #, python-format
@@ -101,7 +101,7 @@ msgstr "Sozlamalar"
 
 #: usr/lib/blueberry/blueberry.py:130
 msgid "Enable Bluetooth to edit"
-msgstr "Bluetooth ni tahrirlash uchun yoqish"
+msgstr "Bluetoothni tahrirlash uchun yoqish"
 
 #: usr/lib/blueberry/blueberry.py:131
 msgid "Name"
@@ -109,7 +109,7 @@ msgstr "Nomi"
 
 #: usr/lib/blueberry/blueberry.py:132
 msgid "This is the Bluetooth name of your computer"
-msgstr "Bu kompyuteringizni Bluetooth nomi"
+msgstr "Bu kompyuteringizning Bluetooth nomi"
 
 #: usr/lib/blueberry/blueberry.py:139
 msgid "Receive files from remote devices"
@@ -125,7 +125,7 @@ msgstr ""
 
 #: usr/lib/blueberry/blueberry.py:147
 msgid "Show a tray icon"
-msgstr "Belgini treyda ko‘rsatish"
+msgstr "Trey belgisini ko‘rsatish"
 
 #: usr/lib/blueberry/blueberry.py:280
 #, python-format
@@ -168,11 +168,11 @@ msgstr "Bluetooth: %s ga ulangan"
 
 #: usr/lib/blueberry/blueberry-tray.py:130
 msgid "Turn on Bluetooth"
-msgstr "Bluetooth ni yoqish"
+msgstr "Bluetoothni yoqish"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr "Bluetooth ni o‘chirish"
+msgstr "Bluetoothni o‘chirish"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"

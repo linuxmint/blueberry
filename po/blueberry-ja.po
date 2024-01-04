@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-26 10:14+0000\n"
-"PO-Revision-Date: 2021-11-26 19:53+0000\n"
-"Last-Translator: vega m57 <Unknown>\n"
+"PO-Revision-Date: 2023-12-02 11:00+0000\n"
+"Last-Translator: kmyyfz8q <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:56+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2024-01-04 14:56+0000\n"
+"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
 "Language: ja\n"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:281
@@ -42,7 +42,7 @@ msgstr "拒否"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:308
 msgid "Receiving file"
-msgstr "ファイルの受信中"
+msgstr "ファイルを受信しています"
 
 #: usr/lib/blueberry/blueberry-obex-agent.py:309
 #, python-format
@@ -88,7 +88,7 @@ msgstr[0] "%d 個のファイルをバックグラウンドで受信しました
 #, python-format
 msgid "Received %d more file in the background"
 msgid_plural "Received %d more files in the background"
-msgstr[0] "更に %d 個のファイルをバックグラウンドで受信しました"
+msgstr[0] "さらに %d 個のファイルをバックグラウンドで受信しました"
 
 #: usr/lib/blueberry/blueberry.py:100 usr/lib/blueberry/blueberry-tray.py:58
 #: usr/lib/blueberry/blueberry-tray.py:88 generate_desktop_files:23
@@ -168,7 +168,7 @@ msgstr "Bluetooth をオンにする"
 
 #: usr/lib/blueberry/blueberry-tray.py:134
 msgid "Turn off Bluetooth"
-msgstr "Bluetooth を切る"
+msgstr "Bluetooth をオフにする"
 
 #: usr/lib/blueberry/blueberry-tray.py:139
 msgid "Send files to a device"
