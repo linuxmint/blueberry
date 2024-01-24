@@ -25,6 +25,10 @@ cd blueberry
 # This also fetches and installs the build dependencies:
 mint-build
 
+# If mint-build fails with error like: mint-build: command not found
+# Install [mint-dev-tools]([url](https://github.com/linuxmint/mint-dev-tools))
+sudo apt install mint-dev-tools
+ 
 # In subsequent builds, you can use dpkg-buildpackage for faster builds:
 dpkg-buildPackage
 ```
