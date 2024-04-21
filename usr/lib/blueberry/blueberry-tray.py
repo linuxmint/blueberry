@@ -6,7 +6,7 @@ import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GnomeBluetooth', '1.0')
 gi.require_version('AppIndicator3', '0.1')
-from gi.repository import AppIndicator3, Gtk, Gdk, GnomeBluetooth, Gio
+from gi.repository import AppIndicator3, Gtk, GnomeBluetooth, Gio
 import rfkillMagic
 import setproctitle
 import subprocess
@@ -17,10 +17,12 @@ _ = gettext.gettext
 
 setproctitle.setproctitle("blueberry-tray")
 
-
 class BluetoothTray(Gtk.Application):
     def __init__(self):
-        super(BluetoothTray, self).__init__(register_session=True, application_id="org.linuxmint.blueberry.tray")
+        super(BluetoothTray, self).__init__(
+            register_session=True,
+            application_id="org.linuxmint.blueberry.tray"
+        )
 
     def do_activate(self):
         self.hold()
@@ -28,21 +30,21 @@ class BluetoothTray(Gtk.Application):
     def do_startup(self):
         Gtk.Application.do_startup(self)
 
-        debug = False
-        if len(sys.argv) > 1 and sys.argv[1] == "debug":
-            debug = True
+        debug = len(sys.argv) > 1 and sys.argv[1] == "debug"
 
         self.rfkill = rfkillMagic.Interface(self.update_icon_callback, debug)
         self.settings = Gio.Settings(schema="org.blueberry")
         self.settings.connect("changed::tray-enabled", self.on_settings_changed_cb)
 
-        self.tray_icon = "blueberry-tray"
-        self.tray_active_icon = "blueberry-tray-active"
-        self.tray_disabled_icon = "blueberry-tray-disabled"
+        self.icons = {
+            'default':  'blueberry-tray',
+            'active':   'blueberry-tray-active',
+            'disabled': 'blueberry-tray-disabled',
+        }
+
         if self.settings.get_boolean("use-symbolic-icons"):
-            self.tray_icon = "blueberry-tray-symbolic"
-            self.tray_active_icon = "blueberry-tray-active-symbolic"
-            self.tray_disabled_icon = "blueberry-tray-disabled-symbolic"
+            for state in self.icons:
+                self.icons[state] += '-symbolic'
 
         # If we have no adapter, or disabled tray, end early
         if (not self.rfkill.have_adapter) or (not self.settings.get_boolean("tray-enabled")):
@@ -64,7 +66,7 @@ class BluetoothTray(Gtk.Application):
         )
         self.icon.set_status(AppIndicator3.IndicatorStatus.ACTIVE)
 
-        self.update_icon_callback(None, None, None)
+        self.update_icon_callback()
 
     def on_settings_changed_cb(self, setting, key, data=None):
         if not self.settings.get_boolean("tray-enabled"):
@@ -76,9 +78,9 @@ class BluetoothTray(Gtk.Application):
             return
 
         if self.rfkill.hard_block or self.rfkill.soft_block:
-            self.icon.set_icon_full(self.tray_disabled_icon, '')
+            self.icon.set_icon_full(self.icons['disabled'], '')
         else:
-            self.icon.set_icon_full(self.tray_icon, '')
+            self.icon.set_icon_full(self.icons['default'], '')
             self.update_connected_state()
 
         self.icon.set_menu(self.build_menu())
@@ -87,9 +89,9 @@ class BluetoothTray(Gtk.Application):
         self.get_devices()
 
         if len(self.connected_devices) > 0:
-            self.icon.set_icon_full(self.tray_active_icon, '')
+            self.icon.set_icon_full(self.icons['active'], '')
         else:
-            self.icon.set_icon_full(self.tray_icon, '')
+            self.icon.set_icon_full(self.icons['default'], '')
 
     def get_devices(self):
         self.connected_devices = []
@@ -121,7 +123,7 @@ class BluetoothTray(Gtk.Application):
 
                 iter = self.model.iter_next(iter)
 
-    def start_blueberry(self, _ignored):
+    def start_blueberry(self, item):
         subprocess.Popen(["blueberry"])
 
     def build_menu(self):
@@ -190,7 +192,7 @@ class BluetoothTray(Gtk.Application):
         self.rfkill.try_set_blocked(False)
         return True
 
-    def turn_off_bluetooth(self,item):
+    def turn_off_bluetooth(self, item):
         self.rfkill.try_set_blocked(True)
         return True
 
